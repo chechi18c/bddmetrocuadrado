@@ -11,7 +11,9 @@ import org.openqa.selenium.WebDriver;
 @DefaultUrl("https://www.metrocuadrado.com/calculadora-credito-hipotecario-vivienda/")
 public class CalculadoraCreditoViviendaPage extends PageObject {
 
-    public CalculadoraCreditoViviendaPage(WebDriver driver){super(driver);}
+    public CalculadoraCreditoViviendaPage(WebDriver driver) {
+        super(driver);
+    }
 
     @FindBy(id = "ingresosMensuales")
     public WebElementFacade txtIngresosMensuales;
@@ -21,6 +23,12 @@ public class CalculadoraCreditoViviendaPage extends PageObject {
 
     @FindBy(xpath = "//span[@class='m2-icon m2-icon-question']//ancestor::dd[1]")
     public WebElementFacade txtPrestamoBanco;
+
+    @FindBy(xpath = "//dt//span[contains(text(),'Con un ingreso mensual de:')]//following::dd[1]")
+    public WebElementFacade txtValorIngresos;
+
+    @FindBy(xpath = "//dl//span[@class='m2-icon m2-icon-question']//following::dd[1]")
+    public WebElementFacade txtCuotaInicialMinima;
 
     public void ingresarValorIngresos(String valorIngresos) {
         txtIngresosMensuales.sendKeys(valorIngresos);
@@ -34,8 +42,15 @@ public class CalculadoraCreditoViviendaPage extends PageObject {
         btnCalcularCredito.click();
     }
 
+    public String obtenerValorIngresos() {
+        return txtValorIngresos.getText();
+    }
+
     public String obtenerValorCredito() {
-        String valorPrestamoBanco = txtPrestamoBanco.getText();
-        return valorPrestamoBanco;
+        return txtPrestamoBanco.getText();
+    }
+
+    public String obtenerCuotaInicial() {
+        return txtCuotaInicialMinima.getText();
     }
 }

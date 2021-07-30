@@ -23,7 +23,10 @@ public class CalculadoraCreditoViviendaDefinition {
 
     @Entonces("^obtendré el valor del crédito que mejor se adapte a mi capacidad de pago, segun mis ingresos$")
     public void evaluarValorCredito() {
-        calculadoraCreditoViviendaStep.evaluarCreditoVivienda();
+        calculadoraCreditoViviendaStep.verificarIngresosMensuales();
+        calculadoraCreditoViviendaStep.verificarCreditoVivienda();
+        //calculadoraCreditoViviendaStep.verificarCuotaInicial();
+
     }
 
 }

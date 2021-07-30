@@ -4,6 +4,10 @@ import utilidades.constantes.FactoresCobro;
 
 public final class CalculadoraCredito {
 
+    static final double PORCENTAJE_CUOTA_INICIAL = 0.30;
+    static final double PORCENTAJE_CREDITO = 0.70;
+    static int valorTotalCredito;
+
     private CalculadoraCredito() {
     }
 
@@ -11,7 +15,6 @@ public final class CalculadoraCredito {
         final double PORCENTAJE_CUOTA = 0.30;
         final int MESES_ANO = 12;
         int valorCuotaMensual = (int) (Integer.parseInt(valorIngresos) * PORCENTAJE_CUOTA);
-        int valorTotalCredito;
         int plazoMeses;
         int plazoAnos = Integer.parseInt(plazo.replace("Años", "").trim());
         plazoMeses = MESES_ANO * plazoAnos;
@@ -36,14 +39,13 @@ public final class CalculadoraCredito {
         return valorTotalCredito;
     }
 
-    public static int obtenerValorCredito(String valorPrestamoBanco) {
-        valorPrestamoBanco = valorPrestamoBanco.substring(2);
-        String[] lstValorPrestamoBanco = valorPrestamoBanco.split(",");
-        String valorPrestamo = "";
-        for (int i = 0; i < lstValorPrestamoBanco.length; ++i){
-            valorPrestamo += lstValorPrestamoBanco[i];
-        }
-        return Integer.parseInt(valorPrestamo);
+    public static int obtenerValorTransformado(String valorInicial) {
+        valorInicial = valorInicial.replaceAll("[$ ,]*","");
+        return Integer.parseInt(valorInicial);
+    }
+
+    public static int calcularCuotaInicial(){
+        return (int) ((int) (valorTotalCredito* PORCENTAJE_CUOTA_INICIAL)/PORCENTAJE_CREDITO);
     }
 
 }

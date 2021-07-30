@@ -1,0 +1,1708 @@
+<html ng-app="creditApp" ng-controller="MainCtrl" class="ng-scope"><head><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-WTMXDZ"></script><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+<meta charset="utf-8">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="/estatico/favicon.ico">
+<meta name="_csrf" value="8c261484-f8fc-4733-bc7a-6c93425011e9">
+<meta name="description" content="Esta calculadora hipotecaria es un simulador de crédito que permite calcular el valor de las cuotas de su préstamo de vivienda y cuanto le puede prestar un banco.">
+<meta property="og:url" content="/calculadora-credito-hipotecario-vivienda/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora de Crédito para vivienda">
+<meta property="og:description" content="Esta calculadora hipotecaria es un simulador de crédito que permite calcular el valor de las cuotas de su préstamo de vivienda y cuanto le puede prestar un banco.">
+<meta property="og:image" content="/estatico/metrocuadrado-header/bootstrap/img/logo.png">
+<meta property="og:site_name" content="metrocuadrado.com">
+<meta property="fb:admins" content="[id - administrador de Facebook]">
+<meta property="fb:app_id" content="[id- aplicación en Facebook]">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@metrocuadrado">
+<meta name="twitter:creator" content="@metrocuadrado">
+<meta name="twitter:title" content="Calculadora de Crédito para vivienda">
+<meta name="twitter:description" content="Esta calculadora hipotecaria es un simulador de crédito que permite calcular el valor de las cuotas de su préstamo de vivienda y cuanto le puede prestar un banco.">
+<meta name="twitter:image" content="/estatico/metrocuadrado-header/bootstrap/img/logo.png">
+<link rel="canonical" href="https://www.metrocuadrado.com/calculadora-credito-hipotecario-vivienda/">
+<title>Calculadora de Crédito Hipotecario para Vivienda -
+	Simulador de Cuotas</title>
+<link rel="shortcut icon" href="/estatico/favicon.ico">
+<!-- font -->
+<link href="https://fonts.googleapis.com/css?family=Oswald:400,500,700,300|Raleway:400,500,600,700,300,100" rel="stylesheet" type="text/css">
+
+<!--Angular-->
+<script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/releases/Iwg4ANhK7Iu8SHToSsE0E20K/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-WMTwmK8oB+0AA984gY1kVeSBj9C05LMTPYh35MBln+7G/EgYxc1chFvOmzLaMfC5"></script><script src="https://script.crazyegg.com/pages/scripts/0017/1361.js" async="" type="text/javascript"></script><script src="static/js/angular.min.js"></script>
+<script src="static/js/angular-resource.min.js"></script>
+<script src="static/js/angular-route.min.js"></script>
+<script src="static/js/ng-currency.js"></script>
+
+<!-- css libs -->
+<!-- <link rel="stylesheet" -->
+<!-- 	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+<link rel="stylesheet" href="static/css/bootstrap-select.min.css">
+<link rel="stylesheet" href="static/css/jquery.qtip.min.css">
+<link rel="stylesheet" href="static/css/calculadora_styles.css">
+<link rel="stylesheet" href="static/css/fabrica-creditos.css">
+<link rel="stylesheet" href="static/css/m2.css">
+
+<!-- <link rel="stylesheet" type="text/css" href="/estatico/metrocuadrado-header-resources/css/stylesheets.css" /> -->
+
+<!-- Tag CrazyEgg -->
+<script type="text/javascript">
+	setTimeout(function() {
+		var a = document.createElement("script");
+		var b = document.getElementsByTagName("script")[0];
+		a.src = document.location.protocol
+				+ "//script.crazyegg.com/pages/scripts/0017/1361.js";
+		a.async = true;
+		a.type = "text/javascript";
+		b.parentNode.insertBefore(a, b)
+	}, 1);
+</script>
+<!-- End Tag CrazyEgg -->
+
+<!-- google login  -->
+<meta name="google-signin-scope" content="profile email">
+<meta name="google-signin-client_id" content="325216096296-b05qlj40dlh670hen61ti5vgh5dpercm.apps.googleusercontent.com">
+<script src="https://apis.google.com/js/platform.js" defer="defer" gapi_processed="true"></script>
+<script src="/estatico/metrocuadrado-header-resources/bootstrap/js/socialFacebook.js"></script>
+
+<!-- js libs -->
+<script src="static/js/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!-- Fabrica de creditos LQN-->
+<script src="static/js/lqn-scripts.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/bootstrap-select.min.js"></script>
+<script src="static/js/jquery.radiosforbuttons.min.js"></script>
+<script src="static/js/jquery.sticky-kit.min.js"></script>
+<script src="static/js/jquery.qtip.min.js"></script>
+<script src="static/js/tabcordion.js"></script>
+<script src="static/js/autocomplete.js"></script>
+
+<!-- m2 js -->
+<script src="static/js/m2.js"></script>
+<script src="static/js/m2-publish.js"></script>
+<script src="static/js/m2-gallery.js"></script>
+<script type="text/javascript">
+	//<![CDATA[
+	var s_account = "eltiempometrocuadradoprod";
+	//]]>
+</script>
+
+
+
+<script>
+	var metrocuadradoResultsUrlContext = '/';
+	var locationAutocompleteContentUrl = 'https://www.metrocuadrado.com/estatico/locations.js'
+	// 	var footerStaticContext = '${footer.static.context}';
+</script>
+<!-- header -->
+<link href="/estatico/metrocuadrado-results/css/locations-autocomplete.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="/estatico/metrocuadrado-results/js/structured-search.js"></script>
+<script type="text/javascript" src="/estatico/metrocuadrado-results/js/locations-autocomplete.js"></script>
+<script type="text/javascript" src="/estatico/metrocuadrado-results/js/js.cookie.js"></script>
+<script type="text/javascript" src="/estatico/metrocuadrado-results/js/search-filters.js"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LefV6UUAAAAAHd6BLtB6D9L4iwVjiD8fXYg5tVn"></script>
+
+<script>   (function (w, d, s, l, i) {     w[l] = w[l] || [];    w[l].push({         'gtm.start': new Date().getTime(), event: 'gtm.js'    });     var f = d.getElementsByTagName(s)[0],         j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';     j.async = true;     j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;     f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer', 'GTM-WTMXDZ')</script><script async="" src="https://static.hotjar.com/c/hotjar-966913.js?sv=6"></script><script async="" src="https://script.hotjar.com/modules.a6e08df3d112e629a598.js" charset="utf-8"></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style></head>
+<body class="modalmenu financing-calculator-app">
+	<!--Header-->
+	<div>
+		<div id="header">
+
+
+
+	<input type="hidden" id="urlcas" value="https://www.metrocuadrado.com/cas">
+<!-- 	<div th:replace="bootstrap/fragments/crazyegg :: crazyegg">&nbsp;</div> -->
+	<script type="text/javascript" src="//assets.adobedtm.com/41d3b477534338831f14b02d7af1cd359b73904f/satelliteLib-8aeb63a9ee18c0379a15a0fcb080dcbc94c88dd8.js">
+		
+	</script>
+	<div>
+		<input type="hidden" id="facebookApplicationId" value="163952777486318">
+		<header>
+		<input type="hidden" id="usernamesession">
+		<nav style="" class="navbar">
+			<div class="navbar-wrapper">
+				<div class="container">
+
+					<div class="navbar-header">
+						<ul class="navbar-header-actions visible-xs visible-sm">
+							 <li>
+                                <a role="button" data-toggle="collapse" href="#collapsebuscadormovil" aria-expanded="false" aria-controls="collapseExample" class="btn btn-link">
+				                    <span class="m2-icon search m2-icon-search"></span>
+				                    <span class="m2-icon search m2-icon-cross" style="display: none;"></span>
+                  				</a>
+                            </li>
+
+
+							<li class="menu_button_mobile">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false" aria-controls="navbar" style="cursor: pointer;">
+									<span class="sr-only">Toggle navigation</span> <span class="m2-icon menu m2-icon-hamburger"></span> <span class="m2-icon menu m2-icon-cross" style="display: none;"></span>
+								</button>
+							</li>
+						</ul>
+						<a class="navbar-brand" href="/"> <img class="img-responsive" src="/estatico/metrocuadrado-header-resources/bootstrap/img/logo.png">
+						</a>
+					</div>
+
+					<div id="main-nav" class="collapse navbar-collapse">
+
+						<ul class="nav navbar-nav primary-nav hidden-xs hidden-sm">
+							<li class="active">
+								<a class="btn btn-primary btn_search" role="button">Buscar Inmueble
+								
+								<div class="icon_desplegar"><img src="/estatico/metrocuadrado-header-resources/images/icons/png/select_arrow.png"></div>
+								</a>
+							</li>
+
+
+							<li class="dropdown hover_lg"><a aria-expanded="false" href="#" class="dropdown-toggle" data-toggle="dropdown">Noticias y tendencias
+								
+								<div class="icon_desplegar"><img src="/estatico/metrocuadrado-header-resources/images/icons/png/select_arrow.png"></div>
+								</a>
+
+
+								<ul class="lg dropdown-menu mega-menu_noticias">
+									<ul class="not_tendencias">
+										<h2 class="block-title" id="newsAndTendencies">Noticias y tendencias</h2>
+										<li><a id="newsHref" href="https://www.metrocuadrado.com/noticias/">Noticias</a></li>
+										<li><a id="economyHref" href="https://www.metrocuadrado.com/noticias/economia/">Economía</a></li>
+										<li><a id="decorHref" href="https://www.metrocuadrado.com/noticias/decoracion/">Decoración</a></li>
+										<li><a id="arquitectureHref" href="https://www.metrocuadrado.com/noticias/arquitectura/">Arquitectura</a></li>
+										<li><a id="entertainmentHref" href="https://www.metrocuadrado.com/noticias/entretenimiento/">Entretenimiento</a></li>
+										<li><a id="actualidadHref" href="https://www.metrocuadrado.com/noticias/actualidad/">Actualidad</a></li>
+
+									</ul>
+									<div class="separador"></div>
+									<div id="megamenu1" data-header-news-url="https://www.metrocuadrado.com/metrocuadrado-header/news/"></div>
+									<div class="clear"></div>
+									<a href="https://www.metrocuadrado.com/noticias/tendencias">
+										<button type="button" class="btn btn-upload">
+											<span class="m2-icon m2-icon-plus"></span><span>Sobre noticias y tendencias</span>
+										</button>
+									</a>
+
+								</ul></li>
+
+
+
+
+
+							<li class="dropdown hover_lg2"><a aria-expanded="false" href="#" class="dropdown-toggle" data-toggle="dropdown">Herramientas
+								<div class="icon_desplegar"><img src="/estatico/metrocuadrado-header-resources/images/icons/png/select_arrow.png"></div>
+							</a>
+
+								<ul class="lg dropdown-menu mega-menu_herramientas">
+								<li>
+									<ul class="guias fondo_grs">
+										<span class="fondo_grs">	
+											<li>
+												<h2 class="block-title" id="calculators">Calculadoras</h2>
+											</li>
+																					
+										<li><a id="creditCalcHref" href="https://www.metrocuadrado.com/calculadora-credito-hipotecario-vivienda/">Calculadora de crédito</a></li>
+
+										<li><a id="insuranceCalcHref" href="https://www.metrocuadrado.com/calculadora-poliza-seguro-arrendamiento/">Calculadora de seguros</a></li>
+
+										<li></li>
+
+										<li></li>
+
+										<li></li>
+
+										<li><a id="m2pricesHref" href="https://www.metrocuadrado.com/noticias/herramientas/precios-m2">Precios m2</a></li>
+									</span>
+									<span class="tu_inmueble">	
+											<li>
+												<h2 class="block-title">Tu inmueble</h2>
+											</li>
+											<li><a href="https://www.metrocuadrado.com/publicar-inmuebles/solicitud-inmuebles/">Solicita
+													tu inmueble</a></li>
+											<li><a href="https://www.metrocuadrado.com/publicar-inmuebles/consignment/firststep">Consigna
+													tu inmueble</a></li>
+									</span>
+									
+									</ul>
+									<div class="separador"></div>
+									<ul class="guias">
+										<h2 class="block-title" id="guides">Guías</h2>
+										<li><a id="rentGuidesHref" href="https://www.metrocuadrado.com/noticias/herramientas/guia-de-arriendo">Guías de arriendo</a></li>
+										<li><a id="horizontalPropertyGuideHref" href="https://www.metrocuadrado.com/noticias/herramientas/guia-de-propiedad-horizontal">Guía de propiedad horizontal</a></li>
+										<li><a id="buyAndSellGuideHref" href="https://www.metrocuadrado.com/noticias/herramientas/guia-de-venta">Guía de compra y venta</a></li>
+										<li><a id="creditGuideHref" href="https://www.metrocuadrado.com/noticias/herramientas/guia-de-credito">Guía de crédito</a></li>
+										<!-- <li><a th:href="#{header.ahref.adviserHref}"
+											id="adviserHref" th:text="#{header.href.adviserHref}"></a></li>-->
+											
+										<li><a id="directoryHref" href="https://www.metrocuadrado.com/directorio-inmobiliarias/">Directorio</a></li>
+
+									</ul>
+
+
+									<div class="separador"></div>
+									<div id="megamenu2"></div>
+									<div class="clear"></div>
+									<a href="https://www.metrocuadrado.com/noticias/herramientas">
+										<button type="button" class="btn btn-upload">
+											<span class="m2-icon m2-icon-plus"></span><span>Sobre herramientas</span>
+										</button>
+									</a>
+
+								</li>
+								</ul> <!-- dropdown-menu --></li>
+							<!-- /.dropdown -->
+						</ul>
+
+						<ul class="nav navbar-nav menu_mobile mobile-nav visible-xs-block visible-sm-block ">
+							<div class="botones_movil_menu">
+								<a class="publishAPropertyLink" href="/publicar-inmuebles">
+									<button type="button" class="btn btn-default" id="publishYourPropertyBtn" rel="nofollow">Publica tu inmueble</button>
+								</a>
+								<input type="hidden" id="urlconstructores" value="https://www.metrocuadrado.com/constructores/">
+								<input type="hidden" id="urlinmobiliarias" value="https://www.metrocuadrado.com/inmobiliarias/">
+							</div>
+							<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span id="toolsSpan">Noticias y tendencias</span> <span class="m2-icon"></span>
+							</a>
+								<ul class="dropdown-menu">
+									<li><a id="newsHref" href="https://www.metrocuadrado.com/noticias/">Noticias</a></li>
+									<li><a id="economyHref" href="https://www.metrocuadrado.com/noticias/economia/">Economía</a></li>
+									<li><a id="decorHref" href="https://www.metrocuadrado.com/noticias/decoracion/">Decoración</a></li>
+									<li><a id="arquitectureHref" href="https://www.metrocuadrado.com/noticias/arquitectura/">Arquitectura</a></li>
+									<li><a id="entertainmentHref" href="https://www.metrocuadrado.com/noticias/entretenimiento/">Entretenimiento</a></li>									
+									<li><a id="actualidadHref" href="https://www.metrocuadrado.com/noticias/actualidad/">Actualidad</a></li>
+								</ul></li>
+							<li class="dropdown herramientas_peq"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span id="toolsSpan">Herramientas</span> <span class="m2-icon"></span>
+							</a>
+								<ul class="dropdown-menu">
+									<li><a href="#" data-toggle="modal" data-target="#herramientas_option" class="test">
+											Calculadoras <span class="m2-icon m2-icon-right"></span>
+									</a></li>
+									<li><a href="#" data-toggle="modal" data-target="#tuinmueble_option"> Tu inmueble <span class="m2-icon m2-icon-right"></span>
+									</a></li>
+									<li><a href="#" data-toggle="modal" data-target="#guias_option"> Guías <span class="m2-icon m2-icon-right"></span>
+									</a></li>
+								</ul></li>
+							<li class="dropdown loginBody"><a id="enterHrefMobile" class="dropdown-toggle " href="https://www.metrocuadrado.com/metrocuadrado-header/rlogin?service=https://www.metrocuadrado.com/calculadora-credito-hipotecario-vivienda/">Ingresar</a>
+								
+								<ul class="dropdown-menu">
+									<li><a href="/metrocuadrado-personal-account/">Mi Espacio</a></li>
+									<li><a href="/metrocuadrado-personal-account/property/published/list">Inmuebles</a></li>
+									<li><a href="/metrocuadrado-personal-account/property/favorites/list">Favoritos</a></li>
+									<li><a href="/metrocuadrado-personal-account/storedsearcheslist">Búsquedas guardadas</a></li>
+									<li><a href="/metrocuadrado-personal-account/account-management/administration">Administrar mi cuenta</a></li>
+									<li><a id="menuCloseSessionMovil" href="https://www.metrocuadrado.com/metrocuadrado-header/bootstrap/auth/do-logout?service=https://www.metrocuadrado.com/calculadora-credito-hipotecario-vivienda/">Cerrar sesión</a></li>
+								</ul></li>
+
+							<li class="complementos"><a id="contactUsHref" href="/metrocuadrado-header/contactenos">Contáctanos</a></li>
+							<li style="display: none" class="complementos"><a id="needHelpHref" href="/metrocuadrado-header/ayuda">¿Necesitas ayuda?</a></li>
+							<li style="display: none" class="text" id="phoneNumberLi">01 80000 115 252</li>
+							<li class="complementos"><a id="viewFavoritesHref" href="/metrocuadrado-personal-account/property/favorites/list">Ver favoritos</a></li>
+						</ul>
+
+						<ul class="nav navbar-nav navbar-right hidden-xs hidden-sm ">
+							<li class="loginBody"></li>
+							<li><a class="btn btn-default publishAPropertyLink" id="publishAPropertyLiHref" href="/publicar-inmuebles">Publica tu inmueble</a></li>
+						</ul>
+						<input type="hidden" id="urlconstructores" value="https://www.metrocuadrado.com/constructores/">
+						<input type="hidden" id="urlinmobiliarias" value="https://www.metrocuadrado.com/inmobiliarias/">
+					</div>
+
+				</div>
+				<!-- / .container -->
+
+				<!-- Contenido herramientas del Lightbox -->
+				<div class="modal fade m2-gallery-modal" id="herramientas_option" role="dialog" aria-labelledby="modalLabel">
+					<div class="modal-dialog herramientas_option" role="document">
+						<div class="modal-content ">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span class="m2-icon m2-icon-left"></span> CALCULADORAS
+								</button>
+							</div>
+							<div class="modal-body">
+								<ul>
+									<li><a href="https://www.metrocuadrado.com/calculadora-credito-hipotecario-vivienda/">Calculadora
+											de crédito</a></li>
+									<li><a href="https://www.metrocuadrado.com/calculadora-poliza-seguro-arrendamiento/">Calculadora
+											de seguros</a></li>
+									<li><a href="https://www.metrocuadrado.com/noticias/herramientas/precios-m2">Precios
+											m2</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<!-- Lightbox -->
+				<!-- Contenido herramientas del Lightbox -->
+				<div class="modal fade m2-gallery-modal" id="tuinmueble_option" role="dialog" aria-labelledby="modalLabel">
+					<div class="modal-dialog herramientas_option" role="document">
+						<div class="modal-content ">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span class="m2-icon m2-icon-left"></span> TU INMUEBLE
+								</button>
+							</div>
+							<div class="modal-body">
+								<ul>
+									<li><a href="https://www.metrocuadrado.com/publicar-inmuebles/solicitud-inmuebles/">Solicita
+											tu inmueble</a></li>
+									<li><a href="https://www.metrocuadrado.com/publicar-inmuebles/consignment/firststep">Consigna
+											tu inmueble</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<!-- Lightbox -->
+				<!-- Contenido herramientas del Lightbox -->
+				<div class="modal fade m2-gallery-modal" id="guias_option" role="dialog" aria-labelledby="modalLabel">
+					<div class="modal-dialog herramientas_option" role="document">
+						<div class="modal-content ">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span class="m2-icon m2-icon-left"></span> GUÍAS
+								</button>
+							</div>
+							<div class="modal-body">
+								<ul>
+									<li><a id="rentGuidesHref" href="https://www.metrocuadrado.com/noticias/herramientas/guia-de-arriendo">Guías de arriendo</a></li>
+									<li><a id="horizontalPropertyGuideHref" href="https://www.metrocuadrado.com/noticias/herramientas/guia-de-propiedad-horizontal">Guía de propiedad horizontal</a></li>
+									<li><a id="buyAndSellGuideHref" href="https://www.metrocuadrado.com/noticias/herramientas/guia-de-venta">Guía de compra y venta</a></li>
+									<li><a id="creditGuideHref" href="https://www.metrocuadrado.com/noticias/herramientas/guia-de-credito">Guía de crédito</a></li>
+									<li><a id="directoryHref" href="https://www.metrocuadrado.com/directorio-inmobiliarias/">Directorio</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				
+				</div>
+				</nav>
+				
+				
+				<!-- Lightbox -->
+
+				<div style="" aria-expanded="true" class="collapse buscador" id="collapsebuscador">
+					<div class="well desktop">
+						
+						<div class="container">
+			                <div class="row">
+			
+			                    <!-- Inicio Búsqueda avanzada -->
+			                    <div class="busqueda_avanzada" style="display: block;">
+			                    	<form action="https://www.metrocuadrado.com/metrocuadrado-results/search/non-ajax" id="form-search-header" method="get">
+			                        <div class="hidden-xs col-sm-3 campo_busqueda">
+			                            <div class="form-group right">
+			                                <select id="mobile-mtiponegocio" data-hidden-field-id="mtiponegocio" class="form-control arrowright mtiponegocio">
+							                    <option value="venta-nuevo">Compra Nuevo</option>
+												<option value="venta-usado">Compra Usado</option>
+												<option value="venta">Compra Nuevo y Usado</option>
+												<option value="arriendo">Arriendo</option>
+							                  </select>
+			                            </div>
+			                        </div>
+			                        <!-- inicio multiselector desktop -->
+			                        
+			                        <div class="col-sm-3 campo_busqueda">
+			                            <div class="campo-selector-multiple">
+			                                <div class="campo-selector-multiple-seleccionados">Tipo de inmueble</div>
+			                                <div id="btn-selector-multiple" class="btn-selector-multiple" align="center">
+			                                    <img src="/estatico/metrocuadrado-header-resources/bootstrap/img/fake_select.svg">
+			                                </div>
+			                                <div id="selector-multiple" class="selector-multiple">
+			                                    <div class="inmueble-check">
+			                                        <input id="check_01" class="property-type-list" propertytype="casa" name="check_01" value="casas" type="checkbox">
+			                                        <label for="check_01">Casas</label>
+			                                    </div>
+			                                    <div class="inmueble-check">
+			                                        <input id="check_02" type="checkbox" class="property-type-list" propertytype="apartamento" name="check_02" value="apartamentos">
+			                                        <label for="check_02">Apartamentos</label>
+			                                    </div>
+			                                    <div class="inmueble-check">
+			                                        <input id="check_03" class="property-type-list" propertytype="oficina" name="check_03" value="oficinas" type="checkbox">
+			                                        <label for="check_03">Oficinas</label>
+			                                    </div>
+			                                    <div class="inmueble-check">
+			                                        <input id="check_04" class="property-type-list" propertytype="bodega" name="check_04" value="bodegas" type="checkbox">
+			                                        <label for="check_04">Bodegas</label>
+			                                    </div>
+			                                    <div class="inmueble-check">
+			                                        <input id="check_05" class="property-type-list" propertytype="consultorio" name="check_05" value="consultorios" type="checkbox">
+			                                        <label for="check_05">Consultorios</label>
+			                                    </div>
+			                                    <div class="inmueble-check">
+			                                        <input id="check_06" class="property-type-list" propertytype="local" name="check_06" value="locales" type="checkbox">
+			                                        <label for="check_06">Locales</label>
+			                                    </div>
+			                                    <div class="inmueble-check">
+			                                        <input id="check_07" class="property-type-list" propertytype="lote" name="check_07" value="lotes" type="checkbox">
+			                                        <label for="check_07">Lotes</label>
+			                                    </div>
+			                                    <div class="inmueble-check">
+			                                        <input id="check_08" class="property-type-list" propertytype="finca" name="check_08" value="fincas" type="checkbox">
+			                                        <label for="check_08">Fincas</label>
+			                                    </div>
+			                                    <div class="inmueble-check">
+			                                        <input id="check_09" class="property-type-list" propertytype="edificio-de-oficinas" name="check_09" value="edificios-oficinas" type="checkbox">
+			                                        <label for="check_09">Edificio de oficinas</label>
+			                                    </div>
+			                                    <div class="inmueble-check">
+			                                        <input id="check_10" class="property-type-list" propertytype="edificio-de-apartamentos" name="check_10" value="edificios-apartamentos" type="checkbox">
+			                                        <label for="check_10">Edificio de apartamentos</label>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <input type="hidden" name="sfh" id="sfh" value="1">
+			                        
+			                        <!-- fin inicio multiselector desktop -->
+			                        
+			                        <div class="hidden-xs col-sm-4 campo_busqueda">
+			                            <div class="input-group buscadorderecho right">
+			                                <input class="form-control search-by-location ui-autocomplete-input" type="text" name="city" id="mobile-location" placeholder="Ciudad, Zona o Barrio">
+			                                <button id="btn_submit_search_header" type="submit" class="btn btn-default search-button m_btn_alt big_alt header-structured-search">Buscar</button>
+			                            </div>
+			                        </div>
+			                        
+			                        </form>
+			                        <div class="hidden-xs col-sm-2 enlace campo_busqueda">
+			                            <a>Buscar código »</a>
+			                        </div>
+			                    </div>
+			                    <form method="post" id="form-search-header-by-code" action="https://www.metrocuadrado.com/metrocuadrado-results/search/code">
+			                    <div class="busqueda_codigo" style="display: none;">
+			                        <div class="hidden-xs col-sm-10 campo_busqueda">
+			                            <div class="input-group buscadorderecho right">
+			                                <input name="propertyId" class="form-control" placeholder="Buscar por codigo" aria-label="" type="text">
+			                                <button class="btn btn-default" type="submit">BUSCAR</button>
+			                            </div>
+			                        </div>
+			                        <div class="hidden-xs col-sm-2 enlace campo_busqueda">
+			                            <a>búsqueda avanzada »</a>
+			                        </div>
+			                    </div>
+			                    </form>
+			                </div>
+           				 </div>
+						
+						
+					</div>
+				</div>
+				
+				<!-- moviles -->
+				 <div class="collapse" id="collapsebuscadormovil">
+				        <div class="well search_mobile">
+				            <div class="container">
+				                <div class="row">
+				                    <div class="col-xs-12">
+				                        <p>Encuentra casa y apartamentos en venta o arriendo:</p>
+				                    </div>
+				                    
+				                    <!-- inicio multiselector movil -->
+				                    <form action="https://www.metrocuadrado.com/metrocuadrado-results/search/non-ajax" id="form-search-header" method="get">
+				                    <div class="busqueda_avanzada moviles" style="display: block;">
+				                        <div class="col-xs-12">
+				                            <div class="form-group right">
+				                                <select id="mobile-mtiponegocio" data-hidden-field-id="mtiponegocio" class="form-control arrowright mtiponegocio">
+				                                     <option value="venta-nuevo">Compra Nuevo</option>
+													<option value="venta-usado">Compra Usado</option>
+													<option value="venta">Compra Nuevo y Usado</option>
+													<option value="arriendo">Arriendo</option>
+				                                </select>
+				                            </div>
+				                        </div>
+				                        <div class="fondo-selector-multiple-mobile">
+				                        </div>
+				                        <div class="col-xs-12">
+				                            <div class="campo-selector-multiple">
+				                                <div class="campo-selector-multiple-seleccionados" id="campo-selector-multiple-seleccionados-mobile">Tipo de inmueble</div>
+				                                <div id="btn-selector-multiple-mobile" class="btn-selector-multiple" align="center">
+				                                    <img src="/estatico/metrocuadrado-header-resources/bootstrap/img/fake_select.svg">
+				                                </div>
+				                                <div id="selector-multiple-mobile" class="selector-multiple">
+				                                    <img id="btn-selector-multiple-cerrar" src="/estatico/metrocuadrado-header-resources/bootstrap/img/close.svg">
+				                                    <div class="inmueble-check">
+				                                     	<input id="check_01" class="property-type-list-mobile" propertytype="casa" name="check_01" value="casas" type="checkbox">
+			                                        	<label for="check_01">Casas</label>
+				                                    </div>
+				                                    <div class="inmueble-check">
+				                                          <input id="check_02" type="checkbox" class="property-type-list-mobile" propertytype="apartamento" name="check_02" value="apartamentos">
+			                                       		  <label for="check_02">Apartamentos</label>
+				                                    </div>
+				                                    <div class="inmueble-check">
+				                                          <input id="check_03" class="property-type-list-mobile" propertytype="oficina" name="check_03" value="oficinas" type="checkbox">
+			                                       		<label for="check_03">Oficinas</label>
+				                                    </div>
+				                                    <div class="inmueble-check">
+				                                        <input id="check_04" class="property-type-list-mobile" propertytype="bodega" name="check_04" value="bodegas" type="checkbox">
+				                                        <label for="check_04">Bodegas</label>
+			                                    	</div>
+				                                    <div class="inmueble-check">
+				                                        <input id="check_05" class="property-type-list-mobile" propertytype="consultorio" name="check_05" value="consultorios" type="checkbox">
+				                                        <label for="check_05">Consultorios</label>
+				                                    </div>
+				                                    <div class="inmueble-check">
+				                                        <input id="check_06" class="property-type-list-mobile" propertytype="local" name="check_06" value="locales" type="checkbox">
+				                                        <label for="check_06">Locales</label>
+				                                    </div>
+				                                    <div class="inmueble-check">
+				                                        <input id="check_07" class="property-type-list-mobile" propertytype="lote" name="check_07" value="lotes" type="checkbox">
+				                                        <label for="check_07">Lotes</label>
+				                                    </div>
+				                                    <div class="inmueble-check">
+				                                        <input id="check_08" class="property-type-list-mobile" propertytype="finca" name="check_08" value="fincas" type="checkbox">
+				                                        <label for="check_08">Fincas</label>
+				                                    </div>
+				                                    <div class="inmueble-check">
+				                                        <input id="check_09" class="property-type-list-mobile" propertytype="edificio-de-oficinas" name="check_09" value="edificios-oficinas" type="checkbox">
+				                                        <label for="check_09">Edificio de oficinas</label>
+				                                    </div>
+				                                    <div class="inmueble-check">
+				                                        <input id="check_10" class="property-type-list-mobile" propertytype="edificio-de-apartamentos" name="check_10" value="edificios-apartamentos" type="checkbox">
+				                                        <label for="check_10">Edificio de apartamentos</label>
+				                                    </div>
+				                                    <button id="btn-selector-multiple-mobile-aceptar" class="btn btn-default" type="button">Aceptar</button>
+				                                </div>
+				                            </div>
+				                        </div>
+				                    
+				                    <!-- fin multiselector movil -->
+				                    <div class="col-xs-12">
+				                        <div class="input-group buscadorderecho">
+				                            <input id="mobile-location-mobile" name="city" class="form-control display_block search-by-location ui-autocomplete-input" placeholder="Ciudad, Zona o Barrio" aria-label="Amount (to the nearest dollar)" type="text">
+				                            <div class="clear"></div>
+<!-- 				                            <button id="btn_submit_search_header"  class="btn btn-default" type="submit"> BUSCAR </button> -->
+				                            <button id="btn_submit_search_header" type="submit" class="btn btn-default search-button m_btn_alt big_alt header-structured-search">Buscar</button>
+				                        </div>
+				                    </div>
+				                     <div class="col-xs-12 enlace">
+				                        <a>Buscar código »</a>
+				                    </div>
+				                    </div>
+				                    
+				                        <input type="hidden" name="sfh" id="sfh" value="1">
+				                    </form>
+				                   
+				                </div>
+				                <div class="busqueda_codigo moviles" style="display: none;">
+				                	<form method="post" id="form-search-header-by-code" action="https://www.metrocuadrado.com/metrocuadrado-results/search/code">
+					                    <div class="col-xs-12">
+					                        <div class="input-group buscadorderecho">
+					                            <input name="propertyId" class="form-control display_block" placeholder="Buscar por código" aria-label="" type="text">
+					                            <div class="clear"></div>
+					                            <button class="btn btn-default" type="submit"> BUSCAR </button>
+					                        </div>
+					                    </div>
+					                    </form>
+				                    <div class="col-xs-12 enlace">
+				                        <a>Búsqueda avanzada »</a>
+				                    </div>
+				                </div>
+				            </div>
+				        </div>
+    			</div>
+				
+				
+			
+		
+		<!-- lightbox para reasignación de rol -->
+		
+		<link href="https://fonts.googleapis.com/css?family=Oswald:400,500,700,300|Raleway:400,500,600,700,300,100" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="/estatico/metrocuadrado-header-resources/bootstrap/css/bootstrap-select.min.css">
+		<link rel="stylesheet" href="/estatico/metrocuadrado-header-resources/bootstrap/css/jquery.qtip.min.css">
+		<link rel="stylesheet" href="/estatico/metrocuadrado-header-resources/bootstrap/css/selector.css">
+		<script src="/estatico/metrocuadrado-header-resources/js/tabcordion.js"></script>
+		<script src="/estatico/metrocuadrado-header-resources/bootstrap/js/sources.js"></script>
+		<!--<script src="/estatico/metrocuadrado-header-resources/js/omnitureEventsMethods.js"></script>-->
+		<script src="/estatico/metrocuadrado-header-resources/bootstrap/js/getHtmlLogin.js"></script>
+		<script src="/estatico/metrocuadrado-header-resources/js/headerScroll.js"></script>
+		<script src="/estatico/metrocuadrado-header-resources/js/headerBuscador.js"></script>
+		<script src="/estatico/metrocuadrado-header-resources/bootstrap/js/menu-fix-lightbox.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			var urlGTM = 'https://www.googletagmanager.com',
+					GTM_id = 'GTM-WTMXDZ';
+		</script>
+		<script src="/estatico/metrocuadrado-common/dist/m2.gtm.min.js"></script>
+		<script src="/estatico/metrocuadrado-header-resources/js/newsletter-bootstrap.min.js"></script>
+	</header>
+
+		<div class="collapse" id="collapsebuscadormovil">
+
+			<div class="well search_mobile">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12"> <p>Encuentra casa y apartamentos en venta o arriendo:</p> </div>
+						<!-- Inicio busqueda avanzada moviles -->
+						<div class="busqueda_avanzada moviles" style="display: block;">
+							<form data-form-validate="" action="https://www.metrocuadrado.com/metrocuadrado-results/search/non-ajax" method="get" id="form-search-header">
+							<div class="col-xs-12">
+								<div class="form-group right">
+									<select class="form-control arrowright" data-hidden-field-id="mtiponegocio" id="select-mtiponegocio">
+										<option value="venta-nuevo">Compra Nuevo</option>
+										<option value="venta-usado">Compra Usado</option>
+										<option value="venta">Compra Nuevo y Usado</option>
+										<option value="arriendo">Arriendo</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-xs-12">
+								<div class="form-group left">
+									<select class="form-control arrowright" data-hidden-field-id="mtipoinmueble" id="select-mtipoinmueble">
+										<option value="">Tipo de Inmueble</option>
+										<option value="casa">Casas</option>
+										<option value="apartamento">Apartamentos</option>
+										<option value="oficina">Oficinas</option>
+										<option value="bodega">Bodega</option>
+										<option value="consultorio">Consultorio</option>
+										<option value="local">Local</option>
+										<option value="lote">Lote</option>
+										<option value="finca">Finca</option>
+										<option value="edificio de oficinas">Edificio de
+											oficinas</option>
+										<option value="edificio de apartamentos">Edificio de
+											apartamentos</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-xs-12">
+								<div class="input-group buscadorderecho">
+									<input class="form-control display_block search-by-location ui-autocomplete-input" aria-label="Amount (to the nearest dollar)" type="text" name="city" autocomplete="off" id="input-location" placeholder="Ciudad, Zona, Sector o Barrio">
+									<div class="clear"></div>
+									<button class="btn btn-default search-button" id="searchBtn" value="BUSCAR">BUSCAR</button>
+									<script type="text/javascript">
+										$('#searchBtn').click(function(e){						
+											e.preventDefault();
+											
+											sendOmnitureEventSearch($('#search-origin').val(),
+													$('#input-location','form#form-search-header').data('inputType'),
+													$('#select-mtiponegocio','form#form-search-header').val(),
+													$('#select-mtipoinmueble','form#form-search-header').val(),
+													$('#input-location','form#form-search-header').val());
+											
+											setTimeout(function(){ 
+												$('#form-search-header').submit();
+											}, 500);
+										});					
+									</script>										
+								</div>
+							</div>
+								<input type="hidden" name="sfh" id="sfh" value="1">
+							</form>
+							<div class="col-xs-12 enlace">
+								<a>Buscar código&gt;&gt;</a>
+							</div>
+						</div>
+						<!-- Fin busqueda avanzada moviles -->
+
+						<!-- Inicio busqueda codigo moviles -->
+						<div class="busqueda_codigo moviles" style="display: none;">
+							<form data-form-validate="" method="post" action="https://www.metrocuadrado.com/metrocuadrado-results/search/code" novalidate="novalidate" id="form-search-header-by-code">
+							<div class="col-xs-12">
+								<div class="input-group buscadorderecho">
+									<input class="form-control display_block" aria-label="" type="text" name="propertyId" id="propertyId" placeholder="Búsqueda por código">
+									<div class="clear"></div>
+									<button class="btn btn-default" id="btn_submit_search_header_by_code" value="BUSCAR">BUSCAR</button>
+									<script type="text/javascript">
+										$('#btn_submit_search_header_by_code').click(function(e){						
+											e.preventDefault();
+											
+											sendOmnitureEventSearch($('#search-origin').val(),"","Search-by-code","","");
+											
+											setTimeout(function(){ 
+												$('#form-search-header-by-code').submit();
+											}, 500);
+										});					
+									</script>									
+								</div>
+							</div>
+							</form>
+							<div class="col-xs-12 enlace">
+								<a>Búsqueda avanzada&gt;&gt;</a>
+							</div>
+						</div>
+						<!-- Fin busqueda codigo moviles -->
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+				
+		(function(h,o,t,j,a,r){
+	        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+	        h._hjSettings={hjid:966913,hjsv:6};
+	        a=o.getElementsByTagName('head')[0];
+	        r=o.createElement('script');r.async=1;
+	        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+	        a.appendChild(r);
+	    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+	</script>
+
+
+</div>
+		<script type="text/javascript" src="static/js/headerloader.js"></script>
+	</div>
+	<!--/Header-->
+	<!-- Inicio miga de pan -->
+	<div class="container hidden-xs">
+		<ol class="breadcrumb">
+			<li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+				<a href="https://www.metrocuadrado.com/" itemprop="url"> <span itemprop="title">Inicio</span></a>
+			</li>
+			<li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/calculadora-credito-hipotecario-vivienda" itemprop="url"><span itemprop="title">Calculadora de crédito para vivienda</span></a></li>
+		</ol>
+	</div>
+	<!-- Fin miga de pan -->
+
+	<!--Supermercado Financiero-->
+	<input type="hidden" id="urlamount">
+	<input type="hidden" id="urldate">
+	<input type="hidden" id="urltype">
+	<input type="hidden" id="urlpropertyId">
+	<input type="hidden" id="urlpropertyTypeId">
+	<input type="hidden" id="urlbusinessTypeId">
+	<input type="hidden" id="urlpropertyPrice">
+	<div class="container supermercado_financiero">
+		<div class="row">
+			<div class="col-xs-12">
+				<h1 data-gtm-item="title">Calculadora de Crédito para
+					vivienda</h1>
+				<p class="texto_inicial ng-binding">En nuestro simulador de crédito
+					puedes calcular cuánto te puede prestar un banco para la
+					compra de tu apartamento o casa, de acuerdo a tus ingresos
+					mensuales, también puedes calcular el valor de la cuota
+					mensual de tu crédito de vivienda. </p>
+			</div>
+		</div>
+		<div class="col-xs-12">
+			<div class="tabcordion tabbable">
+				<ul class="nav nav-tabs">
+					<li class="active opcion_credito" data-gtm-item="sub-title"><a class="verprestamo" data-target=".prestamo" data-gtm-click="17a" data-toggle="tab" aria-controls="calcredit Calcula cuanto te prestan">Calcula
+							cuánto te prestan </a></li>
+					<li class="opcion_cuotas" data-gtm-item="sub-title"><a class="vercuotas" data-gtm-click="17a" data-target=".valorCuotas" data-toggle="tab" aria-controls="calcredit Calcula el valor de las cuotas">Calcula el valor de las
+							cuotas </a></li>
+				</ul>
+				<div class="tab-content">
+					<!-- Inicio contenido Calcule cuánto le prestan -->
+					<div class="prestamo active in tab-pane ng-scope" ng-controller="MonthlyIncomeCtrl">
+						<!-- Inicio formulario crédito -->
+						<div class="col-md-5 col-sm-4 col-xs-12 formulario credito" ng-show="!showLoanInfo || (showLoanInfo &amp;&amp; !hasLowResWidth())">
+							<h2>Calcula cuánto te prestan</h2>
+							<form name="MonthlyIncomeForm" data-gtm-container="17b-2" class="ng-pristine ng-invalid ng-invalid-required ng-valid-max ng-valid-fraction ng-invalid-min">
+								<div class="form-group" ng-class="{'error': (MonthlyIncomeForm.monthlyIncome.$error.required &amp;&amp; MonthlyIncomeForm.monthlyIncome.$touched) || (!MonthlyIncomeForm.monthlyIncome.$error.required &amp;&amp; MonthlyIncomeForm.monthlyIncome.$invalid &amp;&amp; MonthlyIncomeForm.monthlyIncome.$touched)}">
+
+									<label class="valign required" for="ingresosMensuales"><h3>Ingresos
+											mensuales:</h3></label> <input name="monthlyIncome" data-gtm-item="income" ng-model="monthlyIncome" type="text" id="ingresosMensuales" class="form-control ingresos ng-pristine ng-untouched ng-isolate-scope ng-invalid ng-invalid-required ng-valid-max ng-valid-fraction ng-invalid-min" placeholder="" min="basicSalary.value" limit-to="9" currency-symbol="$" fraction="0" restrict-to="[0-9]" ng-currency="" required=""> <span class="m2-icon m2-icon-question">
+										<div>Los ingresos mensuales del grupo familiar o persona
+											que tomará el crédito</div>
+									</span>
+									<p class="validacion ingresos_mensuales ng-binding ng-hide" ng-show="!MonthlyIncomeForm.monthlyIncome.$error.required &amp;&amp; MonthlyIncomeForm.monthlyIncome.$invalid &amp;&amp; MonthlyIncomeForm.monthlyIncome.$touched">
+										Los ingresos deben ser mayores o iguales a $737,717.</p>
+									<p class="validacion ingresos_mensuales ng-hide" ng-show="MonthlyIncomeForm.monthlyIncome.$error.required &amp;&amp; MonthlyIncomeForm.monthlyIncome.$touched">
+										Por favor ingresar campo</p>
+									<div class="clear"></div>
+								</div>
+								<div class="form-group">
+									<label class="valign required" for="plazo"><h3>Plazo
+											en años:</h3></label> <select data-gtm-item="time" class="form-control arrowright ng-pristine ng-untouched ng-valid" ng-model="termInYears" ng-options="year.id as year.name for year in yearOptions"><option label="5 Años" value="number:5">5 Años</option><option label="10 Años" value="number:10">10 Años</option><option label="15 Años" value="number:15" selected="selected">15 Años</option><option label="20 Años" value="number:20">20 Años</option></select>
+									<div class="clear"></div>
+								</div>
+								<button type="button" class="btn btn-upload credito" ng-click="calculateByMonthlyIncome()" ng-disabled="MonthlyIncomeForm.$invalid" data-gtm-click="17b-2" disabled="disabled">
+									<h4>Calcular Crédito</h4>
+								</button>
+								<p></p>
+								<p style="text-align:justify;  font-size:9px;">* Con el diligenciamiento de este formulario, aceptas el envío de tus datos a la entidad que ofrece el servicio que estás cotizando, en su calidad de responsable. Lo anterior, conforme con la política de tratamiento de datos personales de M2. 
+								Cualquier reclamo o consulta relacionado con tus datos, podrá ser tramitado con dicha entidad, cuya información podrás encontrar incluida en el anuncio o podrás comunicarte con nosotros.</p>
+							</form>
+						</div>
+						<!-- Fin formulario crédito -->
+
+						<!-- Inicio imagen crédito -->
+						<div class="col-md-7 col-sm-8 col-xs-12 imagen credito" ng-show="!showLoanInfo">
+							<img srcset="static/img/supermercado_financiero_principal_movil.jpg 767w,
+                             static/img/supermercado_financiero_principal_1.jpg 990w,
+                             static/img/supermercado_financiero_principal_1.jpg 1200w" alt="Calculadora de crédito hipotecario para vivienda – Calcula cuánto te prestan" title="Simulador de crédito hipotecario – Calcula cuánto te prestan">
+							<div class="recuadro">
+								<h3>¿Deseas comprar vivienda?</h3>
+								<p>Encuentra las tasas de interés de los bancos y
+									conoce hasta cuánto te prestan</p>
+							</div>
+						</div>
+						<!-- Fin imagen crédito -->
+
+						<!-- Inicio resultados crédito -->
+						<div class="col-md-7 col-sm-8 col-xs-12 resultados credito ng-hide" ng-show="showLoanInfo">
+							<div class="datos_superior">
+								<dl>
+									<dt>
+										<span class="escritorio">Con un ingreso mensual de:</span><span class="movil">Ingreso mensual:</span>
+									</dt>
+									<dd class="ng-binding"></dd>
+								</dl>
+								<dl>
+									<dt>
+										<span class="escritorio">Un banco puede prestarte
+											hasta:</span><span class="movil">Préstamo hasta:</span>
+									</dt>
+									<dd class="ng-binding">
+										$ 0<span class="m2-icon m2-icon-question"><div>Este valor
+												se calcula de acuerdo a su capacidad de pago. Puede aplicar
+												a un crédito más alto si toma el
+												crédito en conjunto con otras personas de su grupo
+												familiar.</div></span>
+									</dd>
+								</dl>
+								<dl>
+									<dt>
+										<span class="escritorio">Debe tener una cuota inicial
+											mínima de:</span><span class="movil">Cuota inicial
+											mínima:</span>
+									</dt>
+									<dd class="ng-binding">
+										$ 0<span class="m2-icon m2-icon-question"><div>Los bancos
+												usualmente financian hasta el 70% del valor del inmueble.
+												Debes contar con el 30% restante para pagar la cuota
+												inicial.</div></span>
+									</dd>
+								</dl>
+								<dl>
+									<dt>
+										<span class="escritorio">Puede comprar un inmueble de:</span><span class="movil">Valor inmueble:</span>
+									</dt>
+									<dd class="valor ng-binding">$ 0</dd>
+								</dl>
+								<a ng-click="lowResRecalculate()">Volver a calcular</a>
+							</div>
+							<div class="col-xd-12 borde_left_tabla">
+								<table id="td-resul-calc">
+									<tbody><tr>
+										<th>Banco</th>
+										<th>Valor estimado del préstamo</th>
+										<th>Valor de la cuota mensual</th>
+										<th>Tasa de interés <br> (tasa E.A)
+										</th>
+										<th></th>
+									</tr>
+									<tr class="nth-child(even)">
+	                                <!--	<td colspan="5" class="lqn-main-container">
+	                                	<div class="lqn-bar-container">
+														<div class="lqn-bar-logo">
+															<img srcset="static/img/lo-que-necesito-logo.svg" alt="Lo Que Necesito"	title="Lo Que Necesito" />
+														</div>
+														<div class="lqn-bar-text"><p><span>Tramitamos en línea tu crédito hipotecario,</span> con tasas de interés desde 0,72% mensual</p></div>
+														<div class="lqn-bar-btn-container">
+															<a ng-click="omniture_event115()" class="lqn-bar-btn general-lightbox-trigger" data-lightbox="form-lqn">¡Tramitar crédito!</a>
+			                                            </div>
+												</div>
+										</td>  -->
+	                                </tr>
+									<!-- ngRepeat: bank in bankList -->
+								</tbody></table>
+
+								<!-- Inicio resultados mobile credito-->
+								<!-- ngRepeat: bank in bankList -->
+								<!-- final resultados mobile credito-->
+
+								<!-- Inicio label explicacion-->
+								<div class="lista_bancos">
+									<div class="row">
+										<div class="textos_legales">
+											<p>El cálculo realizado es bajo una tasa de
+												interés aproximada por lo cual el valor de la cuota
+												aquí mencionada es aproximada y no incluyen el valor
+												de seguros u otros conceptos. La aprobación del
+												crédito está sujeta a políticas
+												internas de cada una de las entidades financieras.</p>
+										</div>
+									</div>
+								</div>
+								<!-- Fin label explicacion-->
+
+							</div>
+						</div>
+						<!-- Fin resultados crédito -->
+						<div class="clear"></div>
+						<!-- Inicio lightbox contactar bancos -->
+						<div class="modal fade m2-gallery-modal" id="contactoBancosCalculadora1" role="dialog" aria-labelledby="modalLabel">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content contactar_bancos2">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span class="m2-icon m2-icon-cross"></span>
+										</button>
+										<h2 class="modal-title2" id="modalLabel">Solicitar
+											información al banco</h2>
+									</div>
+									<div class="imagen_modal">
+										<img ng-src="static/img/logo_defecto.jpg" src="static/img/logo_defecto.jpg">
+									</div>
+									<div class="modal-body" style="padding-top: 5px;">
+										<div class="col-xs-12">
+											<form name="contactForm" class="ng-pristine ng-invalid ng-invalid-required ng-valid-email ng-valid-pattern ng-valid-minlength">
+												<div class="form-group" ng-class="{'error': contactForm.userName.$invalid &amp;&amp; contactForm.userName.$touched}">
+													<p class="check-campos" for="Nombre">Es necesario
+														diligenciar todos los campos.</p>
+													<input type="text" class="form-control ingresos ng-pristine ng-untouched ng-invalid ng-invalid-required" name="userName" ng-model="userName" required="" placeholder="Nombre">
+													<p ng-show="contactForm.userName.$invalid &amp;&amp; contactForm.userName.$touched" class="validacion ng-hide">Por favor ingresar campo
+														válido</p>
+													<div class="clear"></div>
+												</div>
+												<div class="form-group" ng-class="{'error': contactForm.userId.$invalid &amp;&amp; contactForm.userId.$touched}">
+													<input type="text" class="form-control ingresos ng-pristine ng-untouched ng-valid" name="userId" ng-model="userId" min="0" restrict-to="[0-9]" placeholder="Cédula">
+													<p ng-show="contactForm.userId.$invalid &amp;&amp; contactForm.userId.$touched" class="validacion ng-hide">Por favor ingresar campo
+														válido</p>
+													<div class="clear"></div>
+												</div>
+												<div class="form-group" ng-class="{'error': contactForm.userEmail.$invalid &amp;&amp; contactForm.userEmail.$touched}">
+													<input type="email" ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/" class="form-control ingresos ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern" name="userEmail" ng-model="userEmail" required="" placeholder="Correo">
+													<p ng-show="contactForm.userEmail.$invalid &amp;&amp; contactForm.userEmail.$touched" class="validacion ng-hide">Por favor ingresar campo
+														válido</p>
+													<div class="clear"></div>
+												</div>
+												<div class="form-group" ng-class="{'error': contactForm.userPhoneNumber.$invalid &amp;&amp; contactForm.userPhoneNumber.$touched}">
+													<input type="text" class="form-control ingresos ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-minlength" name="userPhoneNumber" ng-model="userPhoneNumber" min="0" ng-minlength="7" restrict-to="[0-9]" required="" placeholder="Teléfono">
+													<p ng-show="contactForm.userPhoneNumber.$invalid &amp;&amp; contactForm.userPhoneNumber.$touched" class="validacion ng-hide">Por favor ingresar campo
+														válido</p>
+													<div class="clear"></div>
+												</div>
+												<div class="form-group" ng-class="{'error': contactForm.userCity.$invalid &amp;&amp; contactForm.userCity.$touched}">
+													<div class="ui-front">
+														<input id="tags" type="text" class="form-control ingresos ng-pristine ng-untouched ng-invalid ng-invalid-required ui-autocomplete-input" name="userCity" ng-model="userCity" required="" placeholder="Ciudad" autocomplete="off">
+													<ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul></div>
+													<p ng-show="contactForm.userCity.$invalid &amp;&amp; contactForm.userCity.$touched" class="validacion ng-hide">Por favor seleccionar ciudad</p>
+													<div class="clear"></div>
+												</div>
+												<div class="form-group" ng-class="{'error': contactForm.selectedOptions.$invalid &amp;&amp; contactForm.selectedOptions.$touched}">
+													<div class="checkbox">
+														<input type="checkbox" name="selectedOptions" ng-model="userAcceptedTerms" ng-checked="userAcceptedTerms" required="" class="ng-pristine ng-untouched ng-valid ng-valid-required"> <label>Acepto
+															<a target="_blank" href="/metrocuadrado-header/terminoscondiciones">políticas
+																y Términos </a> y <a target="_blank" href="/metrocuadrado-header/avisoprivacidad">Aviso de
+																Privacidad </a>
+														</label>
+													</div>
+													<p ng-show="contactForm.selectedOptions.$invalid &amp;&amp; contactForm.selectedOptions.$touched" class="validacion ng-hide" style="margin-top: -10px">Debes
+														aceptar antes de contactar a los bancos.</p>
+													<div class="clear"></div>
+												</div>
+												<button type="button" class="btn btn-default" data-dismiss="modal" ng-disabled="contactForm.$invalid || contactFormBanks " ng-click="sendContactInfo(bankSelected)" disabled="disabled">Contactar
+												</button>
+											</form>
+										</div>
+										<div class="clear"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin lightbox contactar bancos -->
+						<!-- Inicio lightbox tabla de cuotas -->
+						<div class="modal fade m2-gallery-modal" id="TablaCuotas1" role="dialog" aria-labelledby="modalLabel" tabindex="-1">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content contactar_bancos tabla_cuotas">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span class="m2-icon m2-icon-cross"></span>
+										</button>
+										<h3 class="modal-title" id="modalLabel">Cuotas del
+											crédito</h3>
+									</div>
+									<div class="modal-body">
+										<p>
+											Para un préstamo de<span class="valor_result ng-binding">$0.00 
+										</span></p>
+										<p>
+											Con un plazo de<span class="valor_result ng-binding">0
+												meses 
+										</span></p>
+										<p>
+											Con ingresos mensuales de<span class="valor_result ng-binding"> 
+										</span></p>
+										<div class="tabla">
+											<table class="table table-striped">
+												<thead>
+													<tr>
+														<th>No. Cuota</th>
+														<th>Cuota mensual <br> sin seguro
+														</th>
+														<th>Abono a interés</th>
+														<th>Abono a capital</th>
+														<th>Saldo</th>
+													</tr>
+												</thead>
+												<tbody>
+													<!-- ngRepeat: data in tableQuotas[0] -->
+												</tbody>
+											</table>
+										</div>
+										<div class="clear"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin lightbox tabla de cuotas -->
+					</div>
+					<!-- Fin contenido Calcule cuánto le prestan -->
+
+					<!-- Inicio contenido Calcule el valor de las cuotas -->
+					<div class="valorCuotas tab-pane ng-scope" ng-controller="CalculateLoanCtrl">
+
+						<!-- Inicio formulario cuotas -->
+						<div class="col-md-5 col-sm-4 col-xs-12 formulario cuotas" ng-show="!showLoanInfoByQuota || (showLoanInfoByQuota &amp;&amp; !hasLowResWidth())">
+							<h2>Calcula el valor de las cuotas</h2>
+							<form name="CalculateLoanForm" data-gtm-container="17b-1" class="ng-pristine ng-invalid ng-invalid-required ng-valid-max ng-valid-fraction ng-invalid-min">
+								<div class="form-group" ng-class="{'error': (CalculateLoanForm.loadAmount.$error.required &amp;&amp; CalculateLoanForm.loadAmount.$touched) || (!CalculateLoanForm.loadAmount.$error.required &amp;&amp; CalculateLoanForm.loadAmount.$invalid &amp;&amp; CalculateLoanForm.loadAmount.$touched)}">
+									<label class="valign required" for="ingresosMensuales"><h3>Valor
+											del crédito:</h3></label> <input name="loadAmount" ng-model="loadAmount" type="text" class="form-control ng-pristine ng-untouched ng-isolate-scope ng-invalid ng-invalid-required ng-valid-max ng-valid-fraction ng-invalid-min" placeholder="" min="minLoadAmount.value" limit-to="10" restrict-to="[0-9]" currency-symbol="$" fraction="0" ng-currency="" required="" data-gtm-item="load">
+									<p class="validacion ng-binding ng-hide" ng-show="!CalculateLoanForm.loadAmount.$error.required &amp;&amp; CalculateLoanForm.loadAmount.$invalid &amp;&amp; CalculateLoanForm.loadAmount.$touched">
+										El valor del crédito debe ser mayor o igual a $15,000,000.</p>
+									<p class="validacion ng-hide" ng-show="CalculateLoanForm.loadAmount.$error.required &amp;&amp; CalculateLoanForm.loadAmount.$touched">
+										Por favor ingresar campo</p>
+									<div class="clear"></div>
+								</div>
+								<div class="form-group">
+									<label class="valign required" for="plazo"><h3>Plazo
+											en años:</h3></label> <select class="form-control arrowright ng-pristine ng-untouched ng-valid" data-gtm-item="time" ng-model="termInYearsByQuota" ng-options="year.id as year.name for year in yearOptions"><option label="5 Años" value="number:5">5 Años</option><option label="10 Años" value="number:10">10 Años</option><option label="15 Años" value="number:15" selected="selected">15 Años</option><option label="20 Años" value="number:20">20 Años</option></select>
+									<div class="clear"></div>
+								</div>
+								<button type="button" class="btn btn-upload cuotas" ng-click="calculateByQuota()" ng-disabled="CalculateLoanForm.$invalid" disabled="disabled">
+									<h4 data-gtm-click="17b-1">Calcular Cuotas</h4>
+								</button>
+								<p></p>
+								<p style="text-align:justify;  font-size:9px;">* Con el diligenciamiento de este formulario, aceptas el envío de tus datos a la entidad que ofrece el servicio que estás cotizando, en su calidad de responsable. Lo anterior, conforme con la política de tratamiento de datos personales de M2. 
+								Cualquier reclamo o consulta relacionado con tus datos, podrá ser tramitado con dicha entidad, cuya información podrás encontrar en incluida en el anuncio o podrás comunicarte con nosotros.</p>
+							</form>
+						</div>
+						<!-- Fin formulario cuotas -->
+
+						<!-- Inicio imagen cuotas -->
+						<div class="col-md-7 col-sm-8 col-xs-12 imagen cuotas" ng-show="!showLoanInfoByQuota">
+							<img srcset="static/img/supermercado_financiero_principal_movil.jpg 767w,
+                             static/img/supermercado_financiero_principal_2.jpg 990w,
+                             static/img/supermercado_financiero_principal_2.jpg 1200w" alt="Calculadora de crédito hipotecario para vivienda – Calcula el valor de las cuotas" title="Simulador de crédito hipotecario – Calcula el valor de las cuotas">
+							<div class="recuadro">
+								<h3>¿Deseas comprar vivienda?</h3>
+								<p>Encuentra las tasas de interés de los bancos y el
+									valor de la cuota mensual</p>
+							</div>
+						</div>
+						<!-- Fin imagen cuotas -->
+
+						<!-- Inicio resultados cuotas -->
+						<div class="col-md-7 col-sm-8 col-xs-12 resultados cuotas ng-hide" ng-show="showLoanInfoByQuota">
+							<div class="datos_superior">
+								<dl>
+									<dt>
+										<span class="escritorio">Para obtener un crédito
+											de:</span><span class="movil">Crédito:</span>
+									</dt>
+									<dd class="ng-binding"></dd>
+								</dl>
+								<dl>
+									<dt>
+										<span class="escritorio">Debes tener ingresos mensuales
+											de:</span><span class="movil">Ingresos mensuales:</span>
+									</dt>
+									<dd class="ng-binding">
+										$ 0<span class="m2-icon m2-icon-question"><div>Es posible
+												justificar este valor tomando el crédito en conjunto
+												con otras personas de su grupo familiar.</div></span>
+									</dd>
+								</dl>
+								<dl>
+									<dt>
+										<span class="escritorio">Debes tener una cuota inicial
+											mínima de:</span><span class="movil">Cuota inicial
+											mínima:</span>
+									</dt>
+									<dd class="ng-binding">
+										<span class="m2-icon m2-icon-question"><div>Los bancos
+												solo pueden financiar hasta el 70% del valor del inmueble.
+												Debes contar con el 30% restante para la cuota inicial
+												(ahorros o cesantías).</div></span>
+									</dd>
+								</dl>
+								<dl>
+									<dt>
+										<span class="escritorio">Puedes comprar un inmueble de:</span><span class="movil">Valor inmueble:</span>
+									</dt>
+									<dd class="valor ng-binding">$ 0</dd>
+								</dl>
+								<a ng-click="lowResRecalculateByQuota()">Volver a calcular</a>
+							</div>
+							<div class="col-xd-12 borde_left_tabla">
+								<table id="td-resul-calc">
+									<tbody><tr>
+										<th>Banco</th>
+										<th>Valor de la cuota mensual</th>
+										<th>Valor estimado del préstamo</th>
+										<th>Tasa de interés <br> (tasa E.A)
+										</th>
+										<th></th>
+									</tr>
+									<tr class="nth-child(even)">
+	                                	<!--<td colspan="5" class="lqn-main-container">
+	                                	<div class="lqn-bar-container">
+														<div class="lqn-bar-logo">
+															<img srcset="static/img/lo-que-necesito-logo.svg" alt="Lo Que Necesito"	title="Lo Que Necesito" />
+														</div>
+														<div class="lqn-bar-text"><p><span>Tramitamos en línea tu crédito hipotecario,</span> con tasas de interés desde 0,72% mensual</p></div>
+														<div class="lqn-bar-btn-container">
+															<a ng-click="omniture_event115()" class="lqn-bar-btn general-lightbox-trigger" data-lightbox="form-lqn">¡Tramitar crédito!</a>
+			                                            </div>
+												</div>
+										</td> -->
+	                                </tr>
+									<!-- ngRepeat: bank in bankList -->
+								</tbody></table>
+
+								<!-- Inicio resultados mobile credito-->
+								<!-- ngRepeat: bank in bankList -->
+								<!-- final resultados mobile credito-->
+
+								<!-- Inicio label explicacion-->
+								<div class="lista_bancos">
+									<div class="row">
+										<div class="textos_legales">
+											<p>El cálculo realizado es bajo una tasa de
+												interés aproximada por lo cual el valor de la cuota
+												aquí mencionada es aproximada y no incluyen el valor
+												de seguros u otros conceptos. La aprobación del
+												crédito está sujeta a políticas
+												internas de cada una de las entidades financieras.</p>
+										</div>
+									</div>
+								</div>
+								<!-- Fin label explicacion-->
+							</div>
+						</div>
+						<!-- Fin resultados cuotas -->
+						<div class="clear"></div>
+						<!-- Inicio lightbox contactar bancos -->
+						<div class="modal fade m2-gallery-modal" id="contactoBancosCalculadora2" role="dialog" aria-labelledby="modalLabel">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content contactar_bancos2">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span class="m2-icon m2-icon-cross"></span>
+										</button>
+										<h2 class="modal-title2" id="modalLabel">Solicitar
+											información al banco</h2>
+									</div>
+									<div class="imagen_modal">
+										<img ng-src="static/img/logo_defecto.jpg" src="static/img/logo_defecto.jpg">
+									</div>
+									<div class="modal-body" style="padding-top: 5px;">
+										<div class="col-xs-12">
+											<form name="contactForm" class="ng-pristine ng-invalid ng-invalid-required ng-valid-email ng-valid-pattern ng-valid-minlength">
+												<div class="form-group" ng-class="{'error': contactForm.userName.$invalid &amp;&amp; contactForm.userName.$touched}">
+													<p class="check-campos" for="Nombre">Es necesario
+														diligenciar todos los campos.</p>
+													<input type="text" class="form-control ingresos ng-pristine ng-untouched ng-invalid ng-invalid-required" name="userName" ng-model="userName" required="" placeholder="Nombre">
+													<p ng-show="contactForm.userName.$invalid &amp;&amp; contactForm.userName.$touched" class="validacion ng-hide">Por favor ingresar campo
+														válido</p>
+													<div class="clear"></div>
+												</div>
+												<div class="form-group" ng-class="{'error': contactForm.userId.$invalid &amp;&amp; contactForm.userId.$touched}">
+													<input type="text" class="form-control ingresos ng-pristine ng-untouched ng-valid" name="userId" ng-model="userId" min="0" restrict-to="[0-9]" placeholder="Cédula">
+													<p ng-show="contactForm.userId.$invalid &amp;&amp; contactForm.userId.$touched" class="validacion ng-hide">Por favor ingresar campo
+														válido</p>
+													<div class="clear"></div>
+												</div>
+												<div class="form-group" ng-class="{'error': contactForm.userEmail.$invalid &amp;&amp; contactForm.userEmail.$touched}">
+													<input type="email" ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/" class="form-control ingresos ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern" name="userEmail" ng-model="userEmail" required="" placeholder="Correo">
+													<p ng-show="contactForm.userEmail.$invalid &amp;&amp; contactForm.userEmail.$touched" class="validacion ng-hide">Por favor ingresar campo
+														válido</p>
+													<div class="clear"></div>
+												</div>
+												<div class="form-group" ng-class="{'error': contactForm.userPhoneNumber.$invalid &amp;&amp; contactForm.userPhoneNumber.$touched}">
+													<input type="text" class="form-control ingresos ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-minlength" name="userPhoneNumber" ng-model="userPhoneNumber" min="0" ng-minlength="7" restrict-to="[0-9]" required="" placeholder="Teléfono">
+													<p ng-show="contactForm.userPhoneNumber.$invalid &amp;&amp; contactForm.userPhoneNumber.$touched" class="validacion ng-hide">Por favor ingresar campo
+														válido</p>
+													<div class="clear"></div>
+												</div>
+												<div class="form-group" ng-class="{'error': contactForm.userCity.$invalid &amp;&amp; contactForm.userCity.$touched}">
+													<div class="ui-front">
+														<input id="tags" type="text" class="form-control ingresos ng-pristine ng-untouched ng-valid ng-valid-required" name="userCity" ng-model="userCity" required="" placeholder="Ciudad">
+													</div>
+													<p ng-show="contactForm.userCity.$invalid &amp;&amp; contactForm.userCity.$touched" class="validacion ng-hide">Por favor seleccionar ciudad</p>
+													<div class="clear"></div>
+												</div>
+												<div class="form-group" ng-class="{'error': contactForm.selectedOptions.$invalid &amp;&amp; contactForm.selectedOptions.$touched}">
+													<div class="checkbox">
+														<input type="checkbox" name="selectedOptions" ng-model="userAcceptedTerms" ng-checked="userAcceptedTerms" required="" class="ng-pristine ng-untouched ng-valid ng-valid-required"> <label>Acepto
+															<a target="_blank" href="/metrocuadrado-header/terminoscondiciones">políticas
+																y Términos </a> y <a target="_blank" href="/metrocuadrado-header/avisoprivacidad">Aviso de
+																Privacidad </a>
+														</label>
+													</div>
+													<p ng-show="contactForm.selectedOptions.$invalid &amp;&amp; contactForm.selectedOptions.$touched" class="validacion ng-hide" style="margin-top: -10px">Debes
+														aceptar antes de contactar a los bancos.</p>
+													<div class="clear"></div>
+												</div>
+												<button type="button" class="btn btn-default" data-dismiss="modal" ng-disabled="contactForm.$invalid || contactFormBanks " ng-click="sendContactInfo(bankSelectedCuotas)" disabled="disabled">Contactar
+												</button>
+											</form>
+										</div>
+										<div class="clear"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+						<!-- Fin lightbox contactar bancos -->
+						<!-- Inicio lightbox tabla de cuotas -->
+						<div class="modal fade m2-gallery-modal" id="TablaCuotas" role="dialog" aria-labelledby="modalLabel" tabindex="-1">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content contactar_bancos tabla_cuotas">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span class="m2-icon m2-icon-cross"></span>
+										</button>
+										<h3 class="modal-title" id="modalLabel">Cuotas del
+											crédito</h3>
+									</div>
+									<div class="modal-body">
+										<p>
+											Para un préstamo de<span class="valor_result ng-binding"> 
+										</span></p>
+										<p>
+											Con un plazo de<span class="valor_result ng-binding">
+												meses 
+										</span></p>
+										<p>
+											Con ingresos mensuales de<span class="valor_result ng-binding">$0.00 
+										</span></p>
+										<div class="tabla">
+											<table class="table table-striped">
+												<thead>
+													<tr>
+														<th>No. Cuota</th>
+														<th>Cuota mensual <br> sin seguro
+														</th>
+														<th>Abono a interés</th>
+														<th>Abono a capital</th>
+														<th>Saldo</th>
+													</tr>
+												</thead>
+												<tbody>
+													<!-- ngRepeat: data in tableQuotas[0] -->
+												</tbody>
+											</table>
+										</div>
+										<div class="clear"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin lightbox tabla de cuotas -->
+
+					</div>
+					<!-- Fin contenido Calcule el valor de las cuotas -->
+
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-12">
+			<p class="texto_inicial fuentes">
+				<i class="ng-binding">Fuente: Superintendencia Financiera de Colombia. Informe
+					tasas de interés activas. Crédito de vivienda. Tasas efectivas con
+					corte al 2021-07-26.
+					https://www.superfinanciera.gov.co/Superfinanciera-Tasas/generic/activeInterestRates.seam</i>
+			</p>
+		</div>
+	</div>
+
+<!--lightbox LQN-->
+	<div class="lightbox-lqn-container form-lqn" id="contactoLQN">
+		<div class="lightbox-lqn-wrapper">
+		<div class="close-container"><span class="label-text-icon">Inicia tu solicitud</span></div>
+		<div class="lightbox-lqn-content">
+			<div class="lightbox-content-half half-img-size">
+				<div class="half-img-container">
+					<div class="img-overlay"></div>
+					<img src="static/img/lqn-form-img.jpg" alt="" class="lightbox-lqn-background"> 
+				</div>
+				<div class="half-text-container">
+						<h3>Tramitamos tu crédito</h3>
+						<p class="main-description-text">Te ofrecemos la mejor experiencia para tramitar tu crédito de vivienda</p>
+						<p><span class="description-number">1.</span><span class="description-text">Llena el formulario e inicia a procesar tu crédito en línea</span></p>
+						<p><span class="description-number">2.</span><span class="description-text">¡Te diremos en línea que Bancos si te prestan!</span></p><p></p>
+						<p><span class="description-number">3.</span><span class="description-text">Recibe asesoría completa y sin costo por parte de un especialista del equipo de LQN</span></p>					
+				</div>
+			</div>
+			<div class="lightbox-content-half half-form-size">
+				<div class="form-main-container">
+					<div class="desktop-logo-space"></div>
+					<div class="form-container" id="form-containerLQN">  
+						<form name="contactFormLQN" id="contactFormLQN" class="ng-pristine ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength ng-valid-email ng-valid-pattern ng-valid-min ng-valid-max ng-valid-fraction">
+						
+							<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+    						<input type="hidden" name="action" value="validate_captcha">
+    						
+                            <div class="form-field-container" ng-class="{'error': contactFormLQN.userNameLQN.$invalid &amp;&amp; contactFormLQN.userNameLQN.$touched}">                                
+                                <label>Nombre y apellido</label>
+                                <input type="text" restrict-to="[a-zA-ZáéíóúÁÉÍÓÚÑñ ]" class="form-control ingresos ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength" name="userNameLQN" ng-model="userNameLQN" required="" ng-minlength="2" maxlength="150" placeholder="Nombre y apellido">
+                                <p ng-show="(contactFormLQN.$submitted &amp;&amp; contactFormLQN.userNameLQN.$error.required) ||  
+                                		(contactFormLQN.userNameLQN.$error.required &amp;&amp; contactFormLQN.userNameLQN.$touched)" class="validacion error-message ng-hide">Por favor ingresa tu nombre y apellido</p>
+                                <p ng-show="(contactFormLQN.$submitted &amp;&amp; !contactFormLQN.userNameLQN.$error.required &amp;&amp; contactFormLQN.userNameLQN.$invalid)
+                                || (!contactFormLQN.userNameLQN.$error.required &amp;&amp; contactFormLQN.userNameLQN.$invalid &amp;&amp; contactFormLQN.userNameLQN.$touched)" class="validacion error-message ng-hide">Por favor ingresa tu nombre y apellido válido</p>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="form-field-container" ng-class="{'error': contactFormLQN.userIdLQN.$invalid &amp;&amp; contactFormLQN.userIdLQN.$touched}">
+                                 <label>Número de cédula</label>
+                                <input type="text" class="form-control ingresos ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength" maxlength="11" name="userIdLQN" ng-model="userIdLQN" min="0" ng-minlength="5" restrict-to="[0-9]" required="" placeholder="Número de cédula">
+                                <p ng-show="(contactFormLQN.$submitted &amp;&amp; contactFormLQN.userIdLQN.$invalid)
+                                	|| (contactFormLQN.userIdLQN.$invalid &amp;&amp; contactFormLQN.userIdLQN.$touched)" class="validacion error-message ng-hide">Por favor ingresa un número válido</p>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="form-field-container" ng-class="{'error': contactFormLQN.userEmailLQN.$invalid &amp;&amp; contactFormLQN.userEmailLQN.$touched}">
+                                <label>Email</label>
+                                <input type="email" ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/" maxlength="90" class="form-control ingresos ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength" name="userEmailLQN" ng-minlength="5" ng-model="userEmailLQN" required="" placeholder="Email">
+                                <p ng-show="(contactFormLQN.$submitted &amp;&amp; contactFormLQN.userEmailLQN.$invalid)
+                                	|| (contactFormLQN.userEmailLQN.$invalid &amp;&amp; contactFormLQN.userEmailLQN.$touched)" class="validacion error-message ng-hide">Por favor ingresar email
+                                    válido</p>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="form-field-container half" ng-class="{'error': contactFormLQN.userPhoneNumberLQN.$invalid &amp;&amp; contactFormLQN.userPhoneNumberLQN.$touched}">
+                                <label>Teléfono</label>
+                                <input type="text" class="form-control ingresos ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength" maxlength="10" name="userPhoneNumberLQN" ng-model="userPhoneNumberLQN" min="0" ng-minlength="7" restrict-to="[0-9]" required="" placeholder="Teléfono">
+                                <p ng-show="(contactFormLQN.$submitted &amp;&amp; contactFormLQN.userPhoneNumberLQN.$invalid)
+                                	|| (contactFormLQN.userPhoneNumberLQN.$invalid &amp;&amp; contactFormLQN.userPhoneNumberLQN.$touched)" class="validacion error-message ng-hide">Por favor ingresa un número
+                                    válido</p>
+                                <div class="clear"></div>
+                            </div>                            
+							<div class="form-field-container half" ng-class="{'error': contactFormLQN.userCityLQN.$invalid &amp;&amp; contactFormLQN.userCityLQN.$touched}">
+								<label>Ciudad</label>
+								<div class="contenedor-select">
+									<div class="select-appearance select-appearance-general">
+										<p></p>
+										<div class="arrow-select-container"><span class="icon-f0053-chevron-down"></span></div>
+									</div>
+	                                <select data-gtm-item="time" name="userCityLQN" ng-model="userCityLQN" required="" id="select-userCityLQN" ng-options="city.slug as city.name for city in cityOptions" class="ng-pristine ng-untouched ng-invalid ng-invalid-required"><option value="?" selected="selected"></option><option label="Bogotá" value="string:Bogota">Bogotá</option><option label="Medellín" value="string:Medellin">Medellín</option><option label="Cali" value="string:Cali">Cali</option><option label="Barranquilla" value="string:Barranquilla">Barranquilla</option><option label="Bucaramanga" value="string:Bucaramanga">Bucaramanga</option><option label="Cartagena" value="string:Cartagena">Cartagena</option><option label="Otra" value="string:Otra">Otra</option></select>
+                                </div>
+                                <p ng-show="(contactFormLQN.$submitted &amp;&amp; contactFormLQN.userCityLQN.$invalid)
+                                	|| (contactFormLQN.userCityLQN.$invalid &amp;&amp; contactFormLQN.userCityLQN.$touched)" class="validacion error-message ng-hide">Por favor ingresa la ciudad</p>
+                                <div class="clear"></div>
+							</div>
+							
+							<div class="form-field-container half" ng-class="{'error': (contactFormLQN.loadAmountLQN.$error.required &amp;&amp; contactFormLQN.loadAmountLQN.$touched) || (!contactFormLQN.loadAmountLQN.$error.required &amp;&amp; contactFormLQN.loadAmountLQN.$invalid &amp;&amp; contactFormLQN.loadAmountLQN.$touched)}">
+                                <label>Valor del Inmueble</label>
+                                <input name="loadAmountLQN" ng-model="loadAmountLQN" type="text" class="form-control ng-pristine ng-untouched ng-isolate-scope ng-invalid ng-invalid-required ng-valid-min ng-valid-max ng-valid-fraction" placeholder="" min="minLoadAmount.value" limit-to="10" restrict-to="[0-9]" currency-symbol="$" fraction="0" ng-currency="" required="" data-gtm-item="load">
+                                <p class="validacion error-message ng-binding ng-hide" ng-show="(contactFormLQN.$submitted &amp;&amp; !contactFormLQN.loadAmountLQN.$error.required &amp;&amp; contactFormLQN.loadAmountLQN.$invalid)
+                                   || (!contactFormLQN.loadAmountLQN.$error.required &amp;&amp; contactFormLQN.loadAmountLQN.$invalid &amp;&amp; contactFormLQN.loadAmountLQN.$touched)">
+                                    El
+                                    valor del Inmueble debe ser mayor o igual a $15,000,000.</p>
+                                <p class="validacion error-message ng-hide" ng-show="(contactFormLQN.$submitted &amp;&amp; contactFormLQN.loadAmountLQN.$error.required)
+                                   	|| (contactFormLQN.loadAmountLQN.$error.required &amp;&amp; contactFormLQN.loadAmountLQN.$touched)">
+                                    Por favor ingresa un numero valido</p>
+                                <div class="clear"></div>
+                            </div>
+							
+							<div class="form-field-container half" ng-class="{'error': (contactFormLQN.creditAmountLQN.$error.required &amp;&amp; contactFormLQN.creditAmountLQN.$touched) || (!contactFormLQN.loadAmountLQN.$error.required &amp;&amp; contactFormLQN.loadAmountLQN.$invalid &amp;&amp; contactFormLQN.loadAmountLQN.$touched)}">
+									<label>Valor del crédito</label>
+									<input name="creditAmountLQN" ng-model="creditAmountLQN" type="text" class="form-control ng-pristine ng-untouched ng-isolate-scope ng-invalid ng-invalid-required ng-valid-min ng-valid-max ng-valid-fraction" placeholder="" limit-to="10" restrict-to="[0-9]" currency-symbol="$" fraction="0" ng-currency="" required="" data-gtm-item="load">
+                                <p class="validacion error-message ng-binding ng-hide" ng-show="(contactFormLQN.$submitted &amp;&amp; !contactFormLQN.creditAmountLQN.$error.required &amp;&amp; contactFormLQN.creditAmountLQN.$invalid)
+                                   	|| (!contactFormLQN.creditAmountLQN.$error.required &amp;&amp; contactFormLQN.creditAmountLQN.$invalid &amp;&amp; contactFormLQN.creditAmountLQN.$touched)">
+                                    El
+                                    valor del crédito debe ser mayor o igual a $15,000,000.</p>
+                                <p class="validacion error-message ng-hide" ng-show="(contactFormLQN.$submitted &amp;&amp; contactFormLQN.creditAmountLQN.$error.required)
+                                   	|| (contactFormLQN.creditAmountLQN.$error.required &amp;&amp; contactFormLQN.creditAmountLQN.$touched)">
+                                    Por favor ingresa un numero valido</p>
+                                 <p class="validacion error-message ng-binding ng-hide" ng-show="validateCreditLQN()">
+                                    El valor del crédito no puede superar el 100% del valor del inmueble</p>
+                                <div class="clear"></div>
+							</div>
+							
+							<div class="form-field-container half lqn-year-select">
+                                <label>Plazo en años</label>
+                                <div class="contenedor-select">
+                                	<div class="select-appearance select-appearance-general">
+											<p ng-bind="termInYearsLQN_P" class="ng-binding"></p>
+										<div class="arrow-select-container"><span class="icon-f0053-chevron-down"></span></div>
+									</div>
+	                                <select data-gtm-item="time" ng-model="termInYearsLQN" id="select-termInYearsLQN" ng-options="year.id as year.name for year in yearOptions" class="ng-pristine ng-untouched ng-valid"><option value="?" selected="selected"></option><option label="5 Años" value="number:5">5 Años</option><option label="10 Años" value="number:10">10 Años</option><option label="15 Años" value="number:15">15 Años</option><option label="20 Años" value="number:20">20 Años</option></select>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+							<div class="form-field-container">
+								<div ng-class="{'error': contactFormLQN.selectedOptionsLQN.$invalid &amp;&amp; contactFormLQN.selectedOptionsLQN.$touched}" class="check-condiciones">
+									<label for="defaultCheck1"> 
+										<input type="checkbox" id="defaultCheck1" name="selectedOptionsLQN" ng-model="userAcceptedTermsLQN" checked="checked" ng-checked="userAcceptedTermsLQN" required="" class="ng-pristine ng-untouched ng-valid ng-valid-required">
+										<p class="form-terms">Acepto <a target="_blank" class="link" href="/metrocuadrado-header/terminoscondiciones">políticas y términos -</a> 
+										<a target="_blank" class="link" href="/metrocuadrado-header/avisoprivacidad">Aviso de privacidad </a></p>
+									</label>
+								</div>
+								<p ng-show="(contactFormLQN.$submitted &amp;&amp; contactFormLQN.selectedOptionsLQN.$invalid)
+									|| (contactFormLQN.selectedOptionsLQN.$invalid &amp;&amp; contactFormLQN.selectedOptionsLQN.$touched)" class="validacion checkbox-validate error-message ng-hide">Debes aceptar
+								antes de iniciar el trámite.</p>
+								<div class="clear"></div>
+							</div>
+							<div class="lqn-btns-container">							
+								<button class="orange-btn" type="submit" ng-click="sendContacFormLQN()">Iniciar el trámite</button>
+							</div>
+							<div style="width: 100%;margin: 0px auto auto;float: left;"> <p style="font-size: 10px;color: red;font-family: bold;">			
+								“Recuerda que el trámite de tu crédito lo hará directamente LQN. Al ingresar tus datos, aceptas que los tratemos de acuerdo con nuestra política de tratamiento de datos personales y se los enviemos a LQN para que te contacte”</p>
+							</div>
+						</form>
+					</div>
+					<div class="form-lqn-logo-container">
+						<p class="lqn-label-logo">En alianza con:</p>
+						<img srcset="static/img/lo-que-necesito-logo.svg" alt="Lo Que Necesito" title="Lo Que Necesito">
+					</div>
+					<div class="success-container">
+						<p class="success-icon"><span class="icon-f0062-circle-check"></span></p>
+						<p class="success-text">
+							Tu solicitud de crédito <span>se envió con éxito.</span>
+						</p>
+					</div>
+					<div class="fail-container">
+						<p class="fail-icon"><span class="icon-f0042-lightbox-close"></span></p>
+						<p class="success-text">
+							Tu solicitud de crédito <span>no se pudo tramitar. Intente mas tarde</span>
+						</p>
+					</div>
+			     </div>
+			</div>			
+		</div>
+	</div>
+</div> 
+<div class="general-lightbox white-lightbox-mobile">
+      <div class="general-lightbox-overlay"></div>
+      <div class="general-lightbox-container">
+        <div class="general-lightbox-wrapper">
+          <div class="general-lightbox-close"><span class="lightbox-close-icon icon-f0042-lightbox-close"></span></div>
+          <div class="general-lightbox-content"></div>
+        </div>
+      </div>
+</div>
+<!--Fin Lightbox LQN-->
+
+	<!-- Inicio lightbox mensaje confirmación contacto -->
+	<div class="modal fade m2-gallery-modal" id="ConfirmacionContacto" role="dialog" aria-labelledby="modalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content contactar_bancos2 confirmacion">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span class="m2-icon m2-icon-cross"></span>
+					</button>
+					<h2 class="modal-title2" id="modalLabel">Solicitar
+						información al banco</h2>
+					<div class="imagen_modal">
+						<img id="imageConfirmation">
+					</div>
+				</div>
+				<div class="modal-body2">
+					<h2 class="modal-title3" id="modalLabel">Mensaje Enviado</h2>
+					<p>El banco se pondrá en contacto con usted en los
+						siguientes días.</p>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Fin lightbox mensaje confirmación contacto -->
+	<!--/Supermercado Financiero-->
+
+	<!--Footer-->
+	<div id="nuevofooter">
+		<script type="text/javascript" src="static/js/newfooterloader.js"></script>
+
+		<div class="prefooter_opciones tabcordion tabbable">
+			<div id="prefooter" class="tab-pane">
+
+	
+		<div class="m_real_estate_list">
+			<div class="wrapper">
+				<h2 id="prefooter_title" class="title"></h2>
+			</div>
+		</div>
+	
+	<script type="text/javascript" src="static/js/prefooterloader.js"></script>
+</div>
+			<div class="clear"></div>
+		</div>
+		<div id="footer"><!--Inicio bloque prefooter drupal-->
+<hr class="separator">
+<div class="contact-bottom">
+	<div class="container footer_2">
+		<div class="row">
+			<div class="col-xs-12 col-md-2">
+				<img class="img-responsive" src="/estatico/metrocuadrado-personal-posting/img/logo-gray.png">
+			</div>
+			<div class="col-xs-10">
+				<div class="row">
+					<div class="col-xs-12 col-md-3">
+						<h2>Oficinas Metrocuadrado</h2>
+						<p>
+							Avenida de calle 26 No. 68B-70<br> Casa Editorial El Tiempo.
+							Bogotá.<br>Colombia.<br> (571)425 1734.
+						</p>
+					</div>
+					<div class="col-xs-12 col-md-3">
+						<h2>Línea Nacional:</h2>
+						<p>01 8000 115 252</p>
+						<div>
+							<a style="background-image:url('/estatico/metrocuadrado-detail/images/icons/png/contact-icon.png');background-repeat: no-repeat;padding-left: 32px;padding-bottom: 5px;" href="/metrocuadrado-header/contactenos">Contáctanos</a>
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-6 redessociales">
+						<h2>Síguenos en</h2>
+						<ul>
+							<li class="row_tw"><a class="a_tw" href="https://twitter.com/metrocuadrado" target="_blank"><span class="sm_tw">Tweeter</span></a></li>
+							<li class="row_fb"><a class="a_fb" href="http://www.facebook.com/metrocuadradocom" target="_blank"><span class="sm_fb">Facebook</span></a></li>
+							<li class="row_go"><a class="a_go" href="https://www.instagram.com/metrocuadradooficial/?utm_source=ig_profile_share&amp;igshid=1srxatoub206l" target="_blank"><span class="sm_go">Instagram</span></a></li>
+							<li class="row_yt"><a class="a_yt" href="https://www.youtube.com/user/METROCUADRADOcom" target="_blank"><span class="sm_yt">You Tube</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- / .contact-bottom -->
+<!--Fin bloque prefooter drupal-->
+<footer>
+	<!--Corrección drupal - Se omite footer ya que entra en conflicto con drupal. se reemplaza por div con clase container-footer -->
+	<!--Inicio bloque footer drupal-->
+	<div class="container-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 ">
+					<ul class="menu">
+
+						<li class="row_pol"><a class="a_poly" rel="nofollow" href="/metrocuadrado-header/terminoscondiciones" target="_blank">Política	y términos</a></li>
+						<li class="row_priv"><a class="a_priv" rel="nofollow" href="/metrocuadrado-header/avisoprivacidad" target="_blank">Aviso de privacidad</a></li>
+						<li class="row_nav"><a class="a_nav" rel="nofollow" href="/metrocuadrado-header/politicaCookies" target="_blank">Política Datos de Navegación</a></li>
+						<li class="row_et"><a class="a_et" href="https://www.ceet.co/linea-etica" target="_blank">Línea Ética</a></li>
+
+						<li class="row_qr"><a class="a_qr" rel="nofollow" href="/metrocuadrado-header/contactenos?tipoContacto=quejasYReclamos" target="_blank">Quejas y reclamos</a></li>
+						<li class="row_ay"><a class="a_ay" rel="nofollow" href="/metrocuadrado-header/ayuda" target="_blank">Ayuda</a></li>
+						<li><a href="https://www.ceet.co/" target="_blank">Paute con nosotros</a></li>
+						<li><a href="https://www.ceet.co/solicitud-reversion-de-pago" target="_blank">Reversión de pago</a></li>
+					</ul>
+					<!-- / .menu -->
+				</div>
+				<div class="aliados col-xs-12">
+					<h3>Nuestros portales especializados</h3>
+					<ul>
+						
+						<li class="row_emp"><a class="a_emp" href="http://www.elempleo.com/colombia/trabajo/ofertas.aspx" target="blank"> <img class="img_emp" src="/estatico/metrocuadrado-detail/images/icons/png/pt_job.png" width="86" height="19" alt=""></a></li>
+						<li class="row_car"><a class="a_car" href="http://www.carroya.com/" target="blank"> <img class="img_car" src="/estatico/metrocuadrado-detail/images/icons/png/pt_motor.png" width="124" height="17" alt=""></a></li>
+						<li class="row_gui"><a class="a_gui" href="http://www.guiaacademica.com/" target="blank">
+								<img class="img_gui" src="/estatico/metrocuadrado-detail/images/icons/png/pt_studies.png" width="159" height="19" alt="">
+						</a></li>
+						
+					</ul>
+				</div>
+			</div>
+			<div class="legal text-center">
+				<a href="http://www.eltiempo.com/" target="blank"> <img src="/estatico/metrocuadrado-personal-posting/img/logo-orange.png"></a>
+				<div class="info-logo-superint">
+					<p class="info">
+						Copyright © <span id="copyright-year">2021</span>
+						Metrocuadrado.com. Usar este site implica que aceptas nuestras
+						<a class="a_term" href="/metrocuadrado-header/terminoscondiciones" target="_blank"> Políticas y Términos</a> |
+						<a class="a_avi" href="/metrocuadrado-header/avisoprivacidad" target="_blank"> Aviso de Privacidad</a> |
+						<a class="a_pol" href="/metrocuadrado-header/politicaCookies" target="_blank"> Política datos de Navegación</a>
+						<br> Prohibida su reproducción total o
+						parcial, así como su traducción a cualquier idioma sin autorización
+						escrita de su titular.
+					</p>
+					<a href="http://www.sic.gov.co/" target="blank"><img src="/estatico/metrocuadrado-header-resources/images/icons/png/logo_super_industria_comercio.png" alt="Logo - Superintendencia de Industria y comercio">
+					</a>
+				</div>
+				<br> <a data-toggle="collapse" href="#footer_down" class="footer_down_section" aria-expanded="false" aria-controls="footer_down"> Conoce nuestra red de portales<br></a>
+				<div class="collapse" id="footer_down">
+					<ul class="col-xs-12 col-md-4">
+						<li class="row_port"><a class="a_port" href="http://www.portafolio.co/" target="blank">PORTAFOLIO.CO
+								- </a> Noticias de Economía</li>
+						<li class="row_viv"><a class="a_viv" href="http://vive.in/" target="blank">VIVE.IN
+						        - </a> Planes en Bogotá</li>
+						<li class="row_fut"><a class="a_fut" href="http://www.futbolred.com/" target="blank">FUTBOLRED.COM
+								- </a> Fútbol colombiano</li>
+						<li class="row_carr"><a class="a_carr" href="http://www.carroya.com/" target="blank">CARROYA.COM
+								- </a> Venta de carros</li>
+						<li class="row_rev"><a class="a_rev" href="http://www.revistadonjuan.com/" target="blank">REVISTADONJUAN.COM
+								- </a> Fotos de mujeres</li>
+					</ul>
+					<ul class="col-xs-12 col-md-4">
+						<li class="row_abc"><a class="a_abc" href="http://www.abcdelbebe.com/" target="blank">ABCDELBEBÉ.COM
+								- </a> Embarazo</li>
+						<li class="row_mot"><a class="a_mot" href="http://www.eltiempo.com/revista-motor" target="blank">MOTOR.COM.CO
+								- </a> Carros y motos</li>
+						<li class="row_adn"><a class="a_adn" href="http://diarioadn.co/" target="blank">DIARIOADN.CO
+								- </a> Noticias de Bogotá</li>
+						<li class="row_aca"><a class="a_aca" href="http://www.guiaacademica.com/" target="blank">GUIA
+								ACADEMICA.COM - </a> Educación</li>
+						<li class="row_alo"><a class="a_alo" href="http://alo.co/" target="blank">ALO.CO - </a>
+							Consejos para mujeres</li>
+					</ul>
+					<ul class="col-xs-12 col-md-4">
+						<li class="row_empl"><a class="a_empl" href="http://www.elempleo.com/colombia/trabajo/ofertas.aspx" target="blank">ELEMPLEO.COM - </a> Clasificados de trabajo</li>
+						<li class="row_circ"><a class="a_circ" href="http://www.circulodelectores.com.co/" target="blank">CÍRCULODELECTORES.COM.CO - </a> Venta de
+							libros</li>
+						<li class="row_clasi"><a class="a_clasi" href="https://clasificados.eltiempo.com/" target="blank">CLASIFICADOS.ELTIEMPO.COM - </a> Clasificados</li>
+						<li class="row_city"><a class="a_city" href="http://www.citytv.com.co/" target="blank">CITYTV.COM.CO
+								- </a> Videos de entrenimiento</li>
+						<li class="row_tiem"><a class="a_tiem" href="http://www.eltiempo.com/" target="blank">ELTIEMPO.COM
+								- </a> Portal de noticias</li>
+					</ul>
+					<div class="clear "></div>
+				</div>
+			</div>
+			<!-- / .legal -->
+		</div>
+		<!-- / .container -->
+	</div>
+</footer>
+<!-- / footer -->
+
+<script>
+	$(function() {
+		getCopyRightYear();
+		$('.tabcordion').tabcordion();
+	});
+
+	function getCopyRightYear(){
+			  var today = new Date();
+			  var year = today.getFullYear();
+			  document.getElementById("copyright-year").innerHTML = year;
+	}
+</script>
+<!--Fin bloque footer drupal-->
+
+<!-- Imágenes responsive -->
+<script>
+	// Picture element HTML5 shiv
+	document.createElement("picture");
+</script>
+<script src="static/js/picturefill.min.js" async=""></script></div>
+	</div>
+	<!--/Footer-->
+	<input type="hidden" id="applicationBaseUrl" value="https://www.metrocuadrado.com/calculadora-credito-hipotecario-vivienda/">
+
+	<input type="hidden" id="homeBaseUrl" value="https://www.metrocuadrado.com/metrocuadrado-home/">
+
+	<input type="hidden" id="saveContactUrl" value="https://www.metrocuadrado.com/detail/save/dynamicContact">
+
+	<input type="hidden" id="reCaptchaSiteKey" value="6LefV6UUAAAAAHd6BLtB6D9L4iwVjiD8fXYg5tVn">
+
+	<!--App-->
+	<script src="static/js/finance.js"></script>
+	<script src="/estatico/metrocuadrado-header-resources/js/s_code.js"></script>
+	<script src="static/js/angular/app.js"></script>
+	<script src="static/js/angular/calculator1.ctrl.js"></script>
+	<script src="static/js/angular/calculator2.ctrl.js"></script>
+	<script src="static/js/angular/directives.js"></script>
+	<script src="static/js/angular/variables.svc.js"></script>
+	<script src="static/js/angular/calculator.svc.js"></script>
+	<script src="static/js/angular/utils.svc.js"></script>
+<script async="" type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&amp;ns=1&amp;cb=572659923"></script>
+
+
+<div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><noscript><iframe height="0" width="0" src="https://www.googletagmanager.com/ns.html?id=GTM-WTMXDZ" style="display: none;"></iframe></noscript><div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; display: block; transition: right 0.3s ease 0s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"><iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LefV6UUAAAAAHd6BLtB6D9L4iwVjiD8fXYg5tVn&amp;co=aHR0cHM6Ly93d3cubWV0cm9jdWFkcmFkby5jb206NDQz&amp;hl=es&amp;v=Iwg4ANhK7Iu8SHToSsE0E20K&amp;size=invisible&amp;cb=ghekwyexhc4e" width="256" height="60" role="presentation" name="a-um7g4gxnzug3" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div></div><iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="https://vars.hotjar.com/box-dfc01efbdc94bb0936d9a35a502b0b64.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe></body></html>

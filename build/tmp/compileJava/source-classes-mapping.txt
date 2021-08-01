@@ -1,12 +1,20 @@
+co/com/metrocuadrado/steps/CalculadoraCreditoViviendaStep.java
+ co.com.metrocuadrado.steps.CalculadoraCreditoViviendaStep
+utilidades/Transformaciones.java
+ utilidades.Transformaciones
+co/com/metrocuadrado/definitions/CalculadoraCreditoViviendaDefinition.java
+ co.com.metrocuadrado.definitions.CalculadoraCreditoViviendaDefinition
+co/com/metrocuadrado/page/CalculadoraCreditoViviendaPage.java
+ co.com.metrocuadrado.page.CalculadoraCreditoViviendaPage
+co/com/metrocuadrado/definitions/CalculadoraCuotaCreditoDefinition.java
+ co.com.metrocuadrado.definitions.CalculadoraCuotaCreditoDefinition
+co/com/metrocuadrado/steps/CalculadoraCuotasCreditoStep.java
+ co.com.metrocuadrado.steps.CalculadoraCuotasCreditoStep
+co/com/metrocuadrado/page/CalculadoraCuotasCreditoPage.java
+ co.com.metrocuadrado.page.CalculadoraCuotasCreditoPage
 utilidades/constantes/FactoresCobro.java
  utilidades.constantes.FactoresCobro
-com.metrocuadrado/steps/CalculadoraCreditoViviendaStep.java
- com.metrocuadrado.steps.CalculadoraCreditoViviendaStep
-com.metrocuadrado/page/CalculadoraCreditoViviendaPage.java
- com.metrocuadrado.page.CalculadoraCreditoViviendaPage
 utilidades/CalculadoraCredito.java
  utilidades.CalculadoraCredito
-com.metrocuadrado/definitions/Prueba.java
- com.metrocuadrado.definitions.Prueba
-com.metrocuadrado/definitions/CalculadoraCreditoViviendaDefinition.java
- com.metrocuadrado.definitions.CalculadoraCreditoViviendaDefinition
+utilidades/CalculadoraCuotas.java
+ utilidades.CalculadoraCuotas

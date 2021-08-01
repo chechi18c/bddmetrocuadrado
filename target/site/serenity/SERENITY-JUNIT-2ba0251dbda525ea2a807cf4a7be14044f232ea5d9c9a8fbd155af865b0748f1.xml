@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="2" name="calcular opción para crédito de vivienda" skipped="0" tests="4" time="70.58" timestamp="2021-08-01 10:32:27"><testcase name="calcular monto máximo de préstamo de acuerdo a ingresos mensuales"><failure message="&#13;&#10;The following assertion failed:&#13;&#10;1) [El cálculo del valor de la cuota inicial no coincide con el esperado:] expected:&lt;13082787[4]&gt; but was:&lt;13082787[5]&gt;&#13;&#10;" type="java.lang.AssertionError">&#13;
+The following assertion failed:&#13;
+1) [El cálculo del valor de la cuota inicial no coincide con el esperado:] expected:&lt;13082787[4]&gt; but was:&lt;13082787[5]&gt;&#13;
+</failure><system-err>&#13;
+The following assertion failed:&#13;
+1) [El cálculo del valor de la cuota inicial no coincide con el esperado:] expected:&lt;13082787[4]&gt; but was:&lt;13082787[5]&gt;&#13;
+&#13;
+co.com.metrocuadrado.steps.CalculadoraCreditoViviendaStep.evaluarCaracteristicasCredito(CalculadoraCreditoViviendaStep.java:74)&#13;
+co.com.metrocuadrado.definitions.CalculadoraCreditoViviendaDefinition.evaluarValorCredito(CalculadoraCreditoViviendaDefinition.java:26)&#13;
+✽.obtendré el valor del crédito que mejor se adapte a mi capacidad de pago, segun mis ingresos(src/test/resources/features/calcular_credito_vivienda.feature:11)&#13;
+</system-err></testcase></testsuite>

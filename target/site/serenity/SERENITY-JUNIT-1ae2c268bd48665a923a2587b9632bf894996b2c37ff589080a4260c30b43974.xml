@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="4" name="calcular opción para crédito de vivienda" skipped="0" tests="4" time="52.05" timestamp="2021-07-21 08:24:17"><testcase name="calcular crédito de vivienda"><failure message="El cálculo del valor para el crédito hipotecario no es el esperado&#10;Expected: 1200&#10;     but: was &lt;56743764&gt;" type="java.lang.AssertionError">El cálculo del valor para el crédito hipotecario no es el esperado
-Expected: 1200
-     but: was &lt;56743764&gt;</failure><system-err>El cálculo del valor para el crédito hipotecario no es el esperado
-Expected: 1200
-     but: was &lt;56743764&gt;&#13;
-com.metrocuadrado.steps.CalculadoraCreditoViviendaStep.evaluarCreditoVivienda(CalculoCreditoViviendaStep.java:19)&#13;
-com.metrocuadrado.definitions.CalculadoraCreditoViviendaDefinition.evaluarValorCredito(CalculoCreditoViviendaDefinition.java:20)&#13;
-cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
-</system-err></testcase></testsuite>

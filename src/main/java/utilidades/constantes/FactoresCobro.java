@@ -1,15 +1,24 @@
 package utilidades.constantes;
 
 public enum FactoresCobro {
-    FACTOR_COBRO_5_ANOS("0.7881078333333333"),
-    FACTOR_COBRO_10_ANOS("0.6359688374750071"),
-    FACTOR_COBRO_15_ANOS("0.5229890745501285"),
-    FACTOR_COBRO_20_ANOS("0.4378294027777778");
+  FACTOR_COBRO_5_ANOS("0.7881078333333333"),
+  FACTOR_COBRO_10_ANOS("0.6359688333333333"),
+  FACTOR_COBRO_15_ANOS("0.5229890740740741"),
+  FACTOR_COBRO_20_ANOS("0.4378294027777778"),
+  FACTOR_CUOTA_5_ANOS("0.0704923275862069"),
+  FACTOR_CUOTA_10_ANOS("0.0436778931034483"),
+  FACTOR_CUOTA_15_ANOS("0.0354089965517241"),
+  FACTOR_CUOTA_20_ANOS("0.0317221482758621"),
+  PORCENTAJE_CUOTA_INICIAL("0.30"),
+  PORCENTAJE_CREDITO("0.70");
 
+  private final String valor;
 
-    private final String valor;
+  FactoresCobro(String valor) {
+    this.valor = valor;
+  }
 
-    FactoresCobro(String valor){this.valor=valor;}
-
-    public String getValor(){return this.valor;}
+  public String getValor() {
+    return this.valor;
+  }
 }

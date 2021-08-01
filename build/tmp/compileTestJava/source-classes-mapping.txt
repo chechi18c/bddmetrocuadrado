@@ -1,4 +1,4 @@
-runners/CalculoCreditoVivienda.java
- runners.CalculoCreditoVivienda
-runners/MyTest.java
- runners.MyTest
+co/com/metrocuadrado/runners/CalculoCuotaCreditoRunner.java
+ co.com.metrocuadrado.runners.CalculoCuotaCreditoRunner
+co/com/metrocuadrado/runners/CalculoCreditoViviendaRunner.java
+ co.com.metrocuadrado.runners.CalculoCreditoViviendaRunner

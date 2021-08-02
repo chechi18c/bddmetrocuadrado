@@ -28,7 +28,7 @@ Se utiliza gradle wrapper (versión 5.2)
 ## Instalación
 
 ```bash
-git clone MI REPO
+git clone https://github.com/chechi18c/bddmetrocuadrado.git
 ```
 
 ## Ejecución

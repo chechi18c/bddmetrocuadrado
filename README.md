@@ -8,6 +8,10 @@ asociadas al cálculo del crédito y la cuota del crédito según el plazo en a�
 Lenguajes utilizados: el proyecto se desarrolló en el lenguaje Java y Gherkin. Se utilizó
 gradle para la gestión de dependencias y construcción del proyecto.
 Frameworks utilizados: cucumber, serenity BDD para la generación de reportes.
+Librerías utilizadas: Serenity-core, para el uso de funcionalidades/métodos propios
+de serenity.Serenity-cucumber, para la interpretación del lenguaje gherkin al lenguaje de máquina, en
+este caso Java. Librería assertj-core, para la creación de aserciones. Librería slf4j-simple,
+poder implementar logs durante la ejecución de los test.
 
 ## Precondiciones
 Entorno de desarrollo utilizado: Intellij IDEA

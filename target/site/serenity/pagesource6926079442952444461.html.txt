@@ -1,0 +1,1799 @@
+<html ng-app="creditApp" ng-controller="MainCtrl" class="ng-scope"><head><script async="" src="https://tags.bkrtx.com/js/bk-coretag.js"></script><script async="" src="https://sb.scorecardresearch.com/beacon.js"></script> <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MHXCV43"></script><script src="https://s.yimg.com/wi/ytc.js" async=""></script><script src="https://connect.facebook.net/signals/config/591972094936802?v=2.9.44&amp;r=stable" async=""></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script type="text/javascript" async="" src="https://static.hotjar.com/c/hotjar-966913.js?sv=7"></script><script type="text/javascript" async="" src="//www.googleadservices.com/pagead/conversion_async.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-WTMXDZ"></script><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+<meta charset="utf-8">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="/estatico/favicon.ico">
+<meta name="_csrf" value="8c261484-f8fc-4733-bc7a-6c93425011e9">
+<meta name="description" content="Esta calculadora hipotecaria es un simulador de crédito que permite calcular el valor de las cuotas de su préstamo de vivienda y cuanto le puede prestar un banco.">
+<meta property="og:url" content="/calculadora-credito-hipotecario-vivienda/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora de Crédito para vivienda">
+<meta property="og:description" content="Esta calculadora hipotecaria es un simulador de crédito que permite calcular el valor de las cuotas de su préstamo de vivienda y cuanto le puede prestar un banco.">
+<meta property="og:image" content="/estatico/metrocuadrado-header/bootstrap/img/logo.png">
+<meta property="og:site_name" content="metrocuadrado.com">
+<meta property="fb:admins" content="[id - administrador de Facebook]">
+<meta property="fb:app_id" content="[id- aplicación en Facebook]">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@metrocuadrado">
+<meta name="twitter:creator" content="@metrocuadrado">
+<meta name="twitter:title" content="Calculadora de Crédito para vivienda">
+<meta name="twitter:description" content="Esta calculadora hipotecaria es un simulador de crédito que permite calcular el valor de las cuotas de su préstamo de vivienda y cuanto le puede prestar un banco.">
+<meta name="twitter:image" content="/estatico/metrocuadrado-header/bootstrap/img/logo.png">
+<link rel="canonical" href="https://www.metrocuadrado.com/calculadora-credito-hipotecario-vivienda/">
+<title>Calculadora de Crédito Hipotecario para Vivienda -
+	Simulador de Cuotas</title>
+<link rel="shortcut icon" href="/estatico/favicon.ico">
+<!-- font -->
+<link href="https://fonts.googleapis.com/css?family=Oswald:400,500,700,300|Raleway:400,500,600,700,300,100" rel="stylesheet" type="text/css">
+
+<!--Angular-->
+<script src="https://script.crazyegg.com/pages/scripts/0017/1361.js" async="" type="text/javascript"></script><script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/releases/ecapuzyywmdXQ5gJHS3JQiXe/recaptcha__es.js" crossorigin="anonymous" integrity="sha384-7VCnyOalmyegW+iltI4YYELG9MplWNiHSd+p4Er5mXKS3Y80LkVUUd2J66SdpmW7"></script><script src="static/js/angular.min.js"></script>
+<script src="static/js/angular-resource.min.js"></script>
+<script src="static/js/angular-route.min.js"></script>
+<script src="static/js/ng-currency.js"></script>
+
+<!-- css libs -->
+<!-- <link rel="stylesheet" -->
+<!-- 	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+<link rel="stylesheet" href="static/css/bootstrap-select.min.css">
+<link rel="stylesheet" href="static/css/jquery.qtip.min.css">
+<link rel="stylesheet" href="static/css/calculadora_styles.css">
+<link rel="stylesheet" href="static/css/fabrica-creditos.css">
+<link rel="stylesheet" href="static/css/m2.css">
+
+<!-- <link rel="stylesheet" type="text/css" href="/estatico/metrocuadrado-header-resources/css/stylesheets.css" /> -->
+
+<!-- Tag CrazyEgg -->
+<script type="text/javascript">
+	setTimeout(function() {
+		var a = document.createElement("script");
+		var b = document.getElementsByTagName("script")[0];
+		a.src = document.location.protocol
+				+ "//script.crazyegg.com/pages/scripts/0017/1361.js";
+		a.async = true;
+		a.type = "text/javascript";
+		b.parentNode.insertBefore(a, b)
+	}, 1);
+</script>
+<!-- End Tag CrazyEgg -->
+
+<!-- google login  -->
+<meta name="google-signin-scope" content="profile email">
+<meta name="google-signin-client_id" content="325216096296-b05qlj40dlh670hen61ti5vgh5dpercm.apps.googleusercontent.com">
+<script src="https://apis.google.com/js/platform.js" defer="defer" gapi_processed="true"></script>
+<script src="/estatico/metrocuadrado-header-resources/bootstrap/js/socialFacebook.js"></script>
+
+<!-- js libs -->
+<script src="static/js/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!-- Fabrica de creditos LQN-->
+<script src="static/js/lqn-scripts.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/bootstrap-select.min.js"></script>
+<script src="static/js/jquery.radiosforbuttons.min.js"></script>
+<script src="static/js/jquery.sticky-kit.min.js"></script>
+<script src="static/js/jquery.qtip.min.js"></script>
+<script src="static/js/tabcordion.js"></script>
+<script src="static/js/autocomplete.js"></script>
+
+<!-- m2 js -->
+<script src="static/js/m2.js"></script>
+<script src="static/js/m2-publish.js"></script>
+<script src="static/js/m2-gallery.js"></script>
+<script type="text/javascript">
+	//<![CDATA[
+	var s_account = "eltiempometrocuadradoprod";
+	//]]>
+</script>
+
+
+
+<script>
+	var metrocuadradoResultsUrlContext = '/';
+	var locationAutocompleteContentUrl = 'https://www.metrocuadrado.com/estatico/locations.js'
+	// 	var footerStaticContext = '${footer.static.context}';
+</script>
+<!-- header -->
+<link href="/estatico/metrocuadrado-results/css/locations-autocomplete.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="/estatico/metrocuadrado-results/js/structured-search.js"></script>
+<script type="text/javascript" src="/estatico/metrocuadrado-results/js/locations-autocomplete.js"></script>
+<script type="text/javascript" src="/estatico/metrocuadrado-results/js/js.cookie.js"></script>
+<script type="text/javascript" src="/estatico/metrocuadrado-results/js/search-filters.js"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LefV6UUAAAAAHd6BLtB6D9L4iwVjiD8fXYg5tVn"></script>
+
+<script>   (function (w, d, s, l, i) {     w[l] = w[l] || [];    w[l].push({         'gtm.start': new Date().getTime(), event: 'gtm.js'    });     var f = d.getElementsByTagName(s)[0],         j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';     j.async = true;     j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;     f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer', 'GTM-WTMXDZ')</script><script async="" src="https://static.hotjar.com/c/hotjar-966913.js?sv=6"></script><script async="" src="https://script.hotjar.com/modules.2ec2062e86adda67b2fe.js" charset="utf-8"></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><script src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/958623456/?random=1627871770310&amp;cv=9&amp;fst=1627871770310&amp;num=1&amp;label=No6lCJfox3IQ4N2NyQM&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;u_h=864&amp;u_w=1536&amp;u_ah=824&amp;u_aw=1536&amp;u_cd=24&amp;u_his=2&amp;u_tz=-300&amp;u_java=false&amp;u_nplug=3&amp;u_nmime=4&amp;gtm=2wg7s0&amp;sendb=1&amp;ig=1&amp;frm=0&amp;url=https%3A%2F%2Fwww.metrocuadrado.com%2Fcalculadora-credito-hipotecario-vivienda%2F&amp;tiba=Calculadora%20de%20Cr%C3%A9dito%20Hipotecario%20para%20Vivienda%20-%20Simulador%20de%20Cuotas&amp;hn=www.googleadservices.com&amp;async=1&amp;rfmt=3&amp;fmt=4"></script></head>
+<body class="modalmenu financing-calculator-app">
+	<!--Header-->
+	<div>
+		<div id="header">
+
+
+
+	<input type="hidden" id="urlcas" value="https://www.metrocuadrado.com/cas">
+<!-- 	<div th:replace="bootstrap/fragments/crazyegg :: crazyegg">&nbsp;</div> -->
+	<script type="text/javascript" src="//assets.adobedtm.com/41d3b477534338831f14b02d7af1cd359b73904f/satelliteLib-8aeb63a9ee18c0379a15a0fcb080dcbc94c88dd8.js">
+		
+	</script>
+	<div>
+		<input type="hidden" id="facebookApplicationId" value="163952777486318">
+		<header>
+		<input type="hidden" id="usernamesession">
+		<nav style="" class="navbar">
+			<div class="navbar-wrapper">
+				<div class="container">
+
+					<div class="navbar-header">
+						<ul class="navbar-header-actions visible-xs visible-sm">
+							 <li>
+                                <a role="button" data-toggle="collapse" href="#collapsebuscadormovil" aria-expanded="false" aria-controls="collapseExample" class="btn btn-link">
+				                    <span class="m2-icon search m2-icon-search"></span>
+				                    <span class="m2-icon search m2-icon-cross" style="display: none;"></span>
+                  				</a>
+                            </li>
+
+
+							<li class="menu_button_mobile">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false" aria-controls="navbar" style="cursor: pointer;">
+									<span class="sr-only">Toggle navigation</span> <span class="m2-icon menu m2-icon-hamburger"></span> <span class="m2-icon menu m2-icon-cross" style="display: none;"></span>
+								</button>
+							</li>
+						</ul>
+						<a class="navbar-brand" href="/"> <img class="img-responsive" src="/estatico/metrocuadrado-header-resources/bootstrap/img/logo.png">
+						</a>
+					</div>
+
+					<div id="main-nav" class="collapse navbar-collapse">
+
+						<ul class="nav navbar-nav primary-nav hidden-xs hidden-sm">
+							<li class="active">
+								<a class="btn btn-primary btn_search" role="button">Buscar Inmueble
+								
+								<div class="icon_desplegar"><img src="/estatico/metrocuadrado-header-resources/images/icons/png/select_arrow.png"></div>
+								</a>
+							</li>
+
+
+							<li class="dropdown hover_lg"><a aria-expanded="false" href="#" class="dropdown-toggle" data-toggle="dropdown">Noticias y tendencias
+								
+								<div class="icon_desplegar"><img src="/estatico/metrocuadrado-header-resources/images/icons/png/select_arrow.png"></div>
+								</a>
+
+
+								<ul class="lg dropdown-menu mega-menu_noticias">
+									<ul class="not_tendencias">
+										<h2 class="block-title" id="newsAndTendencies">Noticias y tendencias</h2>
+										<li><a id="newsHref" href="https://www.metrocuadrado.com/noticias/">Noticias</a></li>
+										<li><a id="economyHref" href="https://www.metrocuadrado.com/noticias/economia/">Economía</a></li>
+										<li><a id="decorHref" href="https://www.metrocuadrado.com/noticias/decoracion/">Decoración</a></li>
+										<li><a id="arquitectureHref" href="https://www.metrocuadrado.com/noticias/arquitectura/">Arquitectura</a></li>
+										<li><a id="entertainmentHref" href="https://www.metrocuadrado.com/noticias/entretenimiento/">Entretenimiento</a></li>
+										<li><a id="actualidadHref" href="https://www.metrocuadrado.com/noticias/actualidad/">Actualidad</a></li>
+
+									</ul>
+									<div class="separador"></div>
+									<div id="megamenu1" data-header-news-url="https://www.metrocuadrado.com/metrocuadrado-header/news/"><ul class="reportajes"><h2 class="block-title">Lo último en Metrocuadrado</h2><li class="mega-menu-column"><a href="https://www.metrocuadrado.com/noticias/actualidad/8-consejos-importantes-para-tener-en-cuenta-al-mudarte-de-casa-4265" class="m_image_link_small"><img src="https://www.metrocuadrado.com/noticias/sites/default/files/styles/300x140/public/field/image/istock-1191377762_2.jpg?itok=M2fs4PYO"><span>8 consejos importantes para tener en cuenta al mudarte</span></a></li><li class="mega-menu-column"><a href="https://www.metrocuadrado.com/noticias/actualidad/enredado-con-tus-finanzas-conoce-cuales-son-las-deudas-buenas-y-las-malas-4264" class="m_image_link_small"><img src="https://www.metrocuadrado.com/noticias/sites/default/files/styles/300x140/public/field/image/deudas.jpg?itok=oQLFYUzW"><span>Conoce cuáles son las deudas buenas y las malas </span></a></li><li class="mega-menu-column"><a href="https://www.metrocuadrado.com/noticias/actualidad/asi-es-la-super-casa-de-la-actriz-lina-tejeiro-las-afueras-de-bogota-4259" class="m_image_link_small"><img src="https://www.metrocuadrado.com/noticias/sites/default/files/styles/300x140/public/field/image/lina_tejeiro.jpeg?itok=QOQkHzQ8"><span>Así es la súper casa de la actriz Lina Tejeiro </span></a></li></ul></div>
+									<div class="clear"></div>
+									<a href="https://www.metrocuadrado.com/noticias/tendencias">
+										<button type="button" class="btn btn-upload">
+											<span class="m2-icon m2-icon-plus"></span><span>Sobre noticias y tendencias</span>
+										</button>
+									</a>
+
+								</ul></li>
+
+
+
+
+
+							<li class="dropdown hover_lg2"><a aria-expanded="false" href="#" class="dropdown-toggle" data-toggle="dropdown">Herramientas
+								<div class="icon_desplegar"><img src="/estatico/metrocuadrado-header-resources/images/icons/png/select_arrow.png"></div>
+							</a>
+
+								<ul class="lg dropdown-menu mega-menu_herramientas">
+								<li>
+									<ul class="guias fondo_grs">
+										<span class="fondo_grs">	
+											<li>
+												<h2 class="block-title" id="calculators">Calculadoras</h2>
+											</li>
+																					
+										<li><a id="creditCalcHref" href="https://www.metrocuadrado.com/calculadora-credito-hipotecario-vivienda/">Calculadora de crédito</a></li>
+
+										<li><a id="insuranceCalcHref" href="https://www.metrocuadrado.com/calculadora-poliza-seguro-arrendamiento/">Calculadora de seguros</a></li>
+
+										<li></li>
+
+										<li></li>
+
+										<li></li>
+
+										<li><a id="m2pricesHref" href="https://www.metrocuadrado.com/noticias/herramientas/precios-m2">Precios m2</a></li>
+									</span>
+									<span class="tu_inmueble">	
+											<li>
+												<h2 class="block-title">Tu inmueble</h2>
+											</li>
+											<li><a href="https://www.metrocuadrado.com/publicar-inmuebles/solicitud-inmuebles/">Solicita
+													tu inmueble</a></li>
+											<li><a href="https://www.metrocuadrado.com/publicar-inmuebles/consignment/firststep">Consigna
+													tu inmueble</a></li>
+									</span>
+									
+									</ul>
+									<div class="separador"></div>
+									<ul class="guias">
+										<h2 class="block-title" id="guides">Guías</h2>
+										<li><a id="rentGuidesHref" href="https://www.metrocuadrado.com/noticias/herramientas/guia-de-arriendo">Guías de arriendo</a></li>
+										<li><a id="horizontalPropertyGuideHref" href="https://www.metrocuadrado.com/noticias/herramientas/guia-de-propiedad-horizontal">Guía de propiedad horizontal</a></li>
+										<li><a id="buyAndSellGuideHref" href="https://www.metrocuadrado.com/noticias/herramientas/guia-de-venta">Guía de compra y venta</a></li>
+										<li><a id="creditGuideHref" href="https://www.metrocuadrado.com/noticias/herramientas/guia-de-credito">Guía de crédito</a></li>
+										<!-- <li><a th:href="#{header.ahref.adviserHref}"
+											id="adviserHref" th:text="#{header.href.adviserHref}"></a></li>-->
+											
+										<li><a id="directoryHref" href="https://www.metrocuadrado.com/directorio-inmobiliarias/">Directorio</a></li>
+
+									</ul>
+
+
+									<div class="separador"></div>
+									<div id="megamenu2"><ul class="reportajes"><h2 class="block-title">Guías</h2><li class="mega-menu-column"><a href="https://www.metrocuadrado.com/noticias/guia-de-compra-y-venta/consejos-para-vender-rapido-y-bien-tu-casa-o-apartamento-4263" class="m_image_link_small"><img src="https://www.metrocuadrado.com/noticias/sites/default/files/styles/300x140/public/field/image/venta_inmueble.jpg?itok=21rbzAwy"><span>Consejos para vender rápido y bien tu casa o apartamento </span></a></li><li class="mega-menu-column"><a href="https://www.metrocuadrado.com/noticias/actualidad/adios-los-ancianatos-esta-es-la-tendencia-de-vivienda-para-adultos-mayores-4261" class="m_image_link_small"><img src="https://www.metrocuadrado.com/noticias/sites/default/files/styles/300x140/public/field/image/vivienda_adulto_mayor_0.jpg?itok=rnv4cc-9"><span>¿Adiós a los ancianatos? Conoce esta tendencia de vivienda </span></a></li><li class="mega-menu-column"><a href="https://www.metrocuadrado.com/noticias/guia-de-compra/conoce-cuales-son-los-gastos-legales-al-momento-de-comprar-vivienda-4257" class="m_image_link_small"><img src="https://www.metrocuadrado.com/noticias/sites/default/files/styles/300x140/public/field/image/gastos_legales.jpg?itok=Y7R9z8g0"><span>Conoce cuáles son los gastos legales al comprar vivivenda</span></a></li></ul></div>
+									<div class="clear"></div>
+									<a href="https://www.metrocuadrado.com/noticias/herramientas">
+										<button type="button" class="btn btn-upload">
+											<span class="m2-icon m2-icon-plus"></span><span>Sobre herramientas</span>
+										</button>
+									</a>
+
+								</li>
+								</ul> <!-- dropdown-menu --></li>
+							<!-- /.dropdown -->
+						</ul>
+
+						<ul class="nav navbar-nav menu_mobile mobile-nav visible-xs-block visible-sm-block ">
+							<div class="botones_movil_menu">
+								<a class="publishAPropertyLink" href="/publicar-inmuebles">
+									<button type="button" class="btn btn-default" id="publishYourPropertyBtn" rel="nofollow">Publica tu inmueble</button>
+								</a>
+								<input type="hidden" id="urlconstructores" value="https://www.metrocuadrado.com/constructores/">
+								<input type="hidden" id="urlinmobiliarias" value="https://www.metrocuadrado.com/inmobiliarias/">
+							</div>
+							<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span id="toolsSpan">Noticias y tendencias</span> <span class="m2-icon"></span>
+							</a>
+								<ul class="dropdown-menu">
+									<li><a id="newsHref" href="https://www.metrocuadrado.com/noticias/">Noticias</a></li>
+									<li><a id="economyHref" href="https://www.metrocuadrado.com/noticias/economia/">Economía</a></li>
+									<li><a id="decorHref" href="https://www.metrocuadrado.com/noticias/decoracion/">Decoración</a></li>
+									<li><a id="arquitectureHref" href="https://www.metrocuadrado.com/noticias/arquitectura/">Arquitectura</a></li>
+									<li><a id="entertainmentHref" href="https://www.metrocuadrado.com/noticias/entretenimiento/">Entretenimiento</a></li>									
+									<li><a id="actualidadHref" href="https://www.metrocuadrado.com/noticias/actualidad/">Actualidad</a></li>
+								</ul></li>
+							<li class="dropdown herramientas_peq"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span id="toolsSpan">Herramientas</span> <span class="m2-icon"></span>
+							</a>
+								<ul class="dropdown-menu">
+									<li><a href="#" data-toggle="modal" data-target="#herramientas_option" class="test">
+											Calculadoras <span class="m2-icon m2-icon-right"></span>
+									</a></li>
+									<li><a href="#" data-toggle="modal" data-target="#tuinmueble_option"> Tu inmueble <span class="m2-icon m2-icon-right"></span>
+									</a></li>
+									<li><a href="#" data-toggle="modal" data-target="#guias_option"> Guías <span class="m2-icon m2-icon-right"></span>
+									</a></li>
+								</ul></li>
+							
+	
+		
+			<input type="hidden" id="loggedUserType" value="">
+			<li class="item_alt has_sublevel_alt usuario_opciones_alt loginBody">
+					<a rel="nofollow" href="/metrocuadrado-personal-account/" class="link ir_login_superior" onclick="gtmUserLogin()"> Ingresar </a>
+			</li>
+		
+		
+		
+
+
+							<li class="complementos"><a id="contactUsHref" href="/metrocuadrado-header/contactenos">Contáctanos</a></li>
+							<li style="display: none" class="complementos"><a id="needHelpHref" href="/metrocuadrado-header/ayuda">¿Necesitas ayuda?</a></li>
+							<li style="display: none" class="text" id="phoneNumberLi">01 80000 115 252</li>
+							<li class="complementos"><a id="viewFavoritesHref" href="/metrocuadrado-personal-account/property/favorites/list">Ver favoritos</a></li>
+						</ul>
+
+						<ul class="nav navbar-nav navbar-right hidden-xs hidden-sm ">
+							
+	
+		
+			<input type="hidden" id="loggedUserType" value="">
+			<li class="item_alt has_sublevel_alt usuario_opciones_alt loginBody">
+					<a rel="nofollow" href="/metrocuadrado-personal-account/" class="link ir_login_superior" onclick="gtmUserLogin()"> Ingresar </a>
+			</li>
+		
+		
+		
+
+							<li><a class="btn btn-default publishAPropertyLink" id="publishAPropertyLiHref" href="/publicar-inmuebles">Publica tu inmueble</a></li>
+						</ul>
+						<input type="hidden" id="urlconstructores" value="https://www.metrocuadrado.com/constructores/">
+						<input type="hidden" id="urlinmobiliarias" value="https://www.metrocuadrado.com/inmobiliarias/">
+					</div>
+
+				</div>
+				<!-- / .container -->
+
+				<!-- Contenido herramientas del Lightbox -->
+				<div class="modal fade m2-gallery-modal" id="herramientas_option" role="dialog" aria-labelledby="modalLabel">
+					<div class="modal-dialog herramientas_option" role="document">
+						<div class="modal-content ">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span class="m2-icon m2-icon-left"></span> CALCULADORAS
+								</button>
+							</div>
+							<div class="modal-body">
+								<ul>
+									<li><a href="https://www.metrocuadrado.com/calculadora-credito-hipotecario-vivienda/">Calculadora
+											de crédito</a></li>
+									<li><a href="https://www.metrocuadrado.com/calculadora-poliza-seguro-arrendamiento/">Calculadora
+											de seguros</a></li>
+									<li><a href="https://www.metrocuadrado.com/noticias/herramientas/precios-m2">Precios
+											m2</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<!-- Lightbox -->
+				<!-- Contenido herramientas del Lightbox -->
+				<div class="modal fade m2-gallery-modal" id="tuinmueble_option" role="dialog" aria-labelledby="modalLabel">
+					<div class="modal-dialog herramientas_option" role="document">
+						<div class="modal-content ">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span class="m2-icon m2-icon-left"></span> TU INMUEBLE
+								</button>
+							</div>
+							<div class="modal-body">
+								<ul>
+									<li><a href="https://www.metrocuadrado.com/publicar-inmuebles/solicitud-inmuebles/">Solicita
+											tu inmueble</a></li>
+									<li><a href="https://www.metrocuadrado.com/publicar-inmuebles/consignment/firststep">Consigna
+											tu inmueble</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<!-- Lightbox -->
+				<!-- Contenido herramientas del Lightbox -->
+				<div class="modal fade m2-gallery-modal" id="guias_option" role="dialog" aria-labelledby="modalLabel">
+					<div class="modal-dialog herramientas_option" role="document">
+						<div class="modal-content ">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span class="m2-icon m2-icon-left"></span> GUÍAS
+								</button>
+							</div>
+							<div class="modal-body">
+								<ul>
+									<li><a id="rentGuidesHref" href="https://www.metrocuadrado.com/noticias/herramientas/guia-de-arriendo">Guías de arriendo</a></li>
+									<li><a id="horizontalPropertyGuideHref" href="https://www.metrocuadrado.com/noticias/herramientas/guia-de-propiedad-horizontal">Guía de propiedad horizontal</a></li>
+									<li><a id="buyAndSellGuideHref" href="https://www.metrocuadrado.com/noticias/herramientas/guia-de-venta">Guía de compra y venta</a></li>
+									<li><a id="creditGuideHref" href="https://www.metrocuadrado.com/noticias/herramientas/guia-de-credito">Guía de crédito</a></li>
+									<li><a id="directoryHref" href="https://www.metrocuadrado.com/directorio-inmobiliarias/">Directorio</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				
+				</div>
+				</nav>
+				
+				
+				<!-- Lightbox -->
+
+				<div style="" aria-expanded="true" class="collapse buscador" id="collapsebuscador">
+					<div class="well desktop">
+						
+						<div class="container">
+			                <div class="row">
+			
+			                    <!-- Inicio Búsqueda avanzada -->
+			                    <div class="busqueda_avanzada" style="display: block;">
+			                    	<form action="https://www.metrocuadrado.com/metrocuadrado-results/search/non-ajax" id="form-search-header" method="get" class="ng-pristine ng-valid">
+			                        <div class="hidden-xs col-sm-3 campo_busqueda">
+			                            <div class="form-group right">
+			                                <select id="mobile-mtiponegocio" data-hidden-field-id="mtiponegocio" class="form-control arrowright mtiponegocio">
+							                    <option value="venta-nuevo">Compra Nuevo</option>
+												<option value="venta-usado">Compra Usado</option>
+												<option value="venta">Compra Nuevo y Usado</option>
+												<option value="arriendo">Arriendo</option>
+							                  </select>
+			                            </div>
+			                        </div>
+			                        <!-- inicio multiselector desktop -->
+			                        
+			                        <div class="col-sm-3 campo_busqueda">
+			                            <div class="campo-selector-multiple">
+			                                <div class="campo-selector-multiple-seleccionados">Tipo de inmueble</div>
+			                                <div id="btn-selector-multiple" class="btn-selector-multiple" align="center">
+			                                    <img src="/estatico/metrocuadrado-header-resources/bootstrap/img/fake_select.svg">
+			                                </div>
+			                                <div id="selector-multiple" class="selector-multiple">
+			                                    <div class="inmueble-check">
+			                                        <input id="check_01" class="property-type-list" propertytype="casa" name="check_01" value="casas" type="checkbox">
+			                                        <label for="check_01">Casas</label>
+			                                    </div>
+			                                    <div class="inmueble-check">
+			                                        <input id="check_02" type="checkbox" class="property-type-list" propertytype="apartamento" name="check_02" value="apartamentos">
+			                                        <label for="check_02">Apartamentos</label>
+			                                    </div>
+			                                    <div class="inmueble-check">
+			                                        <input id="check_03" class="property-type-list" propertytype="oficina" name="check_03" value="oficinas" type="checkbox">
+			                                        <label for="check_03">Oficinas</label>
+			                                    </div>
+			                                    <div class="inmueble-check">
+			                                        <input id="check_04" class="property-type-list" propertytype="bodega" name="check_04" value="bodegas" type="checkbox">
+			                                        <label for="check_04">Bodegas</label>
+			                                    </div>
+			                                    <div class="inmueble-check">
+			                                        <input id="check_05" class="property-type-list" propertytype="consultorio" name="check_05" value="consultorios" type="checkbox">
+			                                        <label for="check_05">Consultorios</label>
+			                                    </div>
+			                                    <div class="inmueble-check">
+			                                        <input id="check_06" class="property-type-list" propertytype="local" name="check_06" value="locales" type="checkbox">
+			                                        <label for="check_06">Locales</label>
+			                                    </div>
+			                                    <div class="inmueble-check">
+			                                        <input id="check_07" class="property-type-list" propertytype="lote" name="check_07" value="lotes" type="checkbox">
+			                                        <label for="check_07">Lotes</label>
+			                                    </div>
+			                                    <div class="inmueble-check">
+			                                        <input id="check_08" class="property-type-list" propertytype="finca" name="check_08" value="fincas" type="checkbox">
+			                                        <label for="check_08">Fincas</label>
+			                                    </div>
+			                                    <div class="inmueble-check">
+			                                        <input id="check_09" class="property-type-list" propertytype="edificio-de-oficinas" name="check_09" value="edificios-oficinas" type="checkbox">
+			                                        <label for="check_09">Edificio de oficinas</label>
+			                                    </div>
+			                                    <div class="inmueble-check">
+			                                        <input id="check_10" class="property-type-list" propertytype="edificio-de-apartamentos" name="check_10" value="edificios-apartamentos" type="checkbox">
+			                                        <label for="check_10">Edificio de apartamentos</label>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <input type="hidden" name="sfh" id="sfh" value="1">
+			                        
+			                        <!-- fin inicio multiselector desktop -->
+			                        
+			                        <div class="hidden-xs col-sm-4 campo_busqueda">
+			                            <div class="input-group buscadorderecho right">
+			                                <input class="form-control search-by-location ui-autocomplete-input" type="text" name="city" id="mobile-location" placeholder="Ciudad, Zona o Barrio" autocomplete="off">
+			                                <button id="btn_submit_search_header" type="submit" class="btn btn-default search-button m_btn_alt big_alt header-structured-search">Buscar</button>
+			                            </div>
+			                        </div>
+			                        
+			                        </form>
+			                        <div class="hidden-xs col-sm-2 enlace campo_busqueda">
+			                            <a>Buscar código »</a>
+			                        </div>
+			                    </div>
+			                    <form method="post" id="form-search-header-by-code" action="https://www.metrocuadrado.com/metrocuadrado-results/search/code" class="ng-pristine ng-valid">
+			                    <div class="busqueda_codigo" style="display: none;">
+			                        <div class="hidden-xs col-sm-10 campo_busqueda">
+			                            <div class="input-group buscadorderecho right">
+			                                <input name="propertyId" class="form-control" placeholder="Buscar por codigo" aria-label="" type="text">
+			                                <button class="btn btn-default" type="submit">BUSCAR</button>
+			                            </div>
+			                        </div>
+			                        <div class="hidden-xs col-sm-2 enlace campo_busqueda">
+			                            <a>búsqueda avanzada »</a>
+			                        </div>
+			                    </div>
+			                    </form>
+			                </div>
+           				 </div>
+						
+						
+					</div>
+				</div>
+				
+				<!-- moviles -->
+				 <div class="collapse" id="collapsebuscadormovil">
+				        <div class="well search_mobile">
+				            <div class="container">
+				                <div class="row">
+				                    <div class="col-xs-12">
+				                        <p>Encuentra casa y apartamentos en venta o arriendo:</p>
+				                    </div>
+				                    
+				                    <!-- inicio multiselector movil -->
+				                    <form action="https://www.metrocuadrado.com/metrocuadrado-results/search/non-ajax" id="form-search-header" method="get" class="ng-pristine ng-valid">
+				                    <div class="busqueda_avanzada moviles" style="display: block;">
+				                        <div class="col-xs-12">
+				                            <div class="form-group right">
+				                                <select id="mobile-mtiponegocio" data-hidden-field-id="mtiponegocio" class="form-control arrowright mtiponegocio">
+				                                     <option value="venta-nuevo">Compra Nuevo</option>
+													<option value="venta-usado">Compra Usado</option>
+													<option value="venta">Compra Nuevo y Usado</option>
+													<option value="arriendo">Arriendo</option>
+				                                </select>
+				                            </div>
+				                        </div>
+				                        <div class="fondo-selector-multiple-mobile">
+				                        </div>
+				                        <div class="col-xs-12">
+				                            <div class="campo-selector-multiple">
+				                                <div class="campo-selector-multiple-seleccionados" id="campo-selector-multiple-seleccionados-mobile">Tipo de inmueble</div>
+				                                <div id="btn-selector-multiple-mobile" class="btn-selector-multiple" align="center">
+				                                    <img src="/estatico/metrocuadrado-header-resources/bootstrap/img/fake_select.svg">
+				                                </div>
+				                                <div id="selector-multiple-mobile" class="selector-multiple">
+				                                    <img id="btn-selector-multiple-cerrar" src="/estatico/metrocuadrado-header-resources/bootstrap/img/close.svg">
+				                                    <div class="inmueble-check">
+				                                     	<input id="check_01" class="property-type-list-mobile" propertytype="casa" name="check_01" value="casas" type="checkbox">
+			                                        	<label for="check_01">Casas</label>
+				                                    </div>
+				                                    <div class="inmueble-check">
+				                                          <input id="check_02" type="checkbox" class="property-type-list-mobile" propertytype="apartamento" name="check_02" value="apartamentos">
+			                                       		  <label for="check_02">Apartamentos</label>
+				                                    </div>
+				                                    <div class="inmueble-check">
+				                                          <input id="check_03" class="property-type-list-mobile" propertytype="oficina" name="check_03" value="oficinas" type="checkbox">
+			                                       		<label for="check_03">Oficinas</label>
+				                                    </div>
+				                                    <div class="inmueble-check">
+				                                        <input id="check_04" class="property-type-list-mobile" propertytype="bodega" name="check_04" value="bodegas" type="checkbox">
+				                                        <label for="check_04">Bodegas</label>
+			                                    	</div>
+				                                    <div class="inmueble-check">
+				                                        <input id="check_05" class="property-type-list-mobile" propertytype="consultorio" name="check_05" value="consultorios" type="checkbox">
+				                                        <label for="check_05">Consultorios</label>
+				                                    </div>
+				                                    <div class="inmueble-check">
+				                                        <input id="check_06" class="property-type-list-mobile" propertytype="local" name="check_06" value="locales" type="checkbox">
+				                                        <label for="check_06">Locales</label>
+				                                    </div>
+				                                    <div class="inmueble-check">
+				                                        <input id="check_07" class="property-type-list-mobile" propertytype="lote" name="check_07" value="lotes" type="checkbox">
+				                                        <label for="check_07">Lotes</label>
+				                                    </div>
+				                                    <div class="inmueble-check">
+				                                        <input id="check_08" class="property-type-list-mobile" propertytype="finca" name="check_08" value="fincas" type="checkbox">
+				                                        <label for="check_08">Fincas</label>
+				                                    </div>
+				                                    <div class="inmueble-check">
+				                                        <input id="check_09" class="property-type-list-mobile" propertytype="edificio-de-oficinas" name="check_09" value="edificios-oficinas" type="checkbox">
+				                                        <label for="check_09">Edificio de oficinas</label>
+				                                    </div>
+				                                    <div class="inmueble-check">
+				                                        <input id="check_10" class="property-type-list-mobile" propertytype="edificio-de-apartamentos" name="check_10" value="edificios-apartamentos" type="checkbox">
+				                                        <label for="check_10">Edificio de apartamentos</label>
+				                                    </div>
+				                                    <button id="btn-selector-multiple-mobile-aceptar" class="btn btn-default" type="button">Aceptar</button>
+				                                </div>
+				                            </div>
+				                        </div>
+				                    
+				                    <!-- fin multiselector movil -->
+				                    <div class="col-xs-12">
+				                        <div class="input-group buscadorderecho">
+				                            <input id="mobile-location-mobile" name="city" class="form-control display_block search-by-location ui-autocomplete-input" placeholder="Ciudad, Zona o Barrio" aria-label="Amount (to the nearest dollar)" type="text" autocomplete="off">
+				                            <div class="clear"></div>
+<!-- 				                            <button id="btn_submit_search_header"  class="btn btn-default" type="submit"> BUSCAR </button> -->
+				                            <button id="btn_submit_search_header" type="submit" class="btn btn-default search-button m_btn_alt big_alt header-structured-search">Buscar</button>
+				                        </div>
+				                    </div>
+				                     <div class="col-xs-12 enlace">
+				                        <a>Buscar código »</a>
+				                    </div>
+				                    </div>
+				                    
+				                        <input type="hidden" name="sfh" id="sfh" value="1">
+				                    </form>
+				                   
+				                </div>
+				                <div class="busqueda_codigo moviles" style="display: none;">
+				                	<form method="post" id="form-search-header-by-code" action="https://www.metrocuadrado.com/metrocuadrado-results/search/code" class="ng-pristine ng-valid">
+					                    <div class="col-xs-12">
+					                        <div class="input-group buscadorderecho">
+					                            <input name="propertyId" class="form-control display_block" placeholder="Buscar por código" aria-label="" type="text">
+					                            <div class="clear"></div>
+					                            <button class="btn btn-default" type="submit"> BUSCAR </button>
+					                        </div>
+					                    </div>
+					                    </form>
+				                    <div class="col-xs-12 enlace">
+				                        <a>Búsqueda avanzada »</a>
+				                    </div>
+				                </div>
+				            </div>
+				        </div>
+    			</div>
+				
+				
+			
+		
+		<!-- lightbox para reasignación de rol -->
+		
+		<link href="https://fonts.googleapis.com/css?family=Oswald:400,500,700,300|Raleway:400,500,600,700,300,100" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="/estatico/metrocuadrado-header-resources/bootstrap/css/bootstrap-select.min.css">
+		<link rel="stylesheet" href="/estatico/metrocuadrado-header-resources/bootstrap/css/jquery.qtip.min.css">
+		<link rel="stylesheet" href="/estatico/metrocuadrado-header-resources/bootstrap/css/selector.css">
+		<script src="/estatico/metrocuadrado-header-resources/js/tabcordion.js"></script>
+		<script src="/estatico/metrocuadrado-header-resources/bootstrap/js/sources.js"></script>
+		<!--<script src="/estatico/metrocuadrado-header-resources/js/omnitureEventsMethods.js"></script>-->
+		<script src="/estatico/metrocuadrado-header-resources/bootstrap/js/getHtmlLogin.js"></script>
+		<script src="/estatico/metrocuadrado-header-resources/js/headerScroll.js"></script>
+		<script src="/estatico/metrocuadrado-header-resources/js/headerBuscador.js"></script>
+		<script src="/estatico/metrocuadrado-header-resources/bootstrap/js/menu-fix-lightbox.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			var urlGTM = 'https://www.googletagmanager.com',
+					GTM_id = 'GTM-WTMXDZ';
+		</script>
+		<script src="/estatico/metrocuadrado-common/dist/m2.gtm.min.js"></script>
+		<script src="/estatico/metrocuadrado-header-resources/js/newsletter-bootstrap.min.js"></script>
+	</header>
+
+		<div class="collapse" id="collapsebuscadormovil">
+
+			<div class="well search_mobile">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12"> <p>Encuentra casa y apartamentos en venta o arriendo:</p> </div>
+						<!-- Inicio busqueda avanzada moviles -->
+						<div class="busqueda_avanzada moviles" style="display: block;">
+							<form data-form-validate="" action="https://www.metrocuadrado.com/metrocuadrado-results/search/non-ajax" method="get" id="form-search-header" class="ng-pristine ng-valid">
+							<div class="col-xs-12">
+								<div class="form-group right">
+									<select class="form-control arrowright" data-hidden-field-id="mtiponegocio" id="select-mtiponegocio">
+										<option value="venta-nuevo">Compra Nuevo</option>
+										<option value="venta-usado">Compra Usado</option>
+										<option value="venta">Compra Nuevo y Usado</option>
+										<option value="arriendo">Arriendo</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-xs-12">
+								<div class="form-group left">
+									<select class="form-control arrowright" data-hidden-field-id="mtipoinmueble" id="select-mtipoinmueble">
+										<option value="">Tipo de Inmueble</option>
+										<option value="casa">Casas</option>
+										<option value="apartamento">Apartamentos</option>
+										<option value="oficina">Oficinas</option>
+										<option value="bodega">Bodega</option>
+										<option value="consultorio">Consultorio</option>
+										<option value="local">Local</option>
+										<option value="lote">Lote</option>
+										<option value="finca">Finca</option>
+										<option value="edificio de oficinas">Edificio de
+											oficinas</option>
+										<option value="edificio de apartamentos">Edificio de
+											apartamentos</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-xs-12">
+								<div class="input-group buscadorderecho">
+									<input class="form-control display_block search-by-location ui-autocomplete-input" aria-label="Amount (to the nearest dollar)" type="text" name="city" autocomplete="off" id="input-location" placeholder="Ciudad, Zona, Sector o Barrio">
+									<div class="clear"></div>
+									<button class="btn btn-default search-button" id="searchBtn" value="BUSCAR">BUSCAR</button>
+									<script type="text/javascript">
+										$('#searchBtn').click(function(e){						
+											e.preventDefault();
+											
+											sendOmnitureEventSearch($('#search-origin').val(),
+													$('#input-location','form#form-search-header').data('inputType'),
+													$('#select-mtiponegocio','form#form-search-header').val(),
+													$('#select-mtipoinmueble','form#form-search-header').val(),
+													$('#input-location','form#form-search-header').val());
+											
+											setTimeout(function(){ 
+												$('#form-search-header').submit();
+											}, 500);
+										});					
+									</script>										
+								</div>
+							</div>
+								<input type="hidden" name="sfh" id="sfh" value="1">
+							</form>
+							<div class="col-xs-12 enlace">
+								<a>Buscar código&gt;&gt;</a>
+							</div>
+						</div>
+						<!-- Fin busqueda avanzada moviles -->
+
+						<!-- Inicio busqueda codigo moviles -->
+						<div class="busqueda_codigo moviles" style="display: none;">
+							<form data-form-validate="" method="post" action="https://www.metrocuadrado.com/metrocuadrado-results/search/code" novalidate="novalidate" id="form-search-header-by-code" class="ng-pristine ng-valid">
+							<div class="col-xs-12">
+								<div class="input-group buscadorderecho">
+									<input class="form-control display_block" aria-label="" type="text" name="propertyId" id="propertyId" placeholder="Búsqueda por código">
+									<div class="clear"></div>
+									<button class="btn btn-default" id="btn_submit_search_header_by_code" value="BUSCAR">BUSCAR</button>
+									<script type="text/javascript">
+										$('#btn_submit_search_header_by_code').click(function(e){						
+											e.preventDefault();
+											
+											sendOmnitureEventSearch($('#search-origin').val(),"","Search-by-code","","");
+											
+											setTimeout(function(){ 
+												$('#form-search-header-by-code').submit();
+											}, 500);
+										});					
+									</script>									
+								</div>
+							</div>
+							</form>
+							<div class="col-xs-12 enlace">
+								<a>Búsqueda avanzada&gt;&gt;</a>
+							</div>
+						</div>
+						<!-- Fin busqueda codigo moviles -->
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+				
+		(function(h,o,t,j,a,r){
+	        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+	        h._hjSettings={hjid:966913,hjsv:6};
+	        a=o.getElementsByTagName('head')[0];
+	        r=o.createElement('script');r.async=1;
+	        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+	        a.appendChild(r);
+	    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+	</script>
+<script async="" type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&amp;ns=45&amp;cb=507463622"></script>
+
+
+</div>
+		<script type="text/javascript" src="static/js/headerloader.js"></script>
+	</div>
+	<!--/Header-->
+	<!-- Inicio miga de pan -->
+	<div class="container hidden-xs">
+		<ol class="breadcrumb">
+			<li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+				<a href="https://www.metrocuadrado.com/" itemprop="url"> <span itemprop="title">Inicio</span></a>
+			</li>
+			<li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/calculadora-credito-hipotecario-vivienda" itemprop="url"><span itemprop="title">Calculadora de crédito para vivienda</span></a></li>
+		</ol>
+	</div>
+	<!-- Fin miga de pan -->
+
+	<!--Supermercado Financiero-->
+	<input type="hidden" id="urlamount" value="">
+	<input type="hidden" id="urldate" value="">
+	<input type="hidden" id="urltype" value="">
+	<input type="hidden" id="urlpropertyId" value="">
+	<input type="hidden" id="urlpropertyTypeId" value="">
+	<input type="hidden" id="urlbusinessTypeId" value="">
+	<input type="hidden" id="urlpropertyPrice" value="">
+	<div class="container supermercado_financiero">
+		<div class="row">
+			<div class="col-xs-12">
+				<h1 data-gtm-item="title">Calculadora de Crédito para
+					vivienda</h1>
+				<p class="texto_inicial ng-binding">En nuestro simulador de crédito
+					puedes calcular cuánto te puede prestar un banco para la
+					compra de tu apartamento o casa, de acuerdo a tus ingresos
+					mensuales, también puedes calcular el valor de la cuota
+					mensual de tu crédito de vivienda. </p>
+			</div>
+		</div>
+		<div class="col-xs-12">
+			<div class="tabcordion tabbable">
+				<ul class="nav nav-tabs">
+					<li class="active opcion_credito" data-gtm-item="sub-title"><a class="verprestamo" data-target=".prestamo" data-gtm-click="17a" data-toggle="tab" aria-controls="calcredit Calcula cuanto te prestan">Calcula
+							cuánto te prestan </a></li>
+					<li class="opcion_cuotas" data-gtm-item="sub-title"><a class="vercuotas" data-gtm-click="17a" data-target=".valorCuotas" data-toggle="tab" aria-controls="calcredit Calcula el valor de las cuotas">Calcula el valor de las
+							cuotas </a></li>
+				</ul>
+				<div class="tab-content">
+					<!-- Inicio contenido Calcule cuánto le prestan -->
+					<div class="prestamo active in tab-pane ng-scope" ng-controller="MonthlyIncomeCtrl">
+						<!-- Inicio formulario crédito -->
+						<div class="col-md-5 col-sm-4 col-xs-12 formulario credito" ng-show="!showLoanInfo || (showLoanInfo &amp;&amp; !hasLowResWidth())">
+							<h2>Calcula cuánto te prestan</h2>
+							<form name="MonthlyIncomeForm" data-gtm-container="17b-2" class="ng-valid-max ng-valid-fraction ng-dirty ng-valid-parse ng-valid-required ng-valid ng-valid-min">
+								<div class="form-group" ng-class="{'error': (MonthlyIncomeForm.monthlyIncome.$error.required &amp;&amp; MonthlyIncomeForm.monthlyIncome.$touched) || (!MonthlyIncomeForm.monthlyIncome.$error.required &amp;&amp; MonthlyIncomeForm.monthlyIncome.$invalid &amp;&amp; MonthlyIncomeForm.monthlyIncome.$touched)}">
+
+									<label class="valign required" for="ingresosMensuales"><h3>Ingresos
+											mensuales:</h3></label> <input name="monthlyIncome" data-gtm-item="income" ng-model="monthlyIncome" type="text" id="ingresosMensuales" class="form-control ingresos ng-isolate-scope ng-valid-max ng-valid-fraction ng-dirty ng-valid-parse ng-valid-required ng-valid ng-valid-min ng-touched" placeholder="" min="basicSalary.value" limit-to="9" currency-symbol="$" fraction="0" restrict-to="[0-9]" ng-currency="" required=""> <span class="m2-icon m2-icon-question">
+										<div>Los ingresos mensuales del grupo familiar o persona
+											que tomará el crédito</div>
+									</span>
+									<p class="validacion ingresos_mensuales ng-binding ng-hide" ng-show="!MonthlyIncomeForm.monthlyIncome.$error.required &amp;&amp; MonthlyIncomeForm.monthlyIncome.$invalid &amp;&amp; MonthlyIncomeForm.monthlyIncome.$touched">
+										Los ingresos deben ser mayores o iguales a $737,717.</p>
+									<p class="validacion ingresos_mensuales ng-hide" ng-show="MonthlyIncomeForm.monthlyIncome.$error.required &amp;&amp; MonthlyIncomeForm.monthlyIncome.$touched">
+										Por favor ingresar campo</p>
+									<div class="clear"></div>
+								</div>
+								<div class="form-group">
+									<label class="valign required" for="plazo"><h3>Plazo
+											en años:</h3></label> <select data-gtm-item="time" class="form-control arrowright ng-valid ng-dirty ng-valid-parse ng-touched" ng-model="termInYears" ng-options="year.id as year.name for year in yearOptions"><option label="5 Años" value="number:5">5 Años</option><option label="10 Años" value="number:10">10 Años</option><option label="15 Años" value="number:15" selected="selected">15 Años</option><option label="20 Años" value="number:20">20 Años</option></select>
+									<div class="clear"></div>
+								</div>
+								<button type="button" class="btn btn-upload credito" ng-click="calculateByMonthlyIncome()" ng-disabled="MonthlyIncomeForm.$invalid" data-gtm-click="17b-2">
+									<h4>Calcular Crédito</h4>
+								</button>
+								<p></p>
+								<p style="text-align:justify;  font-size:9px;">* Con el diligenciamiento de este formulario, aceptas el envío de tus datos a la entidad que ofrece el servicio que estás cotizando, en su calidad de responsable. Lo anterior, conforme con la política de tratamiento de datos personales de M2. 
+								Cualquier reclamo o consulta relacionado con tus datos, podrá ser tramitado con dicha entidad, cuya información podrás encontrar incluida en el anuncio o podrás comunicarte con nosotros.</p>
+							</form>
+						</div>
+						<!-- Fin formulario crédito -->
+
+						<!-- Inicio imagen crédito -->
+						<div class="col-md-7 col-sm-8 col-xs-12 imagen credito ng-hide" ng-show="!showLoanInfo" style="display: none;">
+							<img srcset="static/img/supermercado_financiero_principal_movil.jpg 767w,
+                             static/img/supermercado_financiero_principal_1.jpg 990w,
+                             static/img/supermercado_financiero_principal_1.jpg 1200w" alt="Calculadora de crédito hipotecario para vivienda – Calcula cuánto te prestan" title="Simulador de crédito hipotecario – Calcula cuánto te prestan">
+							<div class="recuadro">
+								<h3>¿Deseas comprar vivienda?</h3>
+								<p>Encuentra las tasas de interés de los bancos y
+									conoce hasta cuánto te prestan</p>
+							</div>
+						</div>
+						<!-- Fin imagen crédito -->
+
+						<!-- Inicio resultados crédito -->
+						<div class="col-md-7 col-sm-8 col-xs-12 resultados credito" ng-show="showLoanInfo" style="display: block;">
+							<div class="datos_superior">
+								<dl>
+									<dt>
+										<span class="escritorio">Con un ingreso mensual de:</span><span class="movil">Ingreso mensual:</span>
+									</dt>
+									<dd class="ng-binding">$ 4,000,000</dd>
+								</dl>
+								<dl>
+									<dt>
+										<span class="escritorio">Un banco puede prestarte
+											hasta:</span><span class="movil">Préstamo hasta:</span>
+									</dt>
+									<dd class="ng-binding">
+										$ 126,094,868<span class="m2-icon m2-icon-question"><div>Este valor
+												se calcula de acuerdo a su capacidad de pago. Puede aplicar
+												a un crédito más alto si toma el
+												crédito en conjunto con otras personas de su grupo
+												familiar.</div></span>
+									</dd>
+								</dl>
+								<dl>
+									<dt>
+										<span class="escritorio">Debe tener una cuota inicial
+											mínima de:</span><span class="movil">Cuota inicial
+											mínima:</span>
+									</dt>
+									<dd class="ng-binding">
+										$ 54,040,658<span class="m2-icon m2-icon-question"><div>Los bancos
+												usualmente financian hasta el 70% del valor del inmueble.
+												Debes contar con el 30% restante para pagar la cuota
+												inicial.</div></span>
+									</dd>
+								</dl>
+								<dl>
+									<dt>
+										<span class="escritorio">Puede comprar un inmueble de:</span><span class="movil">Valor inmueble:</span>
+									</dt>
+									<dd class="valor ng-binding">$ 180,135,525</dd>
+								</dl>
+								<a ng-click="lowResRecalculate()">Volver a calcular</a>
+							</div>
+							<div class="col-xd-12 borde_left_tabla">
+								<table id="td-resul-calc">
+									<tbody><tr>
+										<th>Banco</th>
+										<th>Valor estimado del préstamo</th>
+										<th>Valor de la cuota mensual</th>
+										<th>Tasa de interés <br> (tasa E.A)
+										</th>
+										<th></th>
+									</tr>
+									<tr class="nth-child(even)">
+	                                <!--	<td colspan="5" class="lqn-main-container">
+	                                	<div class="lqn-bar-container">
+														<div class="lqn-bar-logo">
+															<img srcset="static/img/lo-que-necesito-logo.svg" alt="Lo Que Necesito"	title="Lo Que Necesito" />
+														</div>
+														<div class="lqn-bar-text"><p><span>Tramitamos en línea tu crédito hipotecario,</span> con tasas de interés desde 0,72% mensual</p></div>
+														<div class="lqn-bar-btn-container">
+															<a ng-click="omniture_event115()" class="lqn-bar-btn general-lightbox-trigger" data-lightbox="form-lqn">¡Tramitar crédito!</a>
+			                                            </div>
+												</div>
+										</td>  -->
+	                                </tr>
+									<!-- ngRepeat: bank in bankList --><tr ng-repeat="bank in bankList" ng-class="{'inactivo': bank.state == 'N'}" class="ng-scope inactivo">
+										<!-- ngIf: bank.state == 'S' -->
+										<!-- ngIf: bank.state == 'N' --><td ng-if="bank.state == 'N'" class="ng-binding ng-scope"><br> Simulacion Tasa Promedio
+										</td><!-- end ngIf: bank.state == 'N' -->
+										<td ng-class="{'valor_result': bank.state == 'S'}" class="ng-binding">$ 126,094,868</td>
+										<td ng-class="{'valor_result2': bank.state == 'S'}" class="ng-binding">$ 1,200,000 <br> <!-- ngIf: bank.state == 'S' -->
+										</td>
+										<td ng-class="{'valor_result2': bank.state == 'S'}" class="ng-binding">10.25%</td>
+										<td>
+											<!-- ngIf: bank.state == 'S' -->
+										</td>
+									</tr><!-- end ngRepeat: bank in bankList -->
+								</tbody></table>
+
+								<!-- Inicio resultados mobile credito-->
+								<!-- ngRepeat: bank in bankList --><div class="lista_bancos_mobile ng-scope" ng-repeat="bank in bankList">
+									<div class="row">
+										<div class="col-xs-12">
+											<!-- ngIf: bank.state == 'S' -->
+											<!-- ngIf: bank.state == 'N' --><div ng-if="bank.state == 'N'" class="text_result_bancos_inactivo imagen_modal ng-binding ng-scope">
+												<br> Simulacion Tasa Promedio
+											</div><!-- end ngIf: bank.state == 'N' -->
+											<div class="recuadro_mobile">
+												<p ng-class="{valor_result:bank.state == 'S',valor_estimado_inactivo:bank.state == 'N'}" class="valor_estimado_inactivo">
+													Valor estimado del préstamo</p>
+												<p ng-class="{valor_result:bank.state == 'S',valor_estimado_inactivo:bank.state == 'N'}" class="ng-binding valor_estimado_inactivo">
+													$ 126,094,868</p>
+
+												<div class="panel panel-default">
+													<div class="arrowright">
+														<a class="link_cuotas_m" data-toggle="collapse" href="#collapse1">Ver cuota y tasa E.A </a>
+													</div>
+													<div id="collapse1" class="panel-collapse collapse">
+
+														<div class="col-xs-6 linea_vertical">
+															<p>Valor de la cuota mensual</p>
+															<p class="valor_result_peq ng-binding">$ 1,200,000</p>
+														</div>
+														<div class="col-xs-6">
+															<p>Tasa de interés (tasa E.A)</p>
+															<p class="valor_result_peq ng-binding">10.25%</p>
+														</div>
+													</div>
+													<div class="col-xs-12 boton_mobile">
+														<!-- ngIf: bank.state == 'S' -->
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div><!-- end ngRepeat: bank in bankList -->
+								<!-- final resultados mobile credito-->
+
+								<!-- Inicio label explicacion-->
+								<div class="lista_bancos">
+									<div class="row">
+										<div class="textos_legales">
+											<p>El cálculo realizado es bajo una tasa de
+												interés aproximada por lo cual el valor de la cuota
+												aquí mencionada es aproximada y no incluyen el valor
+												de seguros u otros conceptos. La aprobación del
+												crédito está sujeta a políticas
+												internas de cada una de las entidades financieras.</p>
+										</div>
+									</div>
+								</div>
+								<!-- Fin label explicacion-->
+
+							</div>
+						</div>
+						<!-- Fin resultados crédito -->
+						<div class="clear"></div>
+						<!-- Inicio lightbox contactar bancos -->
+						<div class="modal fade m2-gallery-modal" id="contactoBancosCalculadora1" role="dialog" aria-labelledby="modalLabel">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content contactar_bancos2">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span class="m2-icon m2-icon-cross"></span>
+										</button>
+										<h2 class="modal-title2" id="modalLabel">Solicitar
+											información al banco</h2>
+									</div>
+									<div class="imagen_modal">
+										<img ng-src="static/img/logo_defecto.jpg" src="static/img/logo_defecto.jpg">
+									</div>
+									<div class="modal-body" style="padding-top: 5px;">
+										<div class="col-xs-12">
+											<form name="contactForm" class="ng-pristine ng-invalid ng-invalid-required ng-valid-email ng-valid-pattern ng-valid-minlength">
+												<div class="form-group" ng-class="{'error': contactForm.userName.$invalid &amp;&amp; contactForm.userName.$touched}">
+													<p class="check-campos" for="Nombre">Es necesario
+														diligenciar todos los campos.</p>
+													<input type="text" class="form-control ingresos ng-pristine ng-untouched ng-invalid ng-invalid-required" name="userName" ng-model="userName" required="" placeholder="Nombre">
+													<p ng-show="contactForm.userName.$invalid &amp;&amp; contactForm.userName.$touched" class="validacion ng-hide">Por favor ingresar campo
+														válido</p>
+													<div class="clear"></div>
+												</div>
+												<div class="form-group" ng-class="{'error': contactForm.userId.$invalid &amp;&amp; contactForm.userId.$touched}">
+													<input type="text" class="form-control ingresos ng-pristine ng-untouched ng-valid" name="userId" ng-model="userId" min="0" restrict-to="[0-9]" placeholder="Cédula">
+													<p ng-show="contactForm.userId.$invalid &amp;&amp; contactForm.userId.$touched" class="validacion ng-hide">Por favor ingresar campo
+														válido</p>
+													<div class="clear"></div>
+												</div>
+												<div class="form-group" ng-class="{'error': contactForm.userEmail.$invalid &amp;&amp; contactForm.userEmail.$touched}">
+													<input type="email" ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/" class="form-control ingresos ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern" name="userEmail" ng-model="userEmail" required="" placeholder="Correo">
+													<p ng-show="contactForm.userEmail.$invalid &amp;&amp; contactForm.userEmail.$touched" class="validacion ng-hide">Por favor ingresar campo
+														válido</p>
+													<div class="clear"></div>
+												</div>
+												<div class="form-group" ng-class="{'error': contactForm.userPhoneNumber.$invalid &amp;&amp; contactForm.userPhoneNumber.$touched}">
+													<input type="text" class="form-control ingresos ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-minlength" name="userPhoneNumber" ng-model="userPhoneNumber" min="0" ng-minlength="7" restrict-to="[0-9]" required="" placeholder="Teléfono">
+													<p ng-show="contactForm.userPhoneNumber.$invalid &amp;&amp; contactForm.userPhoneNumber.$touched" class="validacion ng-hide">Por favor ingresar campo
+														válido</p>
+													<div class="clear"></div>
+												</div>
+												<div class="form-group" ng-class="{'error': contactForm.userCity.$invalid &amp;&amp; contactForm.userCity.$touched}">
+													<div class="ui-front">
+														<input id="tags" type="text" class="form-control ingresos ng-pristine ng-untouched ng-invalid ng-invalid-required ui-autocomplete-input" name="userCity" ng-model="userCity" required="" placeholder="Ciudad" autocomplete="off">
+													<ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul></div>
+													<p ng-show="contactForm.userCity.$invalid &amp;&amp; contactForm.userCity.$touched" class="validacion ng-hide">Por favor seleccionar ciudad</p>
+													<div class="clear"></div>
+												</div>
+												<div class="form-group" ng-class="{'error': contactForm.selectedOptions.$invalid &amp;&amp; contactForm.selectedOptions.$touched}">
+													<div class="checkbox">
+														<input type="checkbox" name="selectedOptions" ng-model="userAcceptedTerms" ng-checked="userAcceptedTerms" required="" class="ng-pristine ng-untouched ng-valid ng-valid-required"> <label>Acepto
+															<a target="_blank" href="/metrocuadrado-header/terminoscondiciones">políticas
+																y Términos </a> y <a target="_blank" href="/metrocuadrado-header/avisoprivacidad">Aviso de
+																Privacidad </a>
+														</label>
+													</div>
+													<p ng-show="contactForm.selectedOptions.$invalid &amp;&amp; contactForm.selectedOptions.$touched" class="validacion ng-hide" style="margin-top: -10px">Debes
+														aceptar antes de contactar a los bancos.</p>
+													<div class="clear"></div>
+												</div>
+												<button type="button" class="btn btn-default" data-dismiss="modal" ng-disabled="contactForm.$invalid || contactFormBanks " ng-click="sendContactInfo(bankSelected)" disabled="disabled">Contactar
+												</button>
+											</form>
+										</div>
+										<div class="clear"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin lightbox contactar bancos -->
+						<!-- Inicio lightbox tabla de cuotas -->
+						<div class="modal fade m2-gallery-modal" id="TablaCuotas1" role="dialog" aria-labelledby="modalLabel" tabindex="-1">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content contactar_bancos tabla_cuotas">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span class="m2-icon m2-icon-cross"></span>
+										</button>
+										<h3 class="modal-title" id="modalLabel">Cuotas del
+											crédito</h3>
+									</div>
+									<div class="modal-body">
+										<p>
+											Para un préstamo de<span class="valor_result ng-binding">$126,094,867.52 
+										</span></p>
+										<p>
+											Con un plazo de<span class="valor_result ng-binding">240
+												meses 
+										</span></p>
+										<p>
+											Con ingresos mensuales de<span class="valor_result ng-binding">$4,000,000.00 
+										</span></p>
+										<div class="tabla">
+											<table class="table table-striped">
+												<thead>
+													<tr>
+														<th>No. Cuota</th>
+														<th>Cuota mensual <br> sin seguro
+														</th>
+														<th>Abono a interés</th>
+														<th>Abono a capital</th>
+														<th>Saldo</th>
+													</tr>
+												</thead>
+												<tbody>
+													<!-- ngRepeat: data in tableQuotas[0] -->
+												</tbody>
+											</table>
+										</div>
+										<div class="clear"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin lightbox tabla de cuotas -->
+					</div>
+					<!-- Fin contenido Calcule cuánto le prestan -->
+
+					<!-- Inicio contenido Calcule el valor de las cuotas -->
+					<div class="valorCuotas tab-pane ng-scope" ng-controller="CalculateLoanCtrl">
+
+						<!-- Inicio formulario cuotas -->
+						<div class="col-md-5 col-sm-4 col-xs-12 formulario cuotas" ng-show="!showLoanInfoByQuota || (showLoanInfoByQuota &amp;&amp; !hasLowResWidth())">
+							<h2>Calcula el valor de las cuotas</h2>
+							<form name="CalculateLoanForm" data-gtm-container="17b-1" class="ng-pristine ng-invalid ng-invalid-required ng-valid-max ng-valid-fraction ng-invalid-min">
+								<div class="form-group" ng-class="{'error': (CalculateLoanForm.loadAmount.$error.required &amp;&amp; CalculateLoanForm.loadAmount.$touched) || (!CalculateLoanForm.loadAmount.$error.required &amp;&amp; CalculateLoanForm.loadAmount.$invalid &amp;&amp; CalculateLoanForm.loadAmount.$touched)}">
+									<label class="valign required" for="ingresosMensuales"><h3>Valor
+											del crédito:</h3></label> <input name="loadAmount" ng-model="loadAmount" type="text" class="form-control ng-pristine ng-untouched ng-isolate-scope ng-invalid ng-invalid-required ng-valid-max ng-valid-fraction ng-invalid-min" placeholder="" min="minLoadAmount.value" limit-to="10" restrict-to="[0-9]" currency-symbol="$" fraction="0" ng-currency="" required="" data-gtm-item="load">
+									<p class="validacion ng-binding ng-hide" ng-show="!CalculateLoanForm.loadAmount.$error.required &amp;&amp; CalculateLoanForm.loadAmount.$invalid &amp;&amp; CalculateLoanForm.loadAmount.$touched">
+										El valor del crédito debe ser mayor o igual a $15,000,000.</p>
+									<p class="validacion ng-hide" ng-show="CalculateLoanForm.loadAmount.$error.required &amp;&amp; CalculateLoanForm.loadAmount.$touched">
+										Por favor ingresar campo</p>
+									<div class="clear"></div>
+								</div>
+								<div class="form-group">
+									<label class="valign required" for="plazo"><h3>Plazo
+											en años:</h3></label> <select class="form-control arrowright ng-pristine ng-untouched ng-valid" data-gtm-item="time" ng-model="termInYearsByQuota" ng-options="year.id as year.name for year in yearOptions"><option label="5 Años" value="number:5">5 Años</option><option label="10 Años" value="number:10">10 Años</option><option label="15 Años" value="number:15" selected="selected">15 Años</option><option label="20 Años" value="number:20">20 Años</option></select>
+									<div class="clear"></div>
+								</div>
+								<button type="button" class="btn btn-upload cuotas" ng-click="calculateByQuota()" ng-disabled="CalculateLoanForm.$invalid" disabled="disabled">
+									<h4 data-gtm-click="17b-1">Calcular Cuotas</h4>
+								</button>
+								<p></p>
+								<p style="text-align:justify;  font-size:9px;">* Con el diligenciamiento de este formulario, aceptas el envío de tus datos a la entidad que ofrece el servicio que estás cotizando, en su calidad de responsable. Lo anterior, conforme con la política de tratamiento de datos personales de M2. 
+								Cualquier reclamo o consulta relacionado con tus datos, podrá ser tramitado con dicha entidad, cuya información podrás encontrar en incluida en el anuncio o podrás comunicarte con nosotros.</p>
+							</form>
+						</div>
+						<!-- Fin formulario cuotas -->
+
+						<!-- Inicio imagen cuotas -->
+						<div class="col-md-7 col-sm-8 col-xs-12 imagen cuotas" ng-show="!showLoanInfoByQuota">
+							<img srcset="static/img/supermercado_financiero_principal_movil.jpg 767w,
+                             static/img/supermercado_financiero_principal_2.jpg 990w,
+                             static/img/supermercado_financiero_principal_2.jpg 1200w" alt="Calculadora de crédito hipotecario para vivienda – Calcula el valor de las cuotas" title="Simulador de crédito hipotecario – Calcula el valor de las cuotas">
+							<div class="recuadro">
+								<h3>¿Deseas comprar vivienda?</h3>
+								<p>Encuentra las tasas de interés de los bancos y el
+									valor de la cuota mensual</p>
+							</div>
+						</div>
+						<!-- Fin imagen cuotas -->
+
+						<!-- Inicio resultados cuotas -->
+						<div class="col-md-7 col-sm-8 col-xs-12 resultados cuotas ng-hide" ng-show="showLoanInfoByQuota">
+							<div class="datos_superior">
+								<dl>
+									<dt>
+										<span class="escritorio">Para obtener un crédito
+											de:</span><span class="movil">Crédito:</span>
+									</dt>
+									<dd class="ng-binding"></dd>
+								</dl>
+								<dl>
+									<dt>
+										<span class="escritorio">Debes tener ingresos mensuales
+											de:</span><span class="movil">Ingresos mensuales:</span>
+									</dt>
+									<dd class="ng-binding">
+										$ 0<span class="m2-icon m2-icon-question"><div>Es posible
+												justificar este valor tomando el crédito en conjunto
+												con otras personas de su grupo familiar.</div></span>
+									</dd>
+								</dl>
+								<dl>
+									<dt>
+										<span class="escritorio">Debes tener una cuota inicial
+											mínima de:</span><span class="movil">Cuota inicial
+											mínima:</span>
+									</dt>
+									<dd class="ng-binding">
+										<span class="m2-icon m2-icon-question"><div>Los bancos
+												solo pueden financiar hasta el 70% del valor del inmueble.
+												Debes contar con el 30% restante para la cuota inicial
+												(ahorros o cesantías).</div></span>
+									</dd>
+								</dl>
+								<dl>
+									<dt>
+										<span class="escritorio">Puedes comprar un inmueble de:</span><span class="movil">Valor inmueble:</span>
+									</dt>
+									<dd class="valor ng-binding">$ 0</dd>
+								</dl>
+								<a ng-click="lowResRecalculateByQuota()">Volver a calcular</a>
+							</div>
+							<div class="col-xd-12 borde_left_tabla">
+								<table id="td-resul-calc">
+									<tbody><tr>
+										<th>Banco</th>
+										<th>Valor de la cuota mensual</th>
+										<th>Valor estimado del préstamo</th>
+										<th>Tasa de interés <br> (tasa E.A)
+										</th>
+										<th></th>
+									</tr>
+									<tr class="nth-child(even)">
+	                                	<!--<td colspan="5" class="lqn-main-container">
+	                                	<div class="lqn-bar-container">
+														<div class="lqn-bar-logo">
+															<img srcset="static/img/lo-que-necesito-logo.svg" alt="Lo Que Necesito"	title="Lo Que Necesito" />
+														</div>
+														<div class="lqn-bar-text"><p><span>Tramitamos en línea tu crédito hipotecario,</span> con tasas de interés desde 0,72% mensual</p></div>
+														<div class="lqn-bar-btn-container">
+															<a ng-click="omniture_event115()" class="lqn-bar-btn general-lightbox-trigger" data-lightbox="form-lqn">¡Tramitar crédito!</a>
+			                                            </div>
+												</div>
+										</td> -->
+	                                </tr>
+									<!-- ngRepeat: bank in bankList -->
+								</tbody></table>
+
+								<!-- Inicio resultados mobile credito-->
+								<!-- ngRepeat: bank in bankList -->
+								<!-- final resultados mobile credito-->
+
+								<!-- Inicio label explicacion-->
+								<div class="lista_bancos">
+									<div class="row">
+										<div class="textos_legales">
+											<p>El cálculo realizado es bajo una tasa de
+												interés aproximada por lo cual el valor de la cuota
+												aquí mencionada es aproximada y no incluyen el valor
+												de seguros u otros conceptos. La aprobación del
+												crédito está sujeta a políticas
+												internas de cada una de las entidades financieras.</p>
+										</div>
+									</div>
+								</div>
+								<!-- Fin label explicacion-->
+							</div>
+						</div>
+						<!-- Fin resultados cuotas -->
+						<div class="clear"></div>
+						<!-- Inicio lightbox contactar bancos -->
+						<div class="modal fade m2-gallery-modal" id="contactoBancosCalculadora2" role="dialog" aria-labelledby="modalLabel">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content contactar_bancos2">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span class="m2-icon m2-icon-cross"></span>
+										</button>
+										<h2 class="modal-title2" id="modalLabel">Solicitar
+											información al banco</h2>
+									</div>
+									<div class="imagen_modal">
+										<img ng-src="static/img/logo_defecto.jpg" src="static/img/logo_defecto.jpg">
+									</div>
+									<div class="modal-body" style="padding-top: 5px;">
+										<div class="col-xs-12">
+											<form name="contactForm" class="ng-pristine ng-invalid ng-invalid-required ng-valid-email ng-valid-pattern ng-valid-minlength">
+												<div class="form-group" ng-class="{'error': contactForm.userName.$invalid &amp;&amp; contactForm.userName.$touched}">
+													<p class="check-campos" for="Nombre">Es necesario
+														diligenciar todos los campos.</p>
+													<input type="text" class="form-control ingresos ng-pristine ng-untouched ng-invalid ng-invalid-required" name="userName" ng-model="userName" required="" placeholder="Nombre">
+													<p ng-show="contactForm.userName.$invalid &amp;&amp; contactForm.userName.$touched" class="validacion ng-hide">Por favor ingresar campo
+														válido</p>
+													<div class="clear"></div>
+												</div>
+												<div class="form-group" ng-class="{'error': contactForm.userId.$invalid &amp;&amp; contactForm.userId.$touched}">
+													<input type="text" class="form-control ingresos ng-pristine ng-untouched ng-valid" name="userId" ng-model="userId" min="0" restrict-to="[0-9]" placeholder="Cédula">
+													<p ng-show="contactForm.userId.$invalid &amp;&amp; contactForm.userId.$touched" class="validacion ng-hide">Por favor ingresar campo
+														válido</p>
+													<div class="clear"></div>
+												</div>
+												<div class="form-group" ng-class="{'error': contactForm.userEmail.$invalid &amp;&amp; contactForm.userEmail.$touched}">
+													<input type="email" ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/" class="form-control ingresos ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern" name="userEmail" ng-model="userEmail" required="" placeholder="Correo">
+													<p ng-show="contactForm.userEmail.$invalid &amp;&amp; contactForm.userEmail.$touched" class="validacion ng-hide">Por favor ingresar campo
+														válido</p>
+													<div class="clear"></div>
+												</div>
+												<div class="form-group" ng-class="{'error': contactForm.userPhoneNumber.$invalid &amp;&amp; contactForm.userPhoneNumber.$touched}">
+													<input type="text" class="form-control ingresos ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-minlength" name="userPhoneNumber" ng-model="userPhoneNumber" min="0" ng-minlength="7" restrict-to="[0-9]" required="" placeholder="Teléfono">
+													<p ng-show="contactForm.userPhoneNumber.$invalid &amp;&amp; contactForm.userPhoneNumber.$touched" class="validacion ng-hide">Por favor ingresar campo
+														válido</p>
+													<div class="clear"></div>
+												</div>
+												<div class="form-group" ng-class="{'error': contactForm.userCity.$invalid &amp;&amp; contactForm.userCity.$touched}">
+													<div class="ui-front">
+														<input id="tags" type="text" class="form-control ingresos ng-pristine ng-untouched ng-valid ng-valid-required" name="userCity" ng-model="userCity" required="" placeholder="Ciudad">
+													</div>
+													<p ng-show="contactForm.userCity.$invalid &amp;&amp; contactForm.userCity.$touched" class="validacion ng-hide">Por favor seleccionar ciudad</p>
+													<div class="clear"></div>
+												</div>
+												<div class="form-group" ng-class="{'error': contactForm.selectedOptions.$invalid &amp;&amp; contactForm.selectedOptions.$touched}">
+													<div class="checkbox">
+														<input type="checkbox" name="selectedOptions" ng-model="userAcceptedTerms" ng-checked="userAcceptedTerms" required="" class="ng-pristine ng-untouched ng-valid ng-valid-required"> <label>Acepto
+															<a target="_blank" href="/metrocuadrado-header/terminoscondiciones">políticas
+																y Términos </a> y <a target="_blank" href="/metrocuadrado-header/avisoprivacidad">Aviso de
+																Privacidad </a>
+														</label>
+													</div>
+													<p ng-show="contactForm.selectedOptions.$invalid &amp;&amp; contactForm.selectedOptions.$touched" class="validacion ng-hide" style="margin-top: -10px">Debes
+														aceptar antes de contactar a los bancos.</p>
+													<div class="clear"></div>
+												</div>
+												<button type="button" class="btn btn-default" data-dismiss="modal" ng-disabled="contactForm.$invalid || contactFormBanks " ng-click="sendContactInfo(bankSelectedCuotas)" disabled="disabled">Contactar
+												</button>
+											</form>
+										</div>
+										<div class="clear"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+						<!-- Fin lightbox contactar bancos -->
+						<!-- Inicio lightbox tabla de cuotas -->
+						<div class="modal fade m2-gallery-modal" id="TablaCuotas" role="dialog" aria-labelledby="modalLabel" tabindex="-1">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content contactar_bancos tabla_cuotas">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span class="m2-icon m2-icon-cross"></span>
+										</button>
+										<h3 class="modal-title" id="modalLabel">Cuotas del
+											crédito</h3>
+									</div>
+									<div class="modal-body">
+										<p>
+											Para un préstamo de<span class="valor_result ng-binding"> 
+										</span></p>
+										<p>
+											Con un plazo de<span class="valor_result ng-binding">
+												meses 
+										</span></p>
+										<p>
+											Con ingresos mensuales de<span class="valor_result ng-binding">$0.00 
+										</span></p>
+										<div class="tabla">
+											<table class="table table-striped">
+												<thead>
+													<tr>
+														<th>No. Cuota</th>
+														<th>Cuota mensual <br> sin seguro
+														</th>
+														<th>Abono a interés</th>
+														<th>Abono a capital</th>
+														<th>Saldo</th>
+													</tr>
+												</thead>
+												<tbody>
+													<!-- ngRepeat: data in tableQuotas[0] -->
+												</tbody>
+											</table>
+										</div>
+										<div class="clear"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin lightbox tabla de cuotas -->
+
+					</div>
+					<!-- Fin contenido Calcule el valor de las cuotas -->
+
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-12">
+			<p class="texto_inicial fuentes">
+				<i class="ng-binding">Fuente: Superintendencia Financiera de Colombia. Informe
+					tasas de interés activas. Crédito de vivienda. Tasas efectivas con
+					corte al 2021-08-01.
+					https://www.superfinanciera.gov.co/Superfinanciera-Tasas/generic/activeInterestRates.seam</i>
+			</p>
+		</div>
+	</div>
+
+<!--lightbox LQN-->
+	<div class="lightbox-lqn-container form-lqn" id="contactoLQN">
+		<div class="lightbox-lqn-wrapper">
+		<div class="close-container"><span class="label-text-icon">Inicia tu solicitud</span></div>
+		<div class="lightbox-lqn-content">
+			<div class="lightbox-content-half half-img-size">
+				<div class="half-img-container">
+					<div class="img-overlay"></div>
+					<img src="static/img/lqn-form-img.jpg" alt="" class="lightbox-lqn-background"> 
+				</div>
+				<div class="half-text-container">
+						<h3>Tramitamos tu crédito</h3>
+						<p class="main-description-text">Te ofrecemos la mejor experiencia para tramitar tu crédito de vivienda</p>
+						<p><span class="description-number">1.</span><span class="description-text">Llena el formulario e inicia a procesar tu crédito en línea</span></p>
+						<p><span class="description-number">2.</span><span class="description-text">¡Te diremos en línea que Bancos si te prestan!</span></p><p></p>
+						<p><span class="description-number">3.</span><span class="description-text">Recibe asesoría completa y sin costo por parte de un especialista del equipo de LQN</span></p>					
+				</div>
+			</div>
+			<div class="lightbox-content-half half-form-size">
+				<div class="form-main-container">
+					<div class="desktop-logo-space"></div>
+					<div class="form-container" id="form-containerLQN">  
+						<form name="contactFormLQN" id="contactFormLQN" class="ng-pristine ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength ng-valid-email ng-valid-pattern ng-valid-max ng-valid-fraction ng-invalid-min">
+						
+							<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response" value="03AGdBq27jlCYJhKQrbAlLqD2K_bBvsqp9xlfv7DVdnaQZeuxbDeEf4ivEmtbkHrIVZVshZfnlbWr8fsM27S5mq601Zh_5BXxv9WXI6tO0QwxO3E13StK5QHj3LPwygcBbuRmpzP0rgphOaW3jaNp8i_s5MhMSoy7u4XtTMFRDJCxziJf-dsfvFRj9hhRN1u3KRM8XYrk_BEsATp-YoK4Q34pQM3ndOQQGvIh1pP7X8qez-tS9gbac5iua4w4svlcgbvIGFacaOZ7z9ELeeTH3z8zlhA6PL1bC3Q9NYPzbA9UHCtrJjyiZfUhTUYigKKkhUVA-Ks-06esGc6PlbhhnWKOBo1i2A0U95YCNIb3QrO3b--pYYEN7-LmDLv7KRdUPokHaKEPfRK0qSN_W5GZkAT_57CLclBbfHyEzoLaWLLbtK7g4jN2KBzyyAxZSDzOwqsd460TUBk5eQ1hlmLFo4biYfzm0j08Z3A">
+    						<input type="hidden" name="action" value="validate_captcha">
+    						
+                            <div class="form-field-container" ng-class="{'error': contactFormLQN.userNameLQN.$invalid &amp;&amp; contactFormLQN.userNameLQN.$touched}">                                
+                                <label>Nombre y apellido</label>
+                                <input type="text" restrict-to="[a-zA-ZáéíóúÁÉÍÓÚÑñ ]" class="form-control ingresos ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength" name="userNameLQN" ng-model="userNameLQN" required="" ng-minlength="2" maxlength="150" placeholder="Nombre y apellido">
+                                <p ng-show="(contactFormLQN.$submitted &amp;&amp; contactFormLQN.userNameLQN.$error.required) ||  
+                                		(contactFormLQN.userNameLQN.$error.required &amp;&amp; contactFormLQN.userNameLQN.$touched)" class="validacion error-message ng-hide">Por favor ingresa tu nombre y apellido</p>
+                                <p ng-show="(contactFormLQN.$submitted &amp;&amp; !contactFormLQN.userNameLQN.$error.required &amp;&amp; contactFormLQN.userNameLQN.$invalid)
+                                || (!contactFormLQN.userNameLQN.$error.required &amp;&amp; contactFormLQN.userNameLQN.$invalid &amp;&amp; contactFormLQN.userNameLQN.$touched)" class="validacion error-message ng-hide">Por favor ingresa tu nombre y apellido válido</p>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="form-field-container" ng-class="{'error': contactFormLQN.userIdLQN.$invalid &amp;&amp; contactFormLQN.userIdLQN.$touched}">
+                                 <label>Número de cédula</label>
+                                <input type="text" class="form-control ingresos ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength" maxlength="11" name="userIdLQN" ng-model="userIdLQN" min="0" ng-minlength="5" restrict-to="[0-9]" required="" placeholder="Número de cédula">
+                                <p ng-show="(contactFormLQN.$submitted &amp;&amp; contactFormLQN.userIdLQN.$invalid)
+                                	|| (contactFormLQN.userIdLQN.$invalid &amp;&amp; contactFormLQN.userIdLQN.$touched)" class="validacion error-message ng-hide">Por favor ingresa un número válido</p>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="form-field-container" ng-class="{'error': contactFormLQN.userEmailLQN.$invalid &amp;&amp; contactFormLQN.userEmailLQN.$touched}">
+                                <label>Email</label>
+                                <input type="email" ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/" maxlength="90" class="form-control ingresos ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength" name="userEmailLQN" ng-minlength="5" ng-model="userEmailLQN" required="" placeholder="Email">
+                                <p ng-show="(contactFormLQN.$submitted &amp;&amp; contactFormLQN.userEmailLQN.$invalid)
+                                	|| (contactFormLQN.userEmailLQN.$invalid &amp;&amp; contactFormLQN.userEmailLQN.$touched)" class="validacion error-message ng-hide">Por favor ingresar email
+                                    válido</p>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="form-field-container half" ng-class="{'error': contactFormLQN.userPhoneNumberLQN.$invalid &amp;&amp; contactFormLQN.userPhoneNumberLQN.$touched}">
+                                <label>Teléfono</label>
+                                <input type="text" class="form-control ingresos ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength" maxlength="10" name="userPhoneNumberLQN" ng-model="userPhoneNumberLQN" min="0" ng-minlength="7" restrict-to="[0-9]" required="" placeholder="Teléfono">
+                                <p ng-show="(contactFormLQN.$submitted &amp;&amp; contactFormLQN.userPhoneNumberLQN.$invalid)
+                                	|| (contactFormLQN.userPhoneNumberLQN.$invalid &amp;&amp; contactFormLQN.userPhoneNumberLQN.$touched)" class="validacion error-message ng-hide">Por favor ingresa un número
+                                    válido</p>
+                                <div class="clear"></div>
+                            </div>                            
+							<div class="form-field-container half" ng-class="{'error': contactFormLQN.userCityLQN.$invalid &amp;&amp; contactFormLQN.userCityLQN.$touched}">
+								<label>Ciudad</label>
+								<div class="contenedor-select">
+									<div class="select-appearance select-appearance-general">
+										<p></p>
+										<div class="arrow-select-container"><span class="icon-f0053-chevron-down"></span></div>
+									</div>
+	                                <select data-gtm-item="time" name="userCityLQN" ng-model="userCityLQN" required="" id="select-userCityLQN" ng-options="city.slug as city.name for city in cityOptions" class="ng-pristine ng-untouched ng-invalid ng-invalid-required"><option value="?" selected="selected"></option><option label="Bogotá" value="string:Bogota">Bogotá</option><option label="Medellín" value="string:Medellin">Medellín</option><option label="Cali" value="string:Cali">Cali</option><option label="Barranquilla" value="string:Barranquilla">Barranquilla</option><option label="Bucaramanga" value="string:Bucaramanga">Bucaramanga</option><option label="Cartagena" value="string:Cartagena">Cartagena</option><option label="Otra" value="string:Otra">Otra</option></select>
+                                </div>
+                                <p ng-show="(contactFormLQN.$submitted &amp;&amp; contactFormLQN.userCityLQN.$invalid)
+                                	|| (contactFormLQN.userCityLQN.$invalid &amp;&amp; contactFormLQN.userCityLQN.$touched)" class="validacion error-message ng-hide">Por favor ingresa la ciudad</p>
+                                <div class="clear"></div>
+							</div>
+							
+							<div class="form-field-container half" ng-class="{'error': (contactFormLQN.loadAmountLQN.$error.required &amp;&amp; contactFormLQN.loadAmountLQN.$touched) || (!contactFormLQN.loadAmountLQN.$error.required &amp;&amp; contactFormLQN.loadAmountLQN.$invalid &amp;&amp; contactFormLQN.loadAmountLQN.$touched)}">
+                                <label>Valor del Inmueble</label>
+                                <input name="loadAmountLQN" ng-model="loadAmountLQN" type="text" class="form-control ng-pristine ng-untouched ng-isolate-scope ng-invalid ng-invalid-required ng-valid-max ng-valid-fraction ng-invalid-min" placeholder="" min="minLoadAmount.value" limit-to="10" restrict-to="[0-9]" currency-symbol="$" fraction="0" ng-currency="" required="" data-gtm-item="load">
+                                <p class="validacion error-message ng-binding ng-hide" ng-show="(contactFormLQN.$submitted &amp;&amp; !contactFormLQN.loadAmountLQN.$error.required &amp;&amp; contactFormLQN.loadAmountLQN.$invalid)
+                                   || (!contactFormLQN.loadAmountLQN.$error.required &amp;&amp; contactFormLQN.loadAmountLQN.$invalid &amp;&amp; contactFormLQN.loadAmountLQN.$touched)">
+                                    El
+                                    valor del Inmueble debe ser mayor o igual a $15,000,000.</p>
+                                <p class="validacion error-message ng-hide" ng-show="(contactFormLQN.$submitted &amp;&amp; contactFormLQN.loadAmountLQN.$error.required)
+                                   	|| (contactFormLQN.loadAmountLQN.$error.required &amp;&amp; contactFormLQN.loadAmountLQN.$touched)">
+                                    Por favor ingresa un numero valido</p>
+                                <div class="clear"></div>
+                            </div>
+							
+							<div class="form-field-container half" ng-class="{'error': (contactFormLQN.creditAmountLQN.$error.required &amp;&amp; contactFormLQN.creditAmountLQN.$touched) || (!contactFormLQN.loadAmountLQN.$error.required &amp;&amp; contactFormLQN.loadAmountLQN.$invalid &amp;&amp; contactFormLQN.loadAmountLQN.$touched)}">
+									<label>Valor del crédito</label>
+									<input name="creditAmountLQN" ng-model="creditAmountLQN" type="text" class="form-control ng-pristine ng-untouched ng-isolate-scope ng-invalid ng-invalid-required ng-valid-min ng-valid-max ng-valid-fraction" placeholder="" limit-to="10" restrict-to="[0-9]" currency-symbol="$" fraction="0" ng-currency="" required="" data-gtm-item="load">
+                                <p class="validacion error-message ng-binding ng-hide" ng-show="(contactFormLQN.$submitted &amp;&amp; !contactFormLQN.creditAmountLQN.$error.required &amp;&amp; contactFormLQN.creditAmountLQN.$invalid)
+                                   	|| (!contactFormLQN.creditAmountLQN.$error.required &amp;&amp; contactFormLQN.creditAmountLQN.$invalid &amp;&amp; contactFormLQN.creditAmountLQN.$touched)">
+                                    El
+                                    valor del crédito debe ser mayor o igual a $15,000,000.</p>
+                                <p class="validacion error-message ng-hide" ng-show="(contactFormLQN.$submitted &amp;&amp; contactFormLQN.creditAmountLQN.$error.required)
+                                   	|| (contactFormLQN.creditAmountLQN.$error.required &amp;&amp; contactFormLQN.creditAmountLQN.$touched)">
+                                    Por favor ingresa un numero valido</p>
+                                 <p class="validacion error-message ng-binding ng-hide" ng-show="validateCreditLQN()">
+                                    El valor del crédito no puede superar el 100% del valor del inmueble</p>
+                                <div class="clear"></div>
+							</div>
+							
+							<div class="form-field-container half lqn-year-select">
+                                <label>Plazo en años</label>
+                                <div class="contenedor-select">
+                                	<div class="select-appearance select-appearance-general">
+											<p ng-bind="termInYearsLQN_P" class="ng-binding">15 Años</p>
+										<div class="arrow-select-container"><span class="icon-f0053-chevron-down"></span></div>
+									</div>
+	                                <select data-gtm-item="time" ng-model="termInYearsLQN" id="select-termInYearsLQN" ng-options="year.id as year.name for year in yearOptions" class="ng-pristine ng-untouched ng-valid"><option label="5 Años" value="number:5">5 Años</option><option label="10 Años" value="number:10">10 Años</option><option label="15 Años" value="number:15">15 Años</option><option label="20 Años" value="number:20" selected="selected">20 Años</option></select>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+							<div class="form-field-container">
+								<div ng-class="{'error': contactFormLQN.selectedOptionsLQN.$invalid &amp;&amp; contactFormLQN.selectedOptionsLQN.$touched}" class="check-condiciones">
+									<label for="defaultCheck1"> 
+										<input type="checkbox" id="defaultCheck1" name="selectedOptionsLQN" ng-model="userAcceptedTermsLQN" checked="checked" ng-checked="userAcceptedTermsLQN" required="" class="ng-pristine ng-untouched ng-valid ng-valid-required">
+										<p class="form-terms">Acepto <a target="_blank" class="link" href="/metrocuadrado-header/terminoscondiciones">políticas y términos -</a> 
+										<a target="_blank" class="link" href="/metrocuadrado-header/avisoprivacidad">Aviso de privacidad </a></p>
+									</label>
+								</div>
+								<p ng-show="(contactFormLQN.$submitted &amp;&amp; contactFormLQN.selectedOptionsLQN.$invalid)
+									|| (contactFormLQN.selectedOptionsLQN.$invalid &amp;&amp; contactFormLQN.selectedOptionsLQN.$touched)" class="validacion checkbox-validate error-message ng-hide">Debes aceptar
+								antes de iniciar el trámite.</p>
+								<div class="clear"></div>
+							</div>
+							<div class="lqn-btns-container">							
+								<button class="orange-btn" type="submit" ng-click="sendContacFormLQN()">Iniciar el trámite</button>
+							</div>
+							<div style="width: 100%;margin: 0px auto auto;float: left;"> <p style="font-size: 10px;color: red;font-family: bold;">			
+								“Recuerda que el trámite de tu crédito lo hará directamente LQN. Al ingresar tus datos, aceptas que los tratemos de acuerdo con nuestra política de tratamiento de datos personales y se los enviemos a LQN para que te contacte”</p>
+							</div>
+						</form>
+					</div>
+					<div class="form-lqn-logo-container">
+						<p class="lqn-label-logo">En alianza con:</p>
+						<img srcset="static/img/lo-que-necesito-logo.svg" alt="Lo Que Necesito" title="Lo Que Necesito">
+					</div>
+					<div class="success-container">
+						<p class="success-icon"><span class="icon-f0062-circle-check"></span></p>
+						<p class="success-text">
+							Tu solicitud de crédito <span>se envió con éxito.</span>
+						</p>
+					</div>
+					<div class="fail-container">
+						<p class="fail-icon"><span class="icon-f0042-lightbox-close"></span></p>
+						<p class="success-text">
+							Tu solicitud de crédito <span>no se pudo tramitar. Intente mas tarde</span>
+						</p>
+					</div>
+			     </div>
+			</div>			
+		</div>
+	</div>
+</div> 
+<div class="general-lightbox white-lightbox-mobile">
+      <div class="general-lightbox-overlay"></div>
+      <div class="general-lightbox-container">
+        <div class="general-lightbox-wrapper">
+          <div class="general-lightbox-close"><span class="lightbox-close-icon icon-f0042-lightbox-close"></span></div>
+          <div class="general-lightbox-content"></div>
+        </div>
+      </div>
+</div>
+<!--Fin Lightbox LQN-->
+
+	<!-- Inicio lightbox mensaje confirmación contacto -->
+	<div class="modal fade m2-gallery-modal" id="ConfirmacionContacto" role="dialog" aria-labelledby="modalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content contactar_bancos2 confirmacion">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span class="m2-icon m2-icon-cross"></span>
+					</button>
+					<h2 class="modal-title2" id="modalLabel">Solicitar
+						información al banco</h2>
+					<div class="imagen_modal">
+						<img id="imageConfirmation">
+					</div>
+				</div>
+				<div class="modal-body2">
+					<h2 class="modal-title3" id="modalLabel">Mensaje Enviado</h2>
+					<p>El banco se pondrá en contacto con usted en los
+						siguientes días.</p>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Fin lightbox mensaje confirmación contacto -->
+	<!--/Supermercado Financiero-->
+
+	<!--Footer-->
+	<div id="nuevofooter">
+		<script type="text/javascript" src="static/js/newfooterloader.js"></script>
+
+		<div class="prefooter_opciones tabcordion tabbable">
+			<div id="prefooter" class="tab-pane">
+
+	
+		<div class="m_real_estate_list">
+			<div class="wrapper">
+				<h2 id="prefooter_title" class="title">Inmuebles en venta o arriendo en Colombia</h2><div id="section1" class="col" data-m-collapse="visible"><h3 class="title-col" data-m-collapse-link="">Apartamentos en venta y arriendo</h3><div class="boton_enlaces abrir uno"></div><div class="boton_enlaces cerrar uno"></div><ul data-m-collapse-content="" class="m_list list_1"><div><li><a id="link1" href="http://www.metrocuadrado.com/apartamentos/arriendo/armenia/"><h4>Apartamentos en arriendo Armenia</h4></a></li></div><div><li><a id="link2" href="http://www.metrocuadrado.com/apartamentos/arriendo/barranquilla/"><h4>Apartamentos en arriendo Barranquilla</h4></a></li></div><div><li><a id="link3" href="http://www.metrocuadrado.com/apartamentos/arriendo/bello/"><h4>Apartamentos en arriendo Bello</h4></a></li></div><div><li><a id="link4" href="http://www.metrocuadrado.com/apartamentos/arriendo/bogota/"><h4>Apartamentos en arriendo Bogotá</h4></a></li></div><div><li><a id="link5" href="http://www.metrocuadrado.com/apartamentos/arriendo/bucaramanga/"><h4>Apartamentos en arriendo Bucaramanga</h4></a></li></div><div class="show_more"><li class="view_more"><a id="ver_mas_1"><h4>Ver más</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link6" href="http://www.metrocuadrado.com/apartamentos/arriendo/cajica/"><h4>Apartamentos en arriendo Cajicá</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link7" href="http://www.metrocuadrado.com/apartamentos/arriendo/cali/"><h4>Apartamentos en arriendo Cali</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link8" href="http://www.metrocuadrado.com/apartamentos/arriendo/cartagena/"><h4>Apartamentos en arriendo Cartagena</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link9" href="http://www.metrocuadrado.com/apartamentos/arriendo/chia/"><h4>Apartamentos en arriendo Chía</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link10" href="http://www.metrocuadrado.com/apartamentos/arriendo/cucuta/"><h4>Apartamentos en arriendo Cúcuta</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link41" href="http://www.metrocuadrado.com/apartamentos/arriendo/envigado/"><h4>Apartamentos en arriendo Envigado</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link42" href="http://www.metrocuadrado.com/apartamentos/arriendo/floridablanca/"><h4>Apartamentos en arriendo Floridablanca</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link43" href="http://www.metrocuadrado.com/apartamentos/arriendo/ibague/"><h4>Apartamentos en arriendo Ibagué</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link44" href="http://www.metrocuadrado.com/apartamentos/arriendo/itagui/"><h4>Apartamentos en arriendo Itaguí</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link45" href="http://www.metrocuadrado.com/apartamentos/arriendo/medellin/"><h4>Apartamentos en arriendo Medellín</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link46" href="http://www.metrocuadrado.com/apartamentos/arriendo/mosquera/"><h4>Apartamentos en arriendo Mosquera</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link47" href="http://www.metrocuadrado.com/apartamentos/arriendo/sabaneta/"><h4>Apartamentos en arriendo Sabaneta</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link48" href="http://www.metrocuadrado.com/apartamentos/arriendo/santa-marta/"><h4>Apartamentos en arriendo Santa Marta</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link49" href="http://www.metrocuadrado.com/apartamentos/arriendo/soacha/"><h4>Apartamentos en arriendo Soacha</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link50" href="http://www.metrocuadrado.com/apartamentos/arriendo/villavicencio/"><h4>Apartamentos en arriendo Villavicencio</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link51" href="http://www.metrocuadrado.com/apartamentos/venta/armenia/"><h4>Apartamentos en venta Armenia</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link52" href="http://www.metrocuadrado.com/apartamentos/venta/barranquilla/"><h4>Apartamentos en venta Barranquilla</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link53" href="http://www.metrocuadrado.com/apartamentos/venta/bello/"><h4>Apartamentos en venta Bello</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link54" href="http://www.metrocuadrado.com/apartamentos/venta/bogota/"><h4>Apartamentos en venta Bogotá</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link55" href="http://www.metrocuadrado.com/apartamentos/venta/bucaramanga/"><h4>Apartamentos en venta Bucaramanga</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link56" href="http://www.metrocuadrado.com/apartamentos/venta/cajica/"><h4>Apartamentos en venta Cajicá</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link57" href="http://www.metrocuadrado.com/apartamentos/venta/cali/"><h4>Apartamentos en venta Cali</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link58" href="http://www.metrocuadrado.com/apartamentos/venta/cartagena/"><h4>Apartamentos en venta Cartagena</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link59" href="http://www.metrocuadrado.com/apartamentos/venta/chia/"><h4>Apartamentos en venta Chía</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link60" href="http://www.metrocuadrado.com/apartamentos/venta/envigado/"><h4>Apartamentos en venta Envigado</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link61" href="http://www.metrocuadrado.com/apartamentos/venta/floridablanca/"><h4>Apartamentos en venta Floridablanca</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link62" href="http://www.metrocuadrado.com/apartamentos/venta/itagui/"><h4>Apartamentos en venta Itaguí</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link63" href="http://www.metrocuadrado.com/apartamentos/venta/manizales/"><h4>Apartamentos en venta Manizales</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link64" href="http://www.metrocuadrado.com/apartamentos/venta/medellin/"><h4>Apartamentos en venta Medellín</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link65" href="http://www.metrocuadrado.com/apartamentos/venta/mosquera/"><h4>Apartamentos en venta Mosquera</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link66" href="http://www.metrocuadrado.com/apartamentos/venta/pereira/"><h4>Apartamentos en venta Pereira</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link67" href="http://www.metrocuadrado.com/apartamentos/venta/sabaneta/"><h4>Apartamentos en venta Sabaneta</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link68" href="http://www.metrocuadrado.com/apartamentos/venta/santa-marta/"><h4>Apartamentos en venta Santa Marta</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link69" href="http://www.metrocuadrado.com/apartamentos/venta/tunja/"><h4>Apartamentos en venta Tunja</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link70" href="http://www.metrocuadrado.com/apartamentos/venta/villavicencio/"><h4>Apartamentos en venta Villavicencio</h4></a></li></div><div class="show_less" style="display: none;"><li class="view_less"><a id="ver_menos_1"><h4>Ver menos</h4></a></li></div></ul></div><div id="section2" class="col" data-m-collapse="visible"><h3 class="title-col" data-m-collapse-link="">Casas en venta y arriendo</h3><div class="boton_enlaces abrir uno"></div><div class="boton_enlaces cerrar uno"></div><ul data-m-collapse-content="" class="m_list list_2"><div><li><a id="link11" href="http://www.metrocuadrado.com/casas/arriendo/barranquilla/"><h4>Casas en arriendo Barranquilla</h4></a></li></div><div><li><a id="link12" href="http://www.metrocuadrado.com/casas/arriendo/bello/"><h4>Casas en arriendo Bello</h4></a></li></div><div><li><a id="link13" href="http://www.metrocuadrado.com/casas/arriendo/bogota/"><h4>Casas en arriendo Bogotá</h4></a></li></div><div><li><a id="link14" href="http://www.metrocuadrado.com/casas/arriendo/bucaramanga/"><h4>Casas en arriendo Bucaramanga</h4></a></li></div><div><li><a id="link15" href="http://www.metrocuadrado.com/casas/arriendo/cartagena/"><h4>Casas en arriendo Cartagena</h4></a></li></div><div class="show_more"><li class="view_more"><a id="ver_mas_2"><h4>Ver más</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link16" href="http://www.metrocuadrado.com/casas/arriendo/cali/"><h4>Casas en arriendo Cali</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link17" href="http://www.metrocuadrado.com/casas/arriendo/chia/"><h4>Casas en arriendo Chía</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link18" href="http://www.metrocuadrado.com/casas/arriendo/cota/"><h4>Casas en arriendo Cota</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link19" href="http://www.metrocuadrado.com/casas/arriendo/envigado/"><h4>Casas en arriendo Envigado</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link20" href="http://www.metrocuadrado.com/casas/arriendo/funza/"><h4>Casas en arriendo Funza</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link71" href="http://www.metrocuadrado.com/casas/arriendo/fusagasuga/"><h4>Casas en arriendo Fusagasuga</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link72" href="http://www.metrocuadrado.com/casas/arriendo/itagui/"><h4>Casas en arriendo Itaguí</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link73" href="http://www.metrocuadrado.com/casas/arriendo/jamundi/"><h4>Casas en arriendo Jamundí</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link74" href="http://www.metrocuadrado.com/casas/arriendo/la-calera/"><h4>Casas en arriendo La Calera</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link75" href="http://www.metrocuadrado.com/casas/arriendo/medellin/"><h4>Casas en arriendo Medellín</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link76" href="http://www.metrocuadrado.com/casas/arriendo/mosquera/"><h4>Casas en arriendo Mosquera</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link77" href="http://www.metrocuadrado.com/casas/arriendo/rionegro/"><h4>Casas en arriendo Rionegro</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link78" href="http://www.metrocuadrado.com/casas/arriendo/sabaneta/"><h4>Casas en arriendo Sabaneta</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link79" href="http://www.metrocuadrado.com/casas/arriendo/santa-marta/"><h4>Casas en arriendo Santa Marta</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link80" href="http://www.metrocuadrado.com/casas/arriendo/villavicencio/"><h4>Casas en arriendo Villavicencio</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link81" href="http://www.metrocuadrado.com/casas/venta/armenia/"><h4>Casas en venta Armenia</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link82" href="http://www.metrocuadrado.com/casas/venta/barranquilla/"><h4>Casas en venta Barranquilla</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link83" href="http://www.metrocuadrado.com/casas/venta/bello/"><h4>Casas en venta Bello</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link84" href="http://www.metrocuadrado.com/casas/venta/bogota/"><h4>Casas en venta Bogotá</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link85" href="http://www.metrocuadrado.com/casas/venta/bucaramanga/"><h4>Casas en venta Bucaramanga</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link86" href="http://www.metrocuadrado.com/casas/venta/cajica/"><h4>Casas en venta Cajicá</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link87" href="http://www.metrocuadrado.com/casas/venta/cali/"><h4>Casas en venta Cali</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link88" href="http://www.metrocuadrado.com/casas/venta/cartagena/"><h4>Casas en venta Cartagena</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link89" href="http://www.metrocuadrado.com/casas/venta/chia/"><h4>Casas en venta Chía</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link90" href="http://www.metrocuadrado.com/casas/venta/cucuta/"><h4>Casas en venta Cúcuta</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link91" href="http://www.metrocuadrado.com/casas/venta/envigado/"><h4>Casas en venta Envigado</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link92" href="http://www.metrocuadrado.com/casas/venta/fusagasuga/"><h4>Casas en venta Fusagasuga</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link93" href="http://www.metrocuadrado.com/casas/venta/ibague/"><h4>Casas en venta Ibagué</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link94" href="http://www.metrocuadrado.com/casas/venta/medellin/"><h4>Casas en venta Medellín</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link95" href="http://www.metrocuadrado.com/casas/venta/neiva/"><h4>Casas en venta Neiva</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link96" href="http://www.metrocuadrado.com/casas/venta/palmira/"><h4>Casas en venta Palmira</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link97" href="http://www.metrocuadrado.com/casas/venta/pereira/"><h4>Casas en venta Pereira</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link98" href="http://www.metrocuadrado.com/casas/venta/santa-marta/"><h4>Casas en venta Santa Marta</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link99" href="http://www.metrocuadrado.com/casas/venta/tunja/"><h4>Casas en venta Tunja</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link100" href="http://www.metrocuadrado.com/casas/venta/villavicencio/"><h4>Casas en venta Villavicencio</h4></a></li></div><div class="show_less" style="display: none;"><li class="view_less"><a id="ver_menos_2"><h4>Ver menos</h4></a></li></div></ul></div><div id="section3" class="col" data-m-collapse="visible"><h3 class="title-col" data-m-collapse-link="">Proyectos de vivienda nueva en Colombia</h3><div class="boton_enlaces abrir uno"></div><div class="boton_enlaces cerrar uno"></div><ul data-m-collapse-content="" class="m_list list_3"><div><li><a id="link21" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/"><h4>Proyectos de vivienda en Colombia</h4></a></li></div><div><li><a id="link22" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/anapoima/"><h4>Proyectos de vivienda en Anapoima</h4></a></li></div><div><li><a id="link23" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/arbelaez/"><h4>Proyectos de vivienda en Arbelaez</h4></a></li></div><div><li><a id="link24" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/armenia/"><h4>Proyectos de vivienda en Armenia</h4></a></li></div><div><li><a id="link25" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/barranquilla/"><h4>Proyectos de vivienda en Barranquilla</h4></a></li></div><div class="show_more"><li class="view_more"><a id="ver_mas_3"><h4>Ver más</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link26" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/bogota/"><h4>Proyectos de vivienda en Bogotá</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link27" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/bucaramanga/"><h4>Proyectos de vivienda en Bucaramanga</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link28" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/cajica/"><h4>Proyectos de vivienda en Cajicá</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link29" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/cali/"><h4>Proyectos de vivienda en Cali</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link30" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/cartagena/"><h4>Proyectos de vivienda en Cartagena</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link101" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/cartago/"><h4>Proyectos de vivienda en Cartago</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link102" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/chia/"><h4>Proyectos de vivienda en Chía</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link103" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/cota/"><h4>Proyectos de vivienda en Cota</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link104" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/envigado/"><h4>Proyectos de vivienda en Envigado</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link105" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/floridablanca/"><h4>Proyectos de vivienda en Floridablanca</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link106" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/funza/"><h4>Proyectos de vivienda en Funza</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link107" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/ibague/"><h4>Proyectos de vivienda en Ibagué</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link108" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/jamundi/"><h4>Proyectos de vivienda en Jamundí</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link109" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/la-calera/"><h4>Proyectos de vivienda en La Calera</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link110" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/madrid/"><h4>Proyectos de vivienda en Madrid</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link111" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/malambo/"><h4>Proyectos de vivienda en Malambo</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link112" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/medellin/"><h4>Proyectos de vivienda en Medellín</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link113" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/melgar/"><h4>Proyectos de vivienda en Melgar</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link114" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/mosquera/"><h4>Proyectos de vivienda en Mosquera</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link115" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/neiva/"><h4>Proyectos de vivienda en Neiva</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link116" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/pereira/"><h4>Proyectos de vivienda en Pereira</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link117" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/puerto-colombia/"><h4>Proyectos de vivienda en Puerto Colombia</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link118" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/ricaurte/"><h4>Proyectos de vivienda en Ricaurte</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link119" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/sabaneta/"><h4>Proyectos de vivienda en Sabaneta</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link120" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/santa-marta/"><h4>Proyectos de vivienda en Santa Marta</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link121" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/soacha/"><h4>Proyectos de vivienda en Soacha</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link122" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/sogamoso/"><h4>Proyectos de vivienda en Sogamoso</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link123" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/soledad/"><h4>Proyectos de vivienda en Soledad</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link124" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/sopo/"><h4>Proyectos de vivienda en Sopó</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link125" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/tocancipa/"><h4>Proyectos de vivienda en Tocancipá</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link126" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/tunja/"><h4>Proyectos de vivienda en Tunja</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link127" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/valledupar/"><h4>Proyectos de vivienda en Valledupar</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link128" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/villavicencio/"><h4>Proyectos de vivienda en Villavicencio</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link129" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/villeta/"><h4>Proyectos de vivienda en Villeta</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link130" href="http://www.metrocuadrado.com/proyectos-vivienda-nueva/zipaquira/"><h4>Proyectos de vivienda en Zipaquirá</h4></a></li></div><div class="show_less" style="display: none;"><li class="view_less"><a id="ver_menos_3"><h4>Ver menos</h4></a></li></div></ul></div><div id="section4" class="col" data-m-collapse="visible"><h3 class="title-col" data-m-collapse-link="">Otros inmuebles en venta y arriendo</h3><div class="boton_enlaces abrir uno"></div><div class="boton_enlaces cerrar uno"></div><ul data-m-collapse-content="" class="m_list list_4"><div><li><a id="link31" href="http://www.metrocuadrado.com/bodegas/arriendo/"><h4>Bodegas en arriendo</h4></a></li></div><div><li><a id="link32" href="http://www.metrocuadrado.com/bodegas/venta/"><h4>Bodegas en venta</h4></a></li></div><div><li><a id="link33" href="http://www.metrocuadrado.com/casas/arriendo/"><h4>Casas en arriendo</h4></a></li></div><div><li><a id="link34" href="http://www.metrocuadrado.com/casas/venta/"><h4>Casas en venta</h4></a></li></div><div><li><a id="link35" href="http://www.metrocuadrado.com/consultorios/arriendo/"><h4>Consultorios en arriendo</h4></a></li></div><div class="show_more"><li class="view_more"><a id="ver_mas_4"><h4>Ver más</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link36" href="http://www.metrocuadrado.com/consultorios/venta/"><h4>Consultorios en venta</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link37" href="http://www.metrocuadrado.com/edificios-de-apartamentos/arriendo/"><h4>Edificios de apartamentos en arriendo</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link38" href="http://www.metrocuadrado.com/edificios-apartamentos/venta/"><h4>Edificios de apartamentos en venta</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link39" href="http://www.metrocuadrado.com/edificios-de-oficinas/arriendo/"><h4>Edificios de oficinas en arriendo</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link40" href="http://www.metrocuadrado.com/edificios-de-oficinas/venta/"><h4>Edificios de oficinas en venta</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link131" href="http://www.metrocuadrado.com/fincas/arriendo/"><h4>Fincas en arriendo</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link132" href="http://www.metrocuadrado.com/fincas/venta/"><h4>Fincas en venta</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link133" href="http://www.metrocuadrado.com/inmuebles/arriendo/"><h4>Inmuebles en arriendo</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link134" href="http://www.metrocuadrado.com/inmuebles/venta/"><h4>Inmuebles en venta</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link135" href="http://www.metrocuadrado.com/locales/arriendo/"><h4>Locales en arriendo</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link136" href="http://www.metrocuadrado.com/locales/venta/"><h4>Locales en venta</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link137" href="http://www.metrocuadrado.com/lotes/arriendo/"><h4>Lotes en arriendo</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link138" href="http://www.metrocuadrado.com/lotes/venta/"><h4>Lotes en venta</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link139" href="http://www.metrocuadrado.com/oficinas/arriendo/"><h4>Oficinas en arriendo</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link140" href="http://www.metrocuadrado.com/oficinas/venta/"><h4>Oficinas en venta</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link141" href="http://www.metrocuadrado.com/apartamentos/arriendo/"><h4>Apartamentos en arriendo</h4></a></li></div><div class="hideable" style="display: none;"><li><a id="link142" href="http://www.metrocuadrado.com/apartamentos/venta/"><h4>Apartamentos en venta</h4></a></li></div><div class="show_less" style="display: none;"><li class="view_less"><a id="ver_menos_4"><h4>Ver menos</h4></a></li></div></ul></div>
+			</div>
+		</div>
+	
+	<script type="text/javascript" src="static/js/prefooterloader.js"></script>
+</div>
+			<div class="clear"></div>
+		</div>
+		<div id="footer"><!--Inicio bloque prefooter drupal-->
+<hr class="separator">
+<div class="contact-bottom">
+	<div class="container footer_2">
+		<div class="row">
+			<div class="col-xs-12 col-md-2">
+				<img class="img-responsive" src="/estatico/metrocuadrado-personal-posting/img/logo-gray.png">
+			</div>
+			<div class="col-xs-10">
+				<div class="row">
+					<div class="col-xs-12 col-md-3">
+						<h2>Oficinas Metrocuadrado</h2>
+						<p>
+							Avenida de calle 26 No. 68B-70<br> Casa Editorial El Tiempo.
+							Bogotá.<br>Colombia.<br> (571)425 1734.
+						</p>
+					</div>
+					<div class="col-xs-12 col-md-3">
+						<h2>Línea Nacional:</h2>
+						<p>01 8000 115 252</p>
+						<div>
+							<a style="background-image:url('/estatico/metrocuadrado-detail/images/icons/png/contact-icon.png');background-repeat: no-repeat;padding-left: 32px;padding-bottom: 5px;" href="/metrocuadrado-header/contactenos">Contáctanos</a>
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-6 redessociales">
+						<h2>Síguenos en</h2>
+						<ul>
+							<li class="row_tw"><a class="a_tw" href="https://twitter.com/metrocuadrado" target="_blank"><span class="sm_tw">Tweeter</span></a></li>
+							<li class="row_fb"><a class="a_fb" href="http://www.facebook.com/metrocuadradocom" target="_blank"><span class="sm_fb">Facebook</span></a></li>
+							<li class="row_go"><a class="a_go" href="https://www.instagram.com/metrocuadradooficial/?utm_source=ig_profile_share&amp;igshid=1srxatoub206l" target="_blank"><span class="sm_go">Instagram</span></a></li>
+							<li class="row_yt"><a class="a_yt" href="https://www.youtube.com/user/METROCUADRADOcom" target="_blank"><span class="sm_yt">You Tube</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- / .contact-bottom -->
+<!--Fin bloque prefooter drupal-->
+<footer>
+	<!--Corrección drupal - Se omite footer ya que entra en conflicto con drupal. se reemplaza por div con clase container-footer -->
+	<!--Inicio bloque footer drupal-->
+	<div class="container-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 ">
+					<ul class="menu">
+
+						<li class="row_pol"><a class="a_poly" rel="nofollow" href="/metrocuadrado-header/terminoscondiciones" target="_blank">Política	y términos</a></li>
+						<li class="row_priv"><a class="a_priv" rel="nofollow" href="/metrocuadrado-header/avisoprivacidad" target="_blank">Aviso de privacidad</a></li>
+						<li class="row_nav"><a class="a_nav" rel="nofollow" href="/metrocuadrado-header/politicaCookies" target="_blank">Política Datos de Navegación</a></li>
+						<li class="row_et"><a class="a_et" href="https://www.ceet.co/linea-etica" target="_blank">Línea Ética</a></li>
+
+						<li class="row_qr"><a class="a_qr" rel="nofollow" href="/metrocuadrado-header/contactenos?tipoContacto=quejasYReclamos" target="_blank">Quejas y reclamos</a></li>
+						<li class="row_ay"><a class="a_ay" rel="nofollow" href="/metrocuadrado-header/ayuda" target="_blank">Ayuda</a></li>
+						<li><a href="https://www.ceet.co/" target="_blank">Paute con nosotros</a></li>
+						<li><a href="https://www.ceet.co/solicitud-reversion-de-pago" target="_blank">Reversión de pago</a></li>
+					</ul>
+					<!-- / .menu -->
+				</div>
+				<div class="aliados col-xs-12">
+					<h3>Nuestros portales especializados</h3>
+					<ul>
+						
+						<li class="row_emp"><a class="a_emp" href="http://www.elempleo.com/colombia/trabajo/ofertas.aspx" target="blank"> <img class="img_emp" src="/estatico/metrocuadrado-detail/images/icons/png/pt_job.png" width="86" height="19" alt=""></a></li>
+						<li class="row_car"><a class="a_car" href="http://www.carroya.com/" target="blank"> <img class="img_car" src="/estatico/metrocuadrado-detail/images/icons/png/pt_motor.png" width="124" height="17" alt=""></a></li>
+						<li class="row_gui"><a class="a_gui" href="http://www.guiaacademica.com/" target="blank">
+								<img class="img_gui" src="/estatico/metrocuadrado-detail/images/icons/png/pt_studies.png" width="159" height="19" alt="">
+						</a></li>
+						
+					</ul>
+				</div>
+			</div>
+			<div class="legal text-center">
+				<a href="http://www.eltiempo.com/" target="blank"> <img src="/estatico/metrocuadrado-personal-posting/img/logo-orange.png"></a>
+				<div class="info-logo-superint">
+					<p class="info">
+						Copyright © <span id="copyright-year">2021</span>
+						Metrocuadrado.com. Usar este site implica que aceptas nuestras
+						<a class="a_term" href="/metrocuadrado-header/terminoscondiciones" target="_blank"> Políticas y Términos</a> |
+						<a class="a_avi" href="/metrocuadrado-header/avisoprivacidad" target="_blank"> Aviso de Privacidad</a> |
+						<a class="a_pol" href="/metrocuadrado-header/politicaCookies" target="_blank"> Política datos de Navegación</a>
+						<br> Prohibida su reproducción total o
+						parcial, así como su traducción a cualquier idioma sin autorización
+						escrita de su titular.
+					</p>
+					<a href="http://www.sic.gov.co/" target="blank"><img src="/estatico/metrocuadrado-header-resources/images/icons/png/logo_super_industria_comercio.png" alt="Logo - Superintendencia de Industria y comercio">
+					</a>
+				</div>
+				<br> <a data-toggle="collapse" href="#footer_down" class="footer_down_section" aria-expanded="false" aria-controls="footer_down"> Conoce nuestra red de portales<br></a>
+				<div class="collapse" id="footer_down">
+					<ul class="col-xs-12 col-md-4">
+						<li class="row_port"><a class="a_port" href="http://www.portafolio.co/" target="blank">PORTAFOLIO.CO
+								- </a> Noticias de Economía</li>
+						<li class="row_viv"><a class="a_viv" href="http://vive.in/" target="blank">VIVE.IN
+						        - </a> Planes en Bogotá</li>
+						<li class="row_fut"><a class="a_fut" href="http://www.futbolred.com/" target="blank">FUTBOLRED.COM
+								- </a> Fútbol colombiano</li>
+						<li class="row_carr"><a class="a_carr" href="http://www.carroya.com/" target="blank">CARROYA.COM
+								- </a> Venta de carros</li>
+						<li class="row_rev"><a class="a_rev" href="http://www.revistadonjuan.com/" target="blank">REVISTADONJUAN.COM
+								- </a> Fotos de mujeres</li>
+					</ul>
+					<ul class="col-xs-12 col-md-4">
+						<li class="row_abc"><a class="a_abc" href="http://www.abcdelbebe.com/" target="blank">ABCDELBEBÉ.COM
+								- </a> Embarazo</li>
+						<li class="row_mot"><a class="a_mot" href="http://www.eltiempo.com/revista-motor" target="blank">MOTOR.COM.CO
+								- </a> Carros y motos</li>
+						<li class="row_adn"><a class="a_adn" href="http://diarioadn.co/" target="blank">DIARIOADN.CO
+								- </a> Noticias de Bogotá</li>
+						<li class="row_aca"><a class="a_aca" href="http://www.guiaacademica.com/" target="blank">GUIA
+								ACADEMICA.COM - </a> Educación</li>
+						<li class="row_alo"><a class="a_alo" href="http://alo.co/" target="blank">ALO.CO - </a>
+							Consejos para mujeres</li>
+					</ul>
+					<ul class="col-xs-12 col-md-4">
+						<li class="row_empl"><a class="a_empl" href="http://www.elempleo.com/colombia/trabajo/ofertas.aspx" target="blank">ELEMPLEO.COM - </a> Clasificados de trabajo</li>
+						<li class="row_circ"><a class="a_circ" href="http://www.circulodelectores.com.co/" target="blank">CÍRCULODELECTORES.COM.CO - </a> Venta de
+							libros</li>
+						<li class="row_clasi"><a class="a_clasi" href="https://clasificados.eltiempo.com/" target="blank">CLASIFICADOS.ELTIEMPO.COM - </a> Clasificados</li>
+						<li class="row_city"><a class="a_city" href="http://www.citytv.com.co/" target="blank">CITYTV.COM.CO
+								- </a> Videos de entrenimiento</li>
+						<li class="row_tiem"><a class="a_tiem" href="http://www.eltiempo.com/" target="blank">ELTIEMPO.COM
+								- </a> Portal de noticias</li>
+					</ul>
+					<div class="clear "></div>
+				</div>
+			</div>
+			<!-- / .legal -->
+		</div>
+		<!-- / .container -->
+	</div>
+</footer>
+<!-- / footer -->
+
+<script>
+	$(function() {
+		getCopyRightYear();
+		$('.tabcordion').tabcordion();
+	});
+
+	function getCopyRightYear(){
+			  var today = new Date();
+			  var year = today.getFullYear();
+			  document.getElementById("copyright-year").innerHTML = year;
+	}
+</script>
+<!--Fin bloque footer drupal-->
+
+<!-- Imágenes responsive -->
+<script>
+	// Picture element HTML5 shiv
+	document.createElement("picture");
+</script>
+<script src="static/js/picturefill.min.js" async=""></script></div>
+	</div>
+	<!--/Footer-->
+	<input type="hidden" id="applicationBaseUrl" value="https://www.metrocuadrado.com/calculadora-credito-hipotecario-vivienda/">
+
+	<input type="hidden" id="homeBaseUrl" value="https://www.metrocuadrado.com/metrocuadrado-home/">
+
+	<input type="hidden" id="saveContactUrl" value="https://www.metrocuadrado.com/detail/save/dynamicContact">
+
+	<input type="hidden" id="reCaptchaSiteKey" value="6LefV6UUAAAAAHd6BLtB6D9L4iwVjiD8fXYg5tVn">
+
+	<!--App-->
+	<script src="static/js/finance.js"></script>
+	<script src="/estatico/metrocuadrado-header-resources/js/s_code.js"></script>
+	<script src="static/js/angular/app.js"></script>
+	<script src="static/js/angular/calculator1.ctrl.js"></script>
+	<script src="static/js/angular/calculator2.ctrl.js"></script>
+	<script src="static/js/angular/directives.js"></script>
+	<script src="static/js/angular/variables.svc.js"></script>
+	<script src="static/js/angular/calculator.svc.js"></script>
+	<script src="static/js/angular/utils.svc.js"></script>
+<script async="" type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&amp;ns=1&amp;cb=962614240"></script>
+
+
+<div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; display: block; transition: right 0.3s ease 0s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"><iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LefV6UUAAAAAHd6BLtB6D9L4iwVjiD8fXYg5tVn&amp;co=aHR0cHM6Ly93d3cubWV0cm9jdWFkcmFkby5jb206NDQz&amp;hl=es&amp;v=ecapuzyywmdXQ5gJHS3JQiXe&amp;size=invisible&amp;cb=ek165kf7pch" width="256" height="60" role="presentation" name="a-jpuas2ita8tm" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><noscript><iframe height="0" width="0" src="https://www.googletagmanager.com/ns.html?id=GTM-WTMXDZ" style="display: none;"></iframe></noscript><iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="https://vars.hotjar.com/box-25a418976ea02a6f393fbbe77cec94bb.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe>
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","591972094936802");fbq("track","PageView");</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=591972094936802&amp;ev=PageView&amp;noscript=1"></noscript>
+
+<script type="text/javascript" id="">(function(d,a,b,f,e){d[e]=d[e]||[];d[e].push({projectId:"10000",properties:{pixelId:"10055189"}});var c=a.createElement(b);c.src=f;c.async=!0;c.onload=c.onreadystatechange=function(){var a=this.readyState,c=d[e];if(!a||"complete"==a||"loaded"==a)try{var b=YAHOO.ywa.I13N.fireBeacon;d[e]=[];d[e].push=function(a){b([a])};b(c)}catch(g){}};a=a.getElementsByTagName(b)[0];b=a.parentNode;b.insertBefore(c,a)})(window,document,"script","https://s.yimg.com/wi/ytc.js","dotq");</script><script type="text/javascript" id="">(function(b){try{var f=function(a){var c=new Date;c.setTime(c.getTime()+7776E6);c="; expires\x3d"+c.toUTCString();b.cookie="_rtbhouse_source_\x3d"+encodeURIComponent(a)+c+"; path\x3d/; metrocuadrado.com"},d=function(a,c){if(a){var b="(\\?|\x26)"+(c?"(gclid)":"(utm_)?source")+"\x3d([^\x26]*)";b=new RegExp(b);if(b=String(a).match(b))return b[3]}return!1},g=function(a){a=a&&String(a).length?/^https?:\/\//.test(a)?a:"https://"+a:!1;var c="google bing yandex yahoo ask mail babylon rambler avg globo search aolsearch aol info excite ixquick dogpile search webcrawler wolframalpha duckduckgo baidu facebook".split(" ");
+c=new RegExp("^(https?://)([^/@]*.)?("+c.join("|")+")(.[a-z]*)","gi");return/creativecdn\.com/.test(a)?"rtbhouse":d(b.location.search)?d(b.location.search):d(b.location.search,!0)?"AdWords":d(b.location.hash)?d(b.location.hash):a&&c.test(a)?"organic":a?!1:"direct"},e=g(google_tag_manager["GTM-WTMXDZ"].macro(5));e&&f(e)}catch(a){}})(document);</script>
+
+<script type="text/javascript" id="">(function(b,c,d,a,e){b[a]=b[a]||[];b[a].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});b=c.getElementsByTagName(d)[0];c=c.createElement(d);a="dataLayer"!=a?"\x26l\x3d"+a:"";c.async=!0;c.src="https://www.googletagmanager.com/gtm.js?id\x3d"+e+a;b.parentNode.insertBefore(c,b)})(window,document,"script","dataLayer","GTM-MHXCV43");</script>
+
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MHXCV43" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<script type="text/javascript" id="">var _comscore=_comscore||[];_comscore.push({c1:"2",c2:"6035169"});(function(){var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.async=!0;a.src=("https:"==document.location.protocol?"https://sb":"http://b")+".scorecardresearch.com/beacon.js";b.parentNode.insertBefore(a,b)})();</script>
+<noscript>
+  <img src="https://sb.scorecardresearch.com/p?c1=2&amp;c2=6035169&amp;cv=2.0&amp;cj=1">
+</noscript>
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","591972094936802");fbq("track","PageView");</script><script type="text/javascript" id="" src="//cdn-3.convertexperiments.com/js/10022306-10021159.js"></script><script type="text/javascript" id="">(function(){var d="__rtbhouse.lid",b=window.localStorage.getItem(d);if(!b){b="";for(var a="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",c=0;20>c;c++)b+=a.charAt(Math.floor(Math.random()*a.length));window.localStorage.setItem(d,b)}d=document.getElementsByTagName("body")[0];a=document.createElement("iframe");c=document.referrer?document.referrer:"";var e=document.location.href?document.location.href:"",f=-1<e.indexOf("?")?"\x26":"?";c=e+f+"sr\x3d"+encodeURIComponent(c);e=""+Date.now();
+b="https://us.creativecdn.com/tags?type\x3diframe\x26id\x3dpr_Zm8TDdsACFcLmvtdWjN5\x26id\x3dpr_Zm8TDdsACFcLmvtdWjN5_lid_"+encodeURIComponent(b)+"\x26su\x3d"+encodeURIComponent(c)+"\x26ts\x3d"+encodeURIComponent(e);a.setAttribute("src",b);a.setAttribute("width","1");a.setAttribute("height","1");a.setAttribute("scrolling","no");a.setAttribute("frameBorder","0");a.setAttribute("style","display:none");a.setAttribute("referrerpolicy","no-referrer-when-downgrade");d.appendChild(a)})();</script><iframe src="https://us.creativecdn.com/tags?type=iframe&amp;id=pr_Zm8TDdsACFcLmvtdWjN5&amp;id=pr_Zm8TDdsACFcLmvtdWjN5_lid_zXOiMeoERj4fjCIDQeIj&amp;su=https%3A%2F%2Fwww.metrocuadrado.com%2Fcalculadora-credito-hipotecario-vivienda%2F%3Fsr%3D&amp;ts=1627871769972" width="1" height="1" scrolling="no" frameborder="0" style="display:none" referrerpolicy="no-referrer-when-downgrade"></iframe><script type="text/javascript" id="">try{var accion="MCW - Detalles Inmuebles ",idInmueble="",cantidadDataLayer=window.dataLayer.length;for(a=1;a<cantidadDataLayer;a++)if(0<=window.dataLayer[a].event.indexOf("product-details")){var esDetalle="Detalle inmueble";$(document).ready(function(){$("#formCallMeMobile_SR .boton button").click(function(){idInmueble=$(this).attr("data-code");var b=accion+" - "+idInmueble,c=$(this).text();sendEvent(esDetalle,b,c)})});break}}catch(b){console.log("Error en clic Quiero Que me Contacten "+b)}
+function sendEvent(b,c,d){dataLayer.push({event:"ga_event",category:b,action:c+" - Quiero que me contacten",label:d});dataLayer.push({event:"ga_event_contacto",category:"ContactosM2",action:c,label:"Contacto"})};</script>
+  
+<script type="text/javascript" id="">var bket_md5=function(){for(var c=[],b=0;64>b;)c[b]=0|4294967296*Math.abs(Math.sin(++b));return function(a){var b,m,l,e,d=[];a=unescape(encodeURI(a));for(var f=a.length,g=[b=1732584193,m=-271733879,~b,~m],h=0;h<=f;)d[h>>2]|=(a.charCodeAt(h)||128)<<8*(h++%4);d[a=16*(f+8>>6)+14]=8*f;for(h=0;h<a;h+=16){f=g;for(e=0;64>e;)f=[l=f[3],(b=f[1]|0)+((l=f[0]+[b&(m=f[2])|~b&l,l&b|~l&m,b^m^l,m^(b|~l)][f=e>>4]+(c[e]+(d[[e,5*e+1,3*e+5,7*e][f]%16+h]|0)))<<(f=[7,12,17,22,5,9,14,20,4,11,16,23,6,10,15,21][4*f+e++%4])|
+l>>>32-f),b,m];for(e=4;e;)g[--e]=g[e]+f[e]}for(a="";32>e;)a+=(g[e>>3]>>4*(1^e++&7)&15).toString(16);return a}}(),bket_sha256=function(){function c(a,b){return a>>>b|a<<32-b}for(var b=1,a,k=[],m=[];18>++b;)for(a=b*b;312>a;a+=b)k[a]=1;b=1;for(a=0;313>b;)k[++b]||(m[a]=Math.pow(b,.5)%1*4294967296|0,k[a++]=Math.pow(b,1/3)%1*4294967296|0);return function(l){for(var e=m.slice(b=0),d=unescape(encodeURI(l)),f=[],g=d.length,h=[],n,p;b<g;)h[b>>2]|=(d.charCodeAt(b)&255)<<8*(3-b++%4);g*=8;h[g>>5]|=128<<24-g%32;
+h[p=g+64>>5|15]=g;for(b=0;b<p;b+=16){for(d=e.slice(a=0,8);64>a;d[4]+=n)f[a]=16>a?h[a+b]:(c(n=f[a-2],17)^c(n,19)^n>>>10)+(f[a-7]|0)+(c(n=f[a-15],7)^c(n,18)^n>>>3)+(f[a-16]|0),d.unshift((n=(d.pop()+(c(l=d[4],6)^c(l,11)^c(l,25))+((l&d[5]^~l&d[6])+k[a])|0)+(f[a++]|0))+(c(g=d[0],2)^c(g,13)^c(g,22))+(g&d[1]^d[1]&d[2]^d[2]&g));for(a=8;a--;)e[a]=d[a]+e[a]}for(d="";63>a;)d+=(e[++a>>3]>>4*(7-a%8)&15).toString(16);return d}}();function bket_hash(c){bket_hash_time(c,8760)}
+function bket_hash_time(c,b){if(""!=c){c=c.toLowerCase();var a=c.substring(0,c.indexOf("@"));a=bket_md5(a);a=c+a;a=bket_sha256(a);bket_get_cookie("bket_i")!=a&&(bket_set_cookie("bket_i",a,b),bket_delete_cookie("bket_e"),bket_check_hash())}}function bket_check_hash(){var c=bket_get_cookie("bket_i");if(""!=c){var b=bket_get_cookie("bket_e");""==b&&(bket_set_cookie("bket_e",100*Math.random(),144),bk_addPageCtx("id",c),bk_use_multiple_iframes=bk_allow_multiple_calls=!0,BKTAG.doTag(34038,10))}}
+function bket_set_cookie(c,b,a){var k=new Date;k.setTime(k.getTime()+36E5*a);a="expires\x3d"+k.toUTCString();document.cookie=c+"\x3d"+b+"; "+a+";path\x3d/"}function bket_get_cookie(c){c+="\x3d";for(var b=document.cookie.split(";"),a=0;a<b.length;a++){for(var k=b[a];" "==k.charAt(0);)k=k.substring(1);if(0==k.indexOf(c))return k.substring(c.length,k.length)}return""}function bket_delete_cookie(c){document.cookie=c+"\x3d;path\x3d/;expires\x3dThu, 01 Jan 1970 00:00:01 GMT;"}
+function bket_data_collection(){bk_use_multiple_iframes=bk_allow_multiple_calls=!0;"object"==typeof BKTAG&&BKTAG.doTag(74304,10)}window.bk_async=function(){"function"==typeof bket_callback&&bket_callback();bket_check_hash();bket_data_collection()};(function(){var c=document.getElementsByTagName("script")[0],b=document.createElement("script");b.async=!0;b.src="https://tags.bkrtx.com/js/bk-coretag.js";c.parentNode.insertBefore(b,c)})();</script>
+<script type="text/javascript" id="">try{$(document).ready(function(){$(".gtm-flash-searches ul li a").click(function(){var a="Footer",b=$(this).text().trim();a="https://tags.bluekai.com/site/"+google_tag_manager["GTM-MHXCV43"].macro(11)+"?phint\x3d"+a+"%3D"+b;jQuery("\x3cimg /\x3e").on("load").attr("src",a)})})}catch(a){console.log("Error blueKai "+a)};</script><script type="text/javascript" id="">try{$(".descubrimiento ul li a,.busqueda ul li a,.seleccion ul li a,.cierre ul li a").click(function(){dataLayer.push({event:"puebasUno"});var a="Footer",b=$(this).text().trim();a="https://tags.bluekai.com/site/"+google_tag_manager["GTM-MHXCV43"].macro(12)+"?phint\x3d"+a+"%3D"+b;jQuery("\x3cimg /\x3e").on("load").attr("src",a)})}catch(a){console.log("Error blueKai "+a)};</script><script type="text/javascript" id="">try{$(document).ready(function(){$(".gm_real_estate_list ul li a").click(function(){var a="Footer",b=$(this).text().trim();a="https://tags.bluekai.com/site/"+google_tag_manager["GTM-MHXCV43"].macro(13)+"?phint\x3d"+a+"%3D"+b;jQuery("\x3cimg /\x3e").on("load").attr("src",a)})}),$(document).ready(function(){$(".m_real_estate_list ul li a").click(function(){var a="Footer",b=$(this).text().trim();a="https://tags.bluekai.com/site/"+google_tag_manager["GTM-MHXCV43"].macro(14)+"?phint\x3d"+a+"%3D"+b;jQuery("\x3cimg /\x3e").on("load").attr("src",a)})})}catch(a){console.log("Error blueKai "+
+a)};</script><ul id="ui-id-2" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><ul id="ui-id-3" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><ul id="ui-id-4" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><img class="ywa-10000" src="https://sp.analytics.yahoo.com/sp.pl?a=10000&amp;d=Mon%2C%2002%20Aug%202021%2002%3A36%3A10%20GMT&amp;n=5&amp;b=Calculadora%20de%20Cr%C3%A9dito%20Hipotecario%20para%20Vivienda%20-%20Simulador%20de%20Cuotas&amp;.yp=10055189&amp;f=https%3A%2F%2Fwww.metrocuadrado.com%2Fcalculadora-credito-hipotecario-vivienda%2F&amp;enc=UTF-8&amp;yv=1.10.1&amp;tagmgr=gtm%2Cadobe" alt="dot image pixel" style="display: none;"><iframe name="__bkframe" id="__bkframe" title="bk" src="about:blank" style="border: 0px; width: 0px; height: 0px; display: none; position: absolute; clip: rect(0px, 0px, 0px, 0px);"></iframe><iframe name="__bkframe_74304_1627871770530" id="__bkframe_74304_1627871770530" title="bk" src="https://stags.bluekai.com/site/74304?ret=html&amp;phint=__bk_t%3DCalculadora%20de%20Cr%C3%A9dito%20Hipotecario%20para%20Vivienda%20-%20Simulador%20de%20Cuotas&amp;phint=__bk_k%3D&amp;phint=__bk_l%3Dhttps%3A%2F%2Fwww.metrocuadrado.com%2Fcalculadora-credito-hipotecario-vivienda%2F&amp;phint=__bk_v%3D3.1.10&amp;limit=10&amp;r=51693016" class="__bkframe_site_74304" style="border: 0px; width: 0px; height: 0px; display: none; position: absolute; clip: rect(0px, 0px, 0px, 0px);"></iframe><script type="text/javascript" id="">try{var categoria="B\u00fasqueda de Inmuebles",accion="MCW - Contacto Mobile",etiqueta="",tipoDeNegocio=document.querySelectorAll(".m_header_search_content_alt .col_1_alt .form_select .select_content .select_label span")[1].innerText.trim(),tipoDeInmueble=document.querySelectorAll(".m_header_search_content_alt .col_2_alt div.campo-selector-multiple div.campo-selector-multiple-seleccionados")[1].innerText.trim(),ciudadSeleccion=document.querySelectorAll("div.m_breadcrumb div.items span a")[3],idinmueble=
+google_tag_manager["GTM-WTMXDZ"].macro(18),ciudadSeleccionada=void 0==ciudadSeleccion?void 0:document.querySelectorAll("div.m_breadcrumb div.items span a")[3].innerText.trim();$(document).ready(function(){$(".mobile-bar-interaction a.interaction-call-action").click(function(){etiqueta=$(this).text().trim();dataLayer.push({event:"ga_event",category:categoria,action:accion,label:etiqueta,tipoNegocio:tipoDeNegocio,tipoInmueble:tipoDeInmueble,ciudad:ciudadSeleccionada,"Id Inmueble New":idinmueble});"Contactar"!==etiqueta&&
+dataLayer.push({event:"ga_event_contacto",category:"ContactosM2",action:accion,label:"Contacto"})})})}catch(a){console.log("Error contacto mobile "+a)};</script><script type="text/javascript" id="">try{var tipoDeNegocio=document.querySelectorAll("div.m_breadcrumb div.items span a")[2].text.trim(),tipoDeInmueble=document.querySelectorAll("div.m_breadcrumb div.items span a")[1].text.trim();if(0==google_tag_manager["GTM-WTMXDZ"].macro(19).indexOf("/proyecto/"))var ciudadSeleccionada=document.querySelectorAll("div.m_breadcrumb div.items span a")[4].innerText.trim();else{var ciudadSeleccion=document.querySelectorAll("div.m_breadcrumb div.items span a")[3];ciudadSeleccionada=void 0==ciudadSeleccion?void 0:document.querySelectorAll("div.m_breadcrumb div.items span a")[3].innerText.trim()}$(document).ready(function(){$(".contacto_moviles .email_phone_sticky div span#btnContactPhone").click(function(){var a=
+"Detalle inmueble",b="MCW - Detalles Inmuebles - Mobile";var c=$(this).text().trim();dataLayer.push({event:"ga_event",category:a,action:b,label:c,tipoNegocio:tipoDeNegocio,tipoInmueble:tipoDeInmueble,ciudad:ciudadSeleccionada});dataLayer.push({event:"ga_event_contacto",category:"ContactosM2",action:b,label:"Contacto"})})});$(document).ready(function(){$(".contacto_moviles .email_phone_sticky div a.m_btn").click(function(){var a="Detalle inmueble",b="MCW - Detalles Inmuebles - Mobile";var c=$(this).text().trim();
+dataLayer.push({event:"ga_event",category:a,action:b,label:c,tipoNegocio:tipoDeNegocio,tipoInmueble:tipoDeInmueble,ciudad:ciudadSeleccionada})})})}catch(a){console.log("Error contacto mobile detalles "+a)};</script><script type="text/javascript" id="">try{var tipoDeNegocio=document.querySelectorAll("div.m_breadcrumb div.items span a")[2].text.trim(),tipoDeInmueble=document.querySelectorAll("div.m_breadcrumb div.items span a")[1].text.trim();$(document).ready(function(){$("#highlighted-properties-list .swiper-container .swiper-slide a.contact-result-button").click(function(){var a=$(this).attr("data-property-city"),b="B\u00fasqueda de Inmuebles",c="MCW - Quiero que me contacten - Destacados";var d=$(this).attr("data-property-id");dataLayer.push({event:"ga_event",
+category:b,action:c,label:d,tipoNegocio:tipoDeNegocio,tipoInmueble:tipoDeInmueble,ciudad:a})})})}catch(a){console.log("Error contacto mobile detalles "+a)};</script><script type="text/javascript" id="">try{$(document).ready(function(){$("#formulario-contacto #btn-send-contact").click(function(){var a=google_tag_manager["GTM-WTMXDZ"].macro(22);dataLayer.push({event:"ga_event",category:"B\u00fasqueda de Inmuebles",action:"MCW - Contactar popUp - Web",label:"Contactar","Id Inmueble New":a});dataLayer.push({event:"ga_event_contacto",category:"ContactosM2",action:"MCW - Contactar popUp - Web",label:"Contacto","Id Inmueble New":a});setTimeout(function(){var a=$(".success-alert").parent().attr("style");"display: block;"==
+a&&$(".link-whatsapp-contact")&&$(".link-whatsapp-contact").click(function(){})},1E3)});console.log("se ejecuta el popUp")})}catch(a){console.log("Error en carga PopUp contacto "+a)};</script><script type="text/javascript" id="">try{var categoriaGA="Calculadora",etiquetaGA=google_tag_manager["GTM-MHXCV43"].macro(73),bk_event_img_url="https://tags.bluekai.com/site/"+google_tag_manager["GTM-MHXCV43"].macro(74)+"?phint\x3d"+categoriaGA+"%3D"+etiquetaGA;jQuery("\x3cimg /\x3e").on("load").attr("src",bk_event_img_url)}catch(a){console.log("Error blueKai "+a)};</script></body></html>
